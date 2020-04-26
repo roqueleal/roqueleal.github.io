@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+	<url>
+		<loc>https://roqueleal.me/</loc>
+		<xhtml:link rel="alternate" hreflang="fr-fr" href="https://roqueleal.me/" />
+		<xhtml:link rel="alternate" hreflang="es-es" href="https://roqueleal.me/es.html" />
+		<xhtml:link rel="alternate" hreflang="en-us" href="https://roqueleal.me/en.html" />
+	</url>
+	<url>
+		<loc>https://roqueleal.me/es.html</loc>
+		<xhtml:link rel="alternate" hreflang="fr-fr" href="https://roqueleal.me/" />
+		<xhtml:link rel="alternate" hreflang="es-es" href="https://roqueleal.me/es.html" />
+		<xhtml:link rel="alternate" hreflang="en-us" href="https://roqueleal.me/en.html" />
+	</url>
+	<url>
+		<loc>https://roqueleal.me/en.html</loc>
+		<xhtml:link rel="alternate" hreflang="fr-fr" href="https://roqueleal.me/" />
+		<xhtml:link rel="alternate" hreflang="es-es" href="https://roqueleal.me/es.html" />
+		<xhtml:link rel="alternate" hreflang="en-us" href="https://roqueleal.me/en.html" />
+	</url>
+
+<url>
+  <loc>https://roqueleal.me/</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/index.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/es.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/en.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/reseaux-sociaux/world-meetup-Map.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/big-data/popular-times-paris.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/big-data/tripadvisor-insights-paris.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/big-data/carte-biodiversite-gbif-france.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/big-data/google-trends-coronavirus.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/big-data/tripadvisor-restaurants-insights-suisse.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/modele-trafic/carte-velov-grandlyon.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/big-data/le-guide-michelin-2020.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/reseaux-sociaux/carte-tour-de-france.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/modele-trafic/waze-data-paris.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/big-data/airbnb-carte-france.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/modele-trafic/paris-transitland-flows.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/modele-trafic/lyon-waze-data-keplergl.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/machine-learning/competitive-clusters-restaurants-lyon.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/reseaux-sociaux/carte-lyon-fete-lumiere.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/big-data/analyse-donnees-foursquare-france.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/reseaux-sociaux/geolocaliser-tweets-lyon-france.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/reseaux-sociaux/flickr-location-map.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/big-data/tripadvisor-analyser-service-hotelier-lyon.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/modele-trafic/mexico-uber-data.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/modele-trafic/marine-traffic-map-hormuz.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/modele-trafic/osmnx-reseaux-urbains.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/big-data/flowmap-world-migration-2019.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/big-data/mapa-sector-inmobiliario-ecuador.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/reseaux-sociaux/instagram-map-giro-italia.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/machine-learning/data-science-retail-data.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/big-data/uber-keplergl-dataviz-chile.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/machine-learning/pronostico-precios-crudo.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/big-data/big-data-keplergl-chile.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/argentina/desaparecidos.html</loc>
+  <lastmod>2019-02-12T20:24:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/reseaux-sociaux/python-twitter-carte-europe.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/machine-learning/machine-learning-datos-migraciones-america.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/reseaux-sociaux/instagram-location-map-chile.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/reseaux-sociaux/pySpark_jy.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/big-data/popular-times-stgo.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/big-data/mapa-especies-vulnerables-venezuela.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/big-data/data-science-tripadvisor-hotels-chile.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/modele-trafic/uber-data-cluster-bogota.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/modele-trafic/ecobici-argentina.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/waze-data-san-francisco.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/machine-learning/machine-learning-location-buenos-aires.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/big-data/airbnb-intelligence-location-peru.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/modele-trafic/santiago-chile-transitland-flows.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/modele-trafic/oil-tankers-routes-pdvsa.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/modele-trafic/red-vial-caracas.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/big-data/tripadvisor-data-turismo-gastronomia-mexico.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/big-data/big-data-pymes-latam.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/reseaux-sociaux/mapa-instagram-la-vuelta-espana.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/big-data/mapa-sector-inmobiliario-panama.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/reseaux-sociaux/mapa-tweets-venezuela.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/reseaux-sociaux/mapa-instagram-protestas-venezuela</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/reseaux-sociaux/python-sentiment-analysis-bank.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/big-data/inec-mapa-censo-gye.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/big-data/popular-times-sanfrancisco.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/modele-trafic/uber-movement-san-francisco.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/modele-trafic/waze-data-san-francisco.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/machine-learning/san-francisco-machine-learning-location.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/uber/bog.html</loc>
+  <lastmod>2019-11-06T15:07:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://roqueleal.me/modele-trafic/reseau-routier-france.html</loc>
+  <lastmod>2020-04-24T04:40:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
