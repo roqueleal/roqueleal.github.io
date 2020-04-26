@@ -1,0 +1,119 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,600);
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+  margin-bottom: 50px;
+  background: cadetblue;
+}
+
+h4 {
+  margin: 5px 20px;
+}
+
+span {
+  float: right;
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.comment-box {
+  width: 85%;
+  margin-top: 50px;
+  background: #fff;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.comment-box p {
+  margin: 0 30px 15px;
+  font-weight: 300;
+  color: #333;
+  word-wrap: break-word;
+  background: #EEE;
+  padding: 5px 10px;
+}
+
+.header {
+  margin: 15px 20px;
+  font-size: 27px;
+  font-weight: 600;
+}
+
+form {
+  margin: 10px 10px 30px 10px;
+}
+form ::-webkit-input-placeholder {
+  color: #CCC;
+  font-weight: 300;
+}
+
+input[type="text"], textarea {
+  margin: 5px 10px;
+  outline: none;
+  background: #efefef;
+  border: 0;
+  padding: 10px;
+}
+
+textarea {
+  resize: none;
+  width: 85%;
+}
+
+input[type="text"] {
+  width: 50%;
+  margin-bottom: 15px;
+}
+
+button {
+  font-weight: 400;
+  margin: 12px 0 0 10px;
+  border: 0;
+  color: #fff;
+  font-size: 15px;
+  background: #D3775D;
+  padding: 12px 20px 12px 20px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+button:hover {
+  background: #C15322;
+}
+
+.footer p {
+  float: right;
+  font-size: 13px;
+  margin-bottom: 10px;
+  background: #FFF;
+}
+
+.username {
+  color: rgb(172, 71, 115);
+  font-weight: 300;
+}
+.comment_body {
+  font-weight: 300;
+  color: #333;
+}
+.comment {
+	border-radius: 4px;  
+  border: 2px solid #a3c2c2;
+    padding: 2%;
+    width: 85%;
+
+    
+}
