@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html amp lang="es">
+<html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths gr__informationisbeautifulawards_com wf-ptserif-n4-active wf-ptserif-i4-active wf-ptserif-n7-active wf-ptserif-i7-active wf-proximanovasoft-n4-active wf-proximanovasoft-n6-active wf-active" style=""><!--<![endif]-->
+<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+		<meta name="copyright" content="https://roqueleal.me"/>
+		<meta name="description" content="🌎 Visualizaciones del espacio geográfico con el poder de la CIENCIA DE LOS DATOS. ¡Entra y descubre este maravilloso mundo!✔️">
+   		<meta property="fb:admins" content="1573187928"/>
+		<meta name="keywords" content="Data Science, Mapping, Intelligence Location, Python, Data, Machine Learning"/>
+		<meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTkm0UuydwCSTSWG9PkvOKsmgn0Vr-GIj6PpSrVa9Azvjihko_G" link rel="image_src" type="image/jpg" href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTkm0UuydwCSTSWG9PkvOKsmgn0Vr-GIj6PpSrVa9Azvjihko_G" alt="Data Science Blog"/>
+		<meta property="og:image:width" content="400"/>
+		<meta property="og:image:height" content="300"/>
+		<meta property="og:title" content="Roque Leal"/>
+		<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+		<meta property="og:description" content="Blog de Data Science, Machine Learning y Location Intelligence. Continuar leyendo ..."/>
+		<meta property="og:url" content="https://roqueleal.me"/>
+		<title>Roque Leal</title>
+		<link rel="alternative" hreflang="fr" href="https://roqueleal.me/fr.html">
+		<link rel="alternative" hreflang="en" href="https://roqueleal.me/en.html">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+<script src="https://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"></script>
+<script src="https://angular-ui.github.io/ui-leaflet/dist/ui-leaflet.min.js"></script>
+<link rel="stylesheet" href="https://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css" />
+<script src="https://tombatossals.github.io/angular-leaflet-directive/dist/angular-leaflet-directive.min.js"></script>
+
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111035186-2"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date()); 
+gtag('config', 'UA-111035186-2');
+</script>
+<!-- Note: plugin scripts must be included after the tracking snippet. -->
+<script src="https://ipmeta.io/plugin.js"></script>
+
+<script>
+   provideGtagPlugin({
+      apiKey: '6df866a9b2e25439d18f05274c25dd522a40a12a182de5fbae8901c7deffab8f',
+      serviceProvider: 'dimension1',
+      networkDomain: 'dimension2',
+      networkType: 'dimension3',
+   });
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKJHJPN" height="0" width="0" style="display:none;visibility:hidden">
+    </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <title>Traffic Api BAS</title>
+    <link rel="icon" type="image/png" href="data/bus.png" sizes="16x16">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="assets/leaflet-0.7.7/leaflet.css" rel="stylesheet" />
+    <link href="assets/leaflet.markercluster/MarkerCluster.css" rel="stylesheet" />
+    <link href="assets/leaflet.markercluster/MarkerCluster.Default.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <style>
+        
+        body {
+            margin:0;
+            padding:0;
+        }
+        header {
+            position: relative;
+            display: block;
+            top: 0;
+            left: 0;
+            right: 0;
+            text-transform: uppercase;
+            z-index:1;
+        }
+        #legend {
+            position: absolute;
+            left: 24px;
+            bottom: 120px;
+            z-index: 1;
+        }
+        #map { position:absolute; top:0; bottom:0; width:100%; z-index:-1;}
+        dl {
+            margin-left: 0;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        dt {
+            margin-left: 0;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .sidebar > div:first-child button {
+            border-radius:3px 3px 0 0;
+        }
+        .sidebar > div:last-child button {
+            border-radius:0 0 3px 3px;
+        }
+        /* Dark attribution */
+         .mapboxgl-ctrl.mapboxgl-ctrl-attrib a { color:#fff; }
+        /* modal styling */
+        .modal {
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            text-align: center;
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 40px;
+            border: 1px solid #888;
+            width: 40%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .leaflet-popup-content {
+            margin: 7px;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        @media (max-width: 600px) {
+            h3 {
+              
+                font-size: 16px!important;
+                padding: 12px!important;
+                text-align: center;
+                overflow: hidden;
+                 width: 1px;
+                height: 1px;
+            }
+            .modal-content{
+                width:100%;
+            }
+            body { margin:0; padding:0; }
+        }
+            
+         #menu {
+        background: #fff;
+        position: absolute;
+        z-index: 1;
+        top: 10px;
+        left: 10px;
+        width: 120px;
+        font-family: 'Open Sans', sans-serif;
+        border: 1px solid #fff;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+        }
+        #menu a {
+            font-size: 13px;
+            color: #404040;
+            display: block;
+            margin: 0;
+            text-decoration: none;
+            border-bottom: 1px solid #404040;
+            text-align: center;
+        }
+        #menu a:last-child {
+            border: none;
+            background-color: #fad201 ;
+            color: #404040;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        #menu a:hover {
+            background-color: #fad201;
+            color:#404040;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        #menu a.active {
+            background-color: #3887be;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        #menu a.active:hover {
+            background: #3074a4;
+        }
+
+          </style>
+</head>
+    <div id="map"></div>
+
+    <script src="assets/leaflet-0.7.7/leaflet.js"></script>
+    <script src="assets/leaflet.markercluster/leaflet.markercluster.js"></script>
+    <script src="assets/tabletop.js"></script>
+ 		
+<!-- modal-->
+<div id="aboutModal" class="modal" style="display: none;">
+
+    <!-- modal content -->
+    <div class="modal-content">
+        <span class="close">×</span>
+        <p></p><h3>API Transporte Buenos Aires</h3><br>
+                
+Este mapa consume la  <a href="https://www.buenosaires.gob.ar/desarrollourbano/transporte/apitransporte" target="_blank">API Unificada de Transporte de la Ciudad de Buenos Aires - Argentina </a>. Para visualizar en tiempo real la ubicación de la red de trasnporte público de la ciudad</a>.<br>
+
+        <br>Este Proyecto es una iniciativa de <a href="https://roqueleal.me" target="_blank" >roqueleal.me
+    </a> te invito a colaborar y participar en nuevas ideas, puedes escribirme a<a href="mailto:roqueleal@gmail.com"> roqueleal@gmail.com
+    </a>.<br>
+    </div>
+</div>
+
+ <!-- menu -->
+
+    <script>
+    
+        document.addEventListener('DOMContentLoaded', function() {
+
+            //https://docs.google.com/spreadsheets/d/1_dujNyWbvGk3iz7H_mftEm8NbYHO8fibLVWuPZXsVJg/pubhtml  
+
+            Tabletop.init({
+                key: '1_dujNyWbvGk3iz7H_mftEm8NbYHO8fibLVWuPZXsVJg',
+                callback: function(sheet, tabletop) {
+                    for (var i in sheet) {
+                        var data = sheet[i]; //getting e row from table
+
+                        var content = '<b>Bus: </b>' + data.Label 
+                            '</br>';
+                        var point = L.marker([data.Latitude, data.Logitude], {
+                            icon: mki,
+                            title: data.blend,
+                            riseOnHover: true,
+                            doRefresh: true
+ 
+                        }).bindPopup(content);
+                        markerClusters.addLayer(point);
+                        map.addLayer(markerClusters);
+                    }
+                    
+                },
+                simpleSheet: true
+                
+            });
+
+             var layerMapbox = new L.tileLayer('https://api.mapbox.com/styles/v1/roqueleal/ck7t82gdd1mp71jmon8zuwsh0/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoicm9xdWVsZWFsIiwiYSI6ImNqaHVzZTA4ODBkZjczdmt0cTNrbGo1ZWEifQ.m7xOPPWAFsY-A4cAr5nDAw', {
+                attribution: '&copy; <a href="https://www.mapbox.com/about/maps/">Mapbox</a> &copy; <a href="https://osm.org/copyright">OpenStreetMap</a>'
+            });
+           
+            var map = new L.map('map', {
+                minZoom: 11,
+                maxZoom: 18,
+                layers: [layerMapbox],
+                visible: 1
+            });
+
+
+
+            var markerClusters = new L.MarkerClusterGroup({
+                spiderfyOnMaxZoom: true,
+                showCoverageOnHover: false,
+                zoomToBoundsOnClick: true,
+                disableClusteringAtZoom: 15
+            });
+
+            var mki = new L.icon({
+                iconUrl: 'data/icon.png',
+                iconAnchor: [16, 16],
+                popupAnchor: [0, -16]
+            })
+            map.fitBounds([
+                [-34.657498,-58.502884],
+                [-34.584040,-58.377228]
+            ]);
+
+            var baseMaps = {
+                "Mapbox Streets": layerMapboxStreets,
+                "Mapbox Imagery": layerMapboxImagery
+            };
+
+            L.control.layers(baseMaps, null, {
+                collapsed: false
+            }).addTo(map);
+
+
+            var refreshIntervalInSeconds = 10;
+            var actualSeconds = 0;
+            $interval(function() {
+                if (actualSeconds === refreshIntervalInSeconds) {
+                    $scope.layers.overlays.map.doRefresh = true;
+                    console.log("Overlay refreshed.")
+                    actualSeconds = 0;
+                } else {
+                    console.log("Next update of overlay in " + (refreshIntervalInSeconds - actualSeconds) + " seconds.");
+                    actualSeconds += 1;
+                }
+            }, 1000);
+        });
+    </script>
+ <script>
+// modal interaction
+    var modal = document.getElementById('aboutModal');
+    modal.style.display = "block";
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    var aboutHeader = document.getElementsByClassName("about-header")[0];
+    aboutHeader.onclick = function() {
+        document.body.style.cursor = "pointer";
+        modal.style.display = "block";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";      }
+    }
+
+
+        
+</script>
+
+
+</body>
+</html>

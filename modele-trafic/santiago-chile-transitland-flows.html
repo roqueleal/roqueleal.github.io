@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111035186-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+gtag('config', 'UA-111035186-2');
+</script>
+<!-- Note: plugin scripts must be included after the tracking snippet. -->
+<script src="https://ipmeta.io/plugin.js"></script>
+
+<script>
+   provideGtagPlugin({
+      apiKey: '6df866a9b2e25439d18f05274c25dd522a40a12a182de5fbae8901c7deffab8f',
+      serviceProvider: 'dimension1',
+      networkDomain: 'dimension2',
+      networkType: 'dimension3',
+   });
+</script>
+
+
+<!-- meta -->
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta property="og:url" content="https://www.roqueleal.me/modele-trafic/santiago-chile-transitland-flows.html" />
+<meta property="og:title" content="Visualizar la dinámica espacial del Metro de Santiago" />
+<meta property="og:description" content="Modelo del sistema Metro de Santiago de Chile 🇨🇱 desarrollado en Processing gracias al API de TransitLand y las librerías Pandas de Python 🚇." />
+<meta property="og:site_name" content="https://roqueleal.me" />
+<meta property="og:image" content="https://raw.githubusercontent.com/roqueleal/roqueleal.github.io/master/images/transitland-feeds-metro.webp" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="294" />
+<meta property="og:image:height" content="221" />
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600" rel="stylesheet">
+<title>Metro de Chile</title>
+<meta name="description" content="Un mapa interactivo del Metro de Chile 🗺️">
+<meta name="keywords" content="Modelos Urbanos, Sistema Metro, Chile, Cartografía Urbana, TransitFlow"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image"> 		 
+        <meta property="twitter:image:width" content="400"/>
+		<meta property="twitte:image:height" content="300"/>
+<meta name="twitter:site" content="@roqueleal08" />
+<meta name="twitter:creator" content="@roqueleal08" />
+<meta property="twitter:url" content="https://www.roqueleal.me/modele-trafic/santiago-chile-transitland-flows.html" />
+<meta property="twitter:title" content="Visualizar la dinámica espacial del Metro de Santiago" />
+<meta property="twitter:description" content="Modelo del sistema Metro de Santiago de Chile 🇨🇱 desarrollado en Processing gracias al API de TransitLand y las librerías Pandas de Python 🚇." />
+<meta property="twitter:site_name" content="https://roqueleal.me" />
+<meta property="twitter:image" content="https://raw.githubusercontent.com/roqueleal/roqueleal.github.io/master/images/transitland-feeds-metro.webp" />
+<!-- Bootstrap CSS File -->
+<link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Libraries CSS Files -->
+<link href="../lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+<link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="../lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+<link href="../lib/hover/hover.min.css" rel="stylesheet">
+<!-- mapbox-->
+<!-- Blog Stylesheet File -->
+<link href="../css/blog.css" rel="stylesheet">
+<link href="../css/mensajes.css" rel="stylesheet">
+<!-- Main Stylesheet File -->
+<link href="../css/style.css" rel="stylesheet">
+<!-- Responsive css -->
+<link href="../css/responsive.css" rel="stylesheet">
+<!-- Favicon -->
+<link rel="shortcut icon" href="../images/favicon.png">
+<!-- =======================================================
+    Theme Name: Folio
+    Theme URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+<link rel='preload' href='//apps.shareaholic.com/assets/pub/shareaholic.js' as='script'/>
+<script data-cfasync="false" async src="https://apps.shareaholic.com/assets/pub/shareaholic.js" data-shr-siteid="c808dbc8d6951e1d6bc8c470f396b47a"></script>
+<body>
+<!-- start section navbar -->
+<nav id="main-nav-subpage" class="subpage-nav">
+<div class="row">
+	<div class="container">
+		<div class="logo">
+			<a href="../es.html"><img src="../images/logo.png" alt="logo"></a>
+		</div>
+		<div class="responsive">
+			<i data-icon="m" class="ion-navicon-round"></i>
+		</div>
+		<ul class="nav-menu list-unstyled">
+			<li><a href="../es.html" class="smoothScroll">Home</a></li>
+			<li><a href="../es.html#about" class="smoothScroll">+</a></li>
+			<li><a href="../es.html#journal" class="smoothScroll">Journal</a></li>
+			<li><a href="../es.html#contact" class="smoothScroll">Contacto</a></li>
+		</ul>
+	</div>
+</div>
+</nav>
+<!-- End section navbar -->
+<!-- start section main content -->
+<div class="main-content paddsection">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="row">
+					<div class="container-main single-main">
+						<div class="col-md-12">
+							<div class="block-main mb-30">
+								<div class="content-main single-post padDiv">
+									<div class="journal-txt">
+										<h1>Un Minuto en el Sistema Metro de Santiago, Chile</h1>
+										<iframe width="640" height="464" src="https://player.vimeo.com/video/282726704" frameborder="0" allowfullscreen mozallowfullscreen webkitallowfullscreen>
+										</iframe>
+										<div class="content-main single-post padDiv">
+											<div class="journal-txt">
+											</div>
+											<div class="post-meta">
+												<ul class="list-unstyled mb-0">
+													<li class="date">Publicado:<a href="#">Diciembre 12, 2018</a></li>
+												</ul>
+											</div>
+											<p class="mb-30">
+												 Hace unos meses tenia la curiosidad de aplicar un modelo de movilidad de transito para Latinoamérica, la mayoría de los ejemplos son de ciudades de habla inglesa así que fue interesante tener una primera experiencia con datos locales, de todos ellos el Sistema del Metro de Santiago de Chile me parece el + actualizado en sus feeds de transporte público (GTFS) con ellos y consumiendo el API de TransitFlow fue posible correr el script de NumPy y pandas juntos en Processing para resumir toda la dinámica del sistema de metro urbano en apenas un minuto lo que su implementación en cualquier sistema estimo brinda una solución de optimización para adaptar mejor la oferta a la demanda de pasajeros prevista.
+												<p class="mb-30">
+													De la experiencia me gusto mucho la herramienta de Processing en la forma de como implementa librerías de mapas para hacer visualizaciones dinámicas que pueden adaptarse a tiempo real, sin duda una gran ayuda. Si coincides en ello, no dudes en compartir y comentar tus ideas me ayudará mucho tu feedback para continuar aprendiendo.
+													<blockquote>
+														 Te invito a utilizar TransitFlow visitando <a href="https://transit.land">https://transit.land.</a>
+													</blockquote>
+												</div>
+											</div>
+										</div>
+										<!-- start sectoion contact -->
+										<body>
+										<div id="comment-area">
+											<div class="comment-box">
+												<div class="comment-form">
+													<div class="header">
+														 Comparte tus comentarios
+													</div>
+													<input id="username_field" type="text" placeholder="Su Nombre"/>
+													<br>
+													<textarea id="comment_body_field" type="text" placeholder="Su Comentario sobre la visualización" /></textarea>
+													<br>
+													<button id="submit">Compartir</button>
+													<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
+													<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+													<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+													<script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+													<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+													<script src="js/main.js"></script>
+													<!-- start section footer -->
+													<!-- End section footer -->
+													</body>
+													<!--  </div> -->
+													<!-- start section main content -->
+													<!-- JavaScript Libraries -->
+													<script src="lib/jquery/jquery.min.js"></script>
+													<script src="lib/jquery/jquery-migrate.min.js"></script>
+													<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+													<script src="lib/typed/typed.js"></script>
+													<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+													<script src="lib/magnific-popup/magnific-popup.min.js"></script>
+													<script src="lib/isotope/isotope.pkgd.min.js"></script>
+													<!-- Contact Form JavaScript File -->
+													<script src="contactform/mensajes.js"></script>
+													<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+													<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAVvV21l_4tC2tefzBP417pb35GaV3c5aE",
+    authDomain: "roqueleal-b7038.firebaseapp.com",
+    databaseURL: "https://roqueleal-b7038.firebaseio.com",
+    projectId: "roqueleal-b7038",
+    storageBucket: "roqueleal-b7038.appspot.com",
+    messagingSenderId: "396061988538"
+  };
+  firebase.initializeApp(config);
+													</script>
+													<!-- Template Main Javascript File -->
+													<script src="js/main.js"></script>
+													</body>
+													</html>
