@@ -107,10 +107,18 @@
 </div>
 </nav>
 <body>
-<h1 style="font-size:150%;"align="center">Airbnb France 2020</h1>
-<h2 style="font-size:100%;"align="center">Une analyse exploratoire des données d'Airbnb</h2>
-<iframe src="https://public.tableau.com/views/france_15893224943160/Dashboard1?:embed_code_version=3&:loadOrderID=0&:display_count=y&publish=yes&:origin=viz_share_link" width="100%" scrolling="yes" height="580" class="iframe-class" frameborder="0">
-</iframe>
-</header>
-    </body>
+  <div id="vizContainer"></div>
+  <script src="https://us-east-1.online.tableau.com/javascripts/api/tableau-2.min.js"></script>
+  <script>
+    var viz
+    function initViz() {
+      var containerDiv = document.getElementById("vizContainer"),
+      url = "https://us-east-1.online.tableau.com/#/site/zuar/views/france_15893224943160/Dashboard1";
+
+      viz = new tableau.Viz(containerDiv, url);
+    }
+    initViz();
+  </script>
+  
+</body>
   </html>
