@@ -1,39 +1,33 @@
-<!doctype html>
-
-<html lang=”en”>
-
+<!DOCTYPE html>
+<html>
 <head>
+    <meta charset="UTF-8" />
+    <title>JPL Dashboard</title>
+    <script type="text/javascript" src="https://online.tableau.com/javascripts/api/tableau-2.min.js"></script>
+        <script type="text/javascript">
+          function initViz() {
+            var containerDiv = document.getElementById("vizContainer"),
+              //url = "http://public.tableau.com/views/RegionalSampleWorkbook/Storms",
+              url = "https://10ay.online.tableau.com/site/jpl/views/JPLDashboard_V05_JUE/Awareness?:iid=2",
+              options = {
+                hideTabs: true,
+                onFirstInteractive: function() {
+                  console.log("Run this code when the viz has finished loading.");
+                }
+              };
 
-<meta charset=”utf-8″>
-
-<title>Embedded Analytics with Tableau</title>
-
+            var viz = new tableau.Viz(containerDiv, url, options);
+          }
+        </script>
 </head>
-
 <body>
-
-<div id=”vizContainer”></div>
-
-<script src=”https://us-east-1.online.tableau.com/javascripts/api/tableau-2.min.js”></script>
-
-<script>
-
-var viz
-
-function initViz() {
-
-var containerDiv = document.getElementById(“vizContainer”),
-
-url = “https://us-east-1.online.tableau.com/t/zuar/views/Regional/GlobalTemperatures”;
-
-viz = new tableau.Viz(containerDiv, url);
-
-}
-
-initViz();
-
-</script>
-
+    <div id="vizContainer" style="width:800px; height:700px;"></div>
+    <script type="text/javascript">
+        (function () {
+            window.onload = function () {
+                initViz();
+            };
+        })();
+    </script>
 </body>
-
 </html>
