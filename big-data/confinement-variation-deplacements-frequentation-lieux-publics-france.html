@@ -1,113 +1,39 @@
 <!doctype html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <title>Velo'v à Lyon</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <meta name="amp-google-client-id-api" content="googleanalytics">
-    <meta name="description" content="🇫🇷 Le flux de Système Velo'v à Lyon 🚲">
-    <link rel="shortcut icon" href="../images/favicon.png">
-    <style amp-boilerplate="">body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate="">body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <script custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js" async=""></script>
-    <meta property="og:url" content="https://roqueleal.me/modele-trafic/carte-velov-grandlyon.html" />
-    <meta property="og:title" content="Le flux de Système Velo'v à Lyon" />
-    <meta property="og:description" content="🚲 Une carte animée permet de visualiser les flux de disponibilité au Système Vélo'v à Lyon présente ses périodes d'offre et de demande." />
-    <meta property="og:image" content="https://raw.githubusercontent.com/roqueleal/roqueleal.github.io/master/images/velov-grandlyon-bike.jpg" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="294" />
-    <meta property="og:image:height" content="221" />
-    <meta name="keywords" content="Velo'v, Traffic Models, Lyon, BigData, carte animée"/>   
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@roqueleal08" />
-<meta name="twitter:creator" content="@roqueleal08" />
-<meta property="twitter:url" content="https://roqueleal.me/modele-trafic/carte-velov-grandlyon.html" />
-<meta property="twitter:title" content="Le flux de Système Velo'v à Lyon" />
-<meta property="twitter:description" content="🚲 Une carte animée permet de visualiser les flux de dispo au Système Vélo'v à Lyon présente ses périodes d'offre et de demande." />
-<meta property="twitter:image" content="https://raw.githubusercontent.com/roqueleal/roqueleal.github.io/master/images/velov-grandlyon-bike.jpg" />
-<!-- Bootstrap CSS File -->
-<link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
-<!-- Bootstrap CSS File -->
-<link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<!-- Libraries CSS Files -->
-<link href="../lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-<link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-<link href="../lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-<link href="../lib/hover/hover.min.css" rel="stylesheet">
-<!-- Blog Stylesheet File -->
-<link href="../css/blog.css" rel="stylesheet">
-<link href="../css/mensajes.css" rel="stylesheet">
-<!-- Main Stylesheet File -->
-<link href="../css/style.css" rel="stylesheet">
-<!-- Responsive css -->
-<link href="../css/responsive.css" rel="stylesheet">
-<!-- Favicon -->
-<link rel="shortcut icon" href="../images/favicon.png">
-<!-- =======================================================
-    Theme Name: Folio
-    Theme URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
-    Author: BootstrapMade.com
-    Author URL: https://bootstrapmade.com
-  ======================================================= -->
-	<script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://roqueleal.me/modele-trafic/carte-velov-grandlyon.html"
-          },
-          "inLanguage" : "fr-FR",
-          "headline": "Le flux de Système Velo'v à Lyon",
-          
-          "image": [
-            "https://raw.githubusercontent.com/roqueleal/roqueleal.github.io/master/images/velov-grandlyon-bike.jpg"
-          ],
-          
-          "datePublished": "2019-12-10T11:14:14+09:00",
-          "dateModified": "2020-04-09T11:14:14+09:00",
-          
-          "author": {
-            "@type": "Person",
-            "name": "Roque Leal"
-          },
-          
-          "publisher": {
-            "@type": "Organization",
-            "name": "Roque Leal",
-            "sameAs": ["https://twitter.com/roqueleal08"],
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://raw.githubusercontent.com/roqueleal/roqueleal.github.io/master/images/velov-grandlyon-bike.jpg"
-            }
-          },
-          "description": "Une carte animée permet de visualiser les flux de disponibilité au Système Vélo'v à Lyon présente ses périodes d'offre et de demande.",
-          "keywords":"Velo'v, Traffic Models, GrandLyon, BigData, carte animée"
-        }
-        </script>
-    <title>Basic Embed</title>
 
-    <script type="text/javascript"
-	    src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
-    <script type="text/javascript">
-        function initViz() {
-            var containerDiv = document.getElementById("vizContainer"),
-                url = "http://public.tableau.com/views/RegionalSampleWorkbook/Storms",
-                options = {
-                    hideTabs: true,
-                    onFirstInteractive: function () {
-                        console.log("Run this code when the viz has finished loading.");
-                    }
-                };
+<html lang=”en”>
 
-            var viz = new tableau.Viz(containerDiv, url, options);
-            // Create a viz object and embed it in the container div.
-        }
-    </script>
+<head>
+
+<meta charset=”utf-8″>
+
+<title>Embedded Analytics with Tableau</title>
+
 </head>
 
-<body onload="initViz();">
-    <div id="vizContainer" style="width:800px; height:700px;"></div>
+<body>
+
+<div id=”vizContainer”></div>
+
+<script src=”https://us-east-1.online.tableau.com/javascripts/api/tableau-2.min.js”></script>
+
+<script>
+
+var viz
+
+function initViz() {
+
+var containerDiv = document.getElementById(“vizContainer”),
+
+url = “https://us-east-1.online.tableau.com/t/zuar/views/Regional/GlobalTemperatures”;
+
+viz = new tableau.Viz(containerDiv, url);
+
+}
+
+initViz();
+
+</script>
+
 </body>
 
 </html>
