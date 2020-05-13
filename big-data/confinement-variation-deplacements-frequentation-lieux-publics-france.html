@@ -85,40 +85,29 @@
           "keywords":"Velo'v, Traffic Models, GrandLyon, BigData, carte animée"
         }
         </script>
-</head>
-<body>
-<!-- start section navbar -->
-<nav id="main-nav-subpage" class="subpage-nav">
-<div class="row">
-	<div class="container">
-		<div class="logo">
-			<a href="https://roqueleal.me"><img src="../images/logo.png" alt="logo"></a>
-		</div>
-		<div class="responsive">
-			<i data-icon="m" class="ion-navicon-round"></i>
-		</div>
-		<ul class="nav-menu list-unstyled">
-			<li><a href="https://roqueleal.me" class="smoothScroll">Home</a></li>
-			<li><a href="https://roqueleal.me#about" class="smoothScroll">+</a></li>
-			<li><a href="https://roqueleal.me#journal" class="smoothScroll">Journal</a></li>
-			<li><a href="https://roqueleal.me#contact" class="smoothScroll">Contact</a></li>
-		</ul>
-	</div>
-</div>
-</nav>
-<body>
-  <div id="vizContainer"></div>
-  <script src="https://us-east-1.online.tableau.com/javascripts/api/tableau-2.min.js"></script>
-  <script>
-    var viz
-    function initViz() {
-      var containerDiv = document.getElementById("vizContainer"),
-      url = "http://public.tableau.com/views/france_15893224943160/Dashboard1";
+    <title>Basic Embed</title>
 
-      viz = new tableau.Viz(containerDiv, url);
-    }
-    initViz();
-  </script>
-  
+    <script type="text/javascript"
+	    src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <script type="text/javascript">
+        function initViz() {
+            var containerDiv = document.getElementById("vizContainer"),
+                url = "http://public.tableau.com/views/RegionalSampleWorkbook/Storms",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        console.log("Run this code when the viz has finished loading.");
+                    }
+                };
+
+            var viz = new tableau.Viz(containerDiv, url, options);
+            // Create a viz object and embed it in the container div.
+        }
+    </script>
+</head>
+
+<body onload="initViz();">
+    <div id="vizContainer" style="width:800px; height:700px;"></div>
 </body>
-  </html>
+
+</html>
