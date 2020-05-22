@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>Data Science Blog: Découvrez le potentiel de vos données</title>
+		<link><![CDATA[https://roqueleal.me]]></link>
+		<description>69 Études pratiques de Big Data et Data Science en France avec des données géolocalisées d'Instagram, Tripadvisor, Google, Uber,Waze, Airbnb continuer la lecture</description>
+		<language>fr</language>
+		<pubDate>Fri, 22 May 2020 05:14:51 +0300</pubDate>
+		<generator>MySitemapGenerator (www.mysitemapgenerator.com)</generator>
+
+		<item>
+			<guid isPermaLink="false">1640161243</guid>
+			<title>L'impact du Covid-19 pendant et après du confinement</title>
+			<link>https://roqueleal.me/big-data/limpact-du-covid-19-sur-la-reprise-economique-en-france-le-bigdata-20200520.html</link>
+			<dc:creator>Administrator</dc:creator>
+			<category>Site News</category>
+			<description>Confinement et reprise économique en France basés sur les données de Google COVID-19 Community Mobility Reports et Le BigData</description>
+			<pubDate>Wed, 20 May 2020 13:16:05 GMT</pubDate>
+			<enclosure url="https://raw.githubusercontent.com/roqueleal/roqueleal.github.io/master/images/confinement-variation-deplacements-frequentation-lieux-publics-france.jpg" />
+		</item>
+		<item>
+			<guid isPermaLink="false">229292103</guid>
+			<title>Quelle stratégie touristique pour l'après confinement en France ?</title>
+			<link>https://roqueleal.me/reseaux-sociaux/cetetejevisitelafrance-hashtag-geocalisees-tourisme-instagram.html</link>
+			<dc:creator>Administrator</dc:creator>
+			<category>Site News</category>
+			<description>Comment utiliser les post Instagram's pour préparer les touristes pour l'après-confinement.</description>
+			<pubDate>Mon, 04 May 2020 05:14:14 +0300</pubDate>
+			<enclosure url="https://raw.githubusercontent.com/roqueleal/roqueleal.github.io/master/images/cetetejevisitelafrance-hashtag-geocalisees-tourisme-instagram.jpg" />
+		</item>
+		<item>
+			<guid isPermaLink="false">1547946660</guid>
+			<title>Google Mobility Reports France</title>
+			<link>https://roqueleal.me/big-data/covid19-google-community-mobility-reports-france.html</link>
+			<dc:creator>Administrator</dc:creator>
+			<category>Site News</category>
+			<description>Quels impacts sur le comportement des Français face au Covid-19.</description>
+			<pubDate>Wed, 20 May 2020 13:16:05 GMT</pubDate>
+			<enclosure url="https://raw.githubusercontent.com/roqueleal/roqueleal.github.io/master/images/covid19-google-community-mobility-reports-france.jpg" />
+		</item>
+		<item>
+			<guid isPermaLink="false">3109058220</guid>
+			<title>Solidarité COVID-19: Interactions de solidarité française sur Instagram</title>
+			<link>https://roqueleal.me/reseaux-sociaux/la-carte-de-solidarite-covid19-instagram.html</link>
+			<dc:creator>Administrator</dc:creator>
+			<category>Site News</category>
+			<description>Découvrez les gestes de la solidarité sur Instagram.</description>
+			<pubDate>Mon, 04 May 2020 05:14:14 +0300</pubDate>
+			<enclosure url="https://raw.githubusercontent.com/roqueleal/roqueleal.github.io/master/images/la-carte-de-solidarite-covid19-instagram.jpg" />
+		</item>
+		<item>
+			<guid isPermaLink="false">1405811143</guid>
+			<title>Lyon Machine Learning Maps</title>
+			<link>https://roqueleal.me/machine-learning/competitive-clusters-restaurants-lyon.html</link>
+			<dc:creator>Administrator</dc:creator>
+			<category>Site News</category>
+			<description>Une étude de cas d’intelligence de localisation pour localiser un restaurant de Cuisine Française dans la ville de Lyon</description>
+			<pubDate>Wed, 20 May 2020 13:16:06 GMT</pubDate>
+			<enclosure url="https://raw.githubusercontent.com/roqueleal/roqueleal.github.io/master/images/machine-learning-restaurants-lyon.jpg" />
+		</item>
+		<item>
+			<guid isPermaLink="false">3760360394</guid>
+			<title>Apple Mobility Trends Reports France</title>
+			<link>https://roqueleal.me/big-data/covid19-apple-mobility-trends-reports-france.html</link>
+			<dc:creator>Administrator</dc:creator>
+			<category>Site News</category>
+			<description>Découvrez les tendances de la mobilité pendant la pandémie Covid-19. Les rapports sont publiés quotidiennement et reflètent les demandes de directions dans Apple Maps.</description>
+			<pubDate>Wed, 20 May 2020 13:16:05 GMT</pubDate>
+			<enclosure url="https://raw.githubusercontent.com/roqueleal/roqueleal.github.io/master/images/apple-mobility-trends-reports-france.jpg" />
+		</item>
+		<item>
+			<guid isPermaLink="false">1661082146</guid>
+			<title>Carte des producteurs - Route des vins, œnotourisme | Tourisme France</title>
+			<link>https://roqueleal.me/reseaux-sociaux/carte-oenotourisme-tourisme-en-france.html</link>
+			<dc:creator>Administrator</dc:creator>
+			<category>Site News</category>
+			<description>Une carte des interactions instagram liées aux marchands locaux et à leurs produits en France</description>
+			<pubDate>Mon, 04 May 2020 05:14:14 +0300</pubDate>
+			<enclosure url="https://raw.githubusercontent.com/roqueleal/roqueleal.github.io/master/images/carte-oenotourisme-tourisme-en-france.jpg" />
+		</item>
+		<item>
+			<guid isPermaLink="false">3982246415</guid>
+			<title>TripAdvisor Services Hôteliers à Lyon</title>
+			<link>https://roqueleal.me/big-data/tripadvisor-analyser-service-hotelier-lyon.html</link>
+			<dc:creator>Administrator</dc:creator>
+			<category>Site News</category>
+			<description>Nous utilisons les données de Tripadvisor pour découvrir des informations intéressantes sur les services hôteliers à Lyon</description>
+			<pubDate>Wed, 20 May 2020 13:16:05 GMT</pubDate>
+			<enclosure url="https://raw.githubusercontent.com/roqueleal/roqueleal.github.io/master/images/tripadvisor-hotels-reviews-lyon.jpg" />
+		</item>
+		<item>
+			<guid isPermaLink="false">444880300</guid>
+			<title>Carte des producteurs - Où acheter local</title>
+			<link>https://roqueleal.me/reseaux-sociaux/carte-producteurs-locaux-en-france.html</link>
+			<dc:creator>Administrator</dc:creator>
+			<category>Site News</category>
+			<description>Une carte des interactions instagram liées aux marchands locaux et à leurs produits en France</description>
+			<pubDate>Mon, 04 May 2020 05:14:14 +0300</pubDate>
+			<enclosure url="https://raw.githubusercontent.com/roqueleal/roqueleal.github.io/master/images/carte-producteurs-locaux-en-france.jpg" />
+		</item>
+		<item>
+			<guid isPermaLink="false">2367022372</guid>
+			<title>Le paysage de la gastronomie suisse</title>
+			<link>https://roqueleal.me/big-data/tripadvisor-restaurants-insights-suisse.html</link>
+			<dc:creator>Administrator</dc:creator>
+			<category>Site News</category>
+			<description>Les gens aiment manger dans les meilleurs endroits! Cette carte explore les données TripAdvisor pour découvrir où se trouvent les meilleurs restaurants suisses.</description>
+			<pubDate>Tue, 10 Dec 2019 04:14:14 +0200</pubDate>
+			<enclosure url="https://raw.githubusercontent.com/roqueleal/roqueleal.github.io/master/images/tripadvisor-restaurants-location-intelligence.jpg" />
+		</item>
+	</channel>
+</rss>
