@@ -1,0 +1,2273 @@
+<!DOCTYPE html>
+<html lang="fr" prefix="og: http://ogp.me/ns#">
+<html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths gr__informationisbeautifulawards_com wf-ptserif-n4-active wf-ptserif-i4-active wf-ptserif-n7-active wf-ptserif-i7-active wf-proximanovasoft-n4-active wf-proximanovasoft-n6-active wf-active" style=""><!--<![endif]-->
+<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<meta name="copyright" content="https://roqueleal.me"/>
+		<meta name="description" content="69 Études pratiques de Big Data et Data Science en France avec des données géolocalisées d'Instagram, Tripadvisor, Google, Uber,Waze, Airbnb 🔥 continuer la lecture 🗺️✔️">
+		<meta property="fb:admins" content="1573187928"/>
+		<link rel="shortcut icon" href="./images/favicon.png">
+		<meta name="keywords" content="Data Science, Mapping, Intelligence Location, Python, Data, Machine Learning"/>
+		<meta property="og:image" content="https://raw.githubusercontent.com/roqueleal/roqueleal.github.io/master/images/france-data-scientist-blog.jpg"/>		
+		<meta property="og:type" content="website" />
+		<meta property="og:image:width" content="530"/>
+		<meta property="og:image:height" content="398"/>
+		<meta property="og:locale" content="fr_FR">
+		<meta property="og:title" content="Roque Leal"/>
+		<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+		<meta property="og:url" content="https://roqueleal.me"/>
+		<meta name="keywords" content="Data+Science+Blog, Mapbox+Blog, géographie, business+intelligence,Science+des+Données, finance, Power+Bi, Big+Data, Machine+Learning, Python, Data+Scientist"/>
+		<meta property="og:description" content="Data Science, Machine Learning and Location Intelligence Blog. Continue reading..."/>
+		<title>🥇 Data Science Blog: Découvrez le potentiel de vos données</title>
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@roqueleal08" />
+		<meta name="twitter:creator" content="@roqueleal08" />
+		<meta property="twitter:url" content="https://roqueleal.me">
+		<meta property="twitter:title" content="Roque Leal Data Scientist">
+		<meta property="twitter:description" content="Data Science Blog: Découvrez le potentiel de vos données">
+		<meta property="twitter:image" content="https://raw.githubusercontent.com/roqueleal/roqueleal.github.io/master/images/france-data-scientist-blog.jpg">
+		<!-- Twitter -->			
+		<link rel="canonical" href="https://roqueleal.me">
+		<link rel="alternate" href="https://roqueleal.me" hreflang="fr-fr" />
+		<link rel="alternate" href="https://roqueleal.me/en.html" hreflang="en-us" />
+		<link rel="alternate" href="https://roqueleal.me/es.html" hreflang="es-es" />
+		<script type="application/ld+json">
+			{
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"inLanguage" : "fr-FR",
+			"name":"Data Science Blog: Découvrez le potentiel de vos données",
+			"author": {
+				"@type": "Person",
+				"name": "Roque Leal",
+				"image": {
+					"@type": "ImageObject",
+					"url": "https://raw.githubusercontent.com/roqueleal/roqueleal.github.io/master/images/france-data-scientist-blog.webp"
+				}
+			},
+		"datePublished": "2019-05-20T11:14:14+09:00",
+		"dateModified": "2020-05-20T11:14:14+09:00",
+			"url": "https://roqueleal.me",
+			"image": {
+				"@type": "ImageObject",
+				"url": "https://raw.githubusercontent.com/roqueleal/roqueleal.github.io/master/images/france-data-scientist-blog.webp"
+			},
+	  "keywords":[
+		 "Data Science Blog", 
+		 "le bigdata",
+		 "france",
+		 "analyse géographique",
+		 "données géolocalisées"
+		  ],
+			"description": "69 Études pratiques de Big Data et Data Science en France avec des données géolocalisées d'Instagram, Tripadvisor, Google, Uber,Waze, Airbnb",
+			"sameAs": ["https://twitter.com/roqueleal08", "https://www.linkedin.com/in/lealrlx"]
+			}
+			</script>
+			<a href="https://api.whatsapp.com/send?phone=584123188208&text=Salut!%21%20Je%20voudrais%20plus%20d%27informations%20" class="float" target="_blank">
+				<i class="fa fa-whatsapp my-float"></i>
+			</a>
+				<!-- Global site tag (gtag.js) - Google Analytics -->
+				<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111035186-2"></script>
+				<script>
+					  window.dataLayer = window.dataLayer || [];
+					  function gtag(){dataLayer.push(arguments);}
+					  gtag('js', new Date()); 
+					  gtag('config', 'UA-111035186-2');
+				</script>
+				<!-- Note: plugin scripts must be included after the tracking snippet. -->
+				<script src="https://ipmeta.io/plugin.js"></script>
+				
+				<script>
+				   provideGtagPlugin({
+					  apiKey: '6df866a9b2e25439d18f05274c25dd522a40a12a182de5fbae8901c7deffab8f',
+					  serviceProvider: 'dimension1',
+					  networkDomain: 'dimension2',
+					  networkType: 'dimension3',
+				   });
+				</script>         
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+<!-- Bootstrap CSS File -->
+<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Libraries CSS Files -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
+<link rel=preload href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+<link href="lib/hover/hover.min.css" rel="stylesheet">
+<!-- Main Stylesheet File -->
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<!-- Responsive css -->
+<link href="css/responsive.css" rel="stylesheet">
+<!-- Favicon -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="./js/cookieconsent.min.css">
+        </script>
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKJHJPN"  style="display:none;visibility:hidden">
+</iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<meta http-equiv="Content-Type" 
+content="text/html; charset=UTF-8">
+<style type="text/css">.turbolinks-progress-bar {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #0076ff;
+  z-index: 9999;
+  transition: width 300ms ease-out, opacity 150ms 150ms ease-in;
+  transform: translate3d(0, 0, 0);
+}</style><script type="text/javascript" src="./blog/1.txt"></script><script type="text/javascript" src="./blog/1(1).txt"></script>
+	
+		<link rel="stylesheet" media="all" href="./blog/application-2b2d4dfb848677f3f5b083a6f98c7301011de0185ab9577ea8cdc59870de38f7.css" data-turbolinks-track="true">
+<style type="text/css">.at-icon{fill:#fff;border:0}.at-icon-wrapper{display:inline-block;overflow:hidden}a .at-icon-wrapper{cursor:pointer}.at-rounded,.at-rounded-element .at-icon-wrapper{border-radius:12%}.at-circular,.at-circular-element .at-icon-wrapper{border-radius:50%}.addthis_32x32_style .at-icon{width:2pc;height:2pc}.addthis_24x24_style .at-icon{width:24px;height:24px}.addthis_20x20_style .at-icon{width:20px;height:20px}.addthis_16x16_style .at-icon{width:1pc;height:1pc}#at16lb{display:none;position:absolute;top:0;left:0;width:100%;height:100%;z-index:1001;background-color:#000;opacity:.001}#at_complete,#at_error,#at_share,#at_success{position:static!important}.at15dn{display:none}#at15s,#at16p,#at16p form input,#at16p label,#at16p textarea,#at_share .at_item{font-family:arial,helvetica,tahoma,verdana,sans-serif!important;font-size:9pt!important;outline-style:none;outline-width:0;line-height:1em}* html #at15s.mmborder{position:absolute!important}#at15s.mmborder{position:fixed!important;width:250px!important}#at15s{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);float:none;line-height:1em;margin:0;overflow:visible;padding:5px;text-align:left;position:absolute}#at15s a,#at15s span{outline:0;direction:ltr;text-transform:none}#at15s .at-label{margin-left:5px}#at15s .at-icon-wrapper{width:1pc;height:1pc;vertical-align:middle}#at15s .at-icon{width:1pc;height:1pc}.at4-icon{display:inline-block;background-repeat:no-repeat;background-position:top left;margin:0;overflow:hidden;cursor:pointer}.addthis_16x16_style .at4-icon,.addthis_default_style .at4-icon,.at4-icon,.at-16x16{width:1pc;height:1pc;line-height:1pc;background-size:1pc!important}.addthis_32x32_style .at4-icon,.at-32x32{width:2pc;height:2pc;line-height:2pc;background-size:2pc!important}.addthis_24x24_style .at4-icon,.at-24x24{width:24px;height:24px;line-height:24px;background-size:24px!important}.addthis_20x20_style .at4-icon,.at-20x20{width:20px;height:20px;line-height:20px;background-size:20px!important}.at4-icon.circular,.circular .at4-icon,.circular.aticon{border-radius:50%}.at4-icon.rounded,.rounded .at4-icon{border-radius:4px}.at4-icon-left{float:left}#at15s .at4-icon{text-indent:20px;padding:0;overflow:visible;white-space:nowrap;background-size:1pc;width:1pc;height:1pc;background-position:top left;display:inline-block;line-height:1pc}.addthis_vertical_style .at4-icon,.at4-follow-container .at4-icon{margin-right:5px}html>body #at15s{width:250px!important}#at15s.atm{background:none!important;padding:0!important;width:10pc!important}#at15s_inner{background:#fff;border:1px solid #fff;margin:0}#at15s_head{position:relative;background:#f2f2f2;padding:4px;cursor:default;border-bottom:1px solid #e5e5e5}.at15s_head_success{background:#cafd99!important;border-bottom:1px solid #a9d582!important}.at15s_head_success a,.at15s_head_success span{color:#000!important;text-decoration:none}#at15s_brand,#at15sptx,#at16_brand{position:absolute}#at15s_brand{top:4px;right:4px}.at15s_brandx{right:20px!important}a#at15sptx{top:4px;right:4px;text-decoration:none;color:#4c4c4c;font-weight:700}#at15sptx:hover{text-decoration:underline}#at16_brand{top:5px;right:30px;cursor:default}#at_hover{padding:4px}#at_hover .at_item,#at_share .at_item{background:#fff!important;float:left!important;color:#4c4c4c!important}#at_share .at_item .at-icon-wrapper{margin-right:5px}#at_hover .at_bold{font-weight:700;color:#000!important}#at_hover .at_item{width:7pc!important;padding:2px 3px!important;margin:1px;text-decoration:none!important}#at_hover .at_item.athov,#at_hover .at_item:focus,#at_hover .at_item:hover{margin:0!important}#at_hover .at_item.athov,#at_hover .at_item:focus,#at_hover .at_item:hover,#at_share .at_item.athov,#at_share .at_item:hover{background:#f2f2f2!important;border:1px solid #e5e5e5;color:#000!important;text-decoration:none}.ipad #at_hover .at_item:focus{background:#fff!important;border:1px solid #fff}.at15t{display:block!important;height:1pc!important;line-height:1pc!important;padding-left:20px!important;background-position:0 0;text-align:left}.addthis_button,.at15t{cursor:pointer}.addthis_toolbox a.at300b,.addthis_toolbox a.at300m{width:auto}.addthis_toolbox a{margin-bottom:5px;line-height:initial}.addthis_toolbox.addthis_vertical_style{width:200px}.addthis_button_facebook_like .fb_iframe_widget{line-height:100%}.addthis_button_facebook_like iframe.fb_iframe_widget_lift{max-width:none}.addthis_toolbox a.addthis_button_counter,.addthis_toolbox a.addthis_button_facebook_like,.addthis_toolbox a.addthis_button_facebook_send,.addthis_toolbox a.addthis_button_facebook_share,.addthis_toolbox a.addthis_button_foursquare,.addthis_toolbox a.addthis_button_linkedin_counter,.addthis_toolbox a.addthis_button_pinterest_pinit,.addthis_toolbox a.addthis_button_tweet{display:inline-block}.addthis_toolbox span.addthis_follow_label{display:none}.addthis_toolbox.addthis_vertical_style span.addthis_follow_label{display:block;white-space:nowrap}.addthis_toolbox.addthis_vertical_style a{display:block}.addthis_toolbox.addthis_vertical_style.addthis_32x32_style a{line-height:2pc;height:2pc}.addthis_toolbox.addthis_vertical_style .at300bs{margin-right:4px;float:left}.addthis_toolbox.addthis_20x20_style span{line-height:20px}.addthis_toolbox.addthis_32x32_style span{line-height:2pc}.addthis_toolbox.addthis_pill_combo_style .addthis_button_compact .at15t_compact,.addthis_toolbox.addthis_pill_combo_style a{float:left}.addthis_toolbox.addthis_pill_combo_style a.addthis_button_tweet{margin-top:-2px}.addthis_toolbox.addthis_pill_combo_style .addthis_button_compact .at15t_compact{margin-right:4px}.addthis_default_style .addthis_separator{margin:0 5px;display:inline}div.atclear{clear:both}.addthis_default_style .addthis_separator,.addthis_default_style .at4-icon,.addthis_default_style .at300b,.addthis_default_style .at300bo,.addthis_default_style .at300bs,.addthis_default_style .at300m{float:left}.at300b img,.at300bo img{border:0}a.at300b .at4-icon,a.at300m .at4-icon{display:block}.addthis_default_style .at300b,.addthis_default_style .at300bo,.addthis_default_style .at300m{padding:0 2px}.at300b,.at300bo,.at300bs,.at300m{cursor:pointer}.addthis_button_facebook_like.at300b:hover,.addthis_button_facebook_like.at300bs:hover,.addthis_button_facebook_send.at300b:hover,.addthis_button_facebook_send.at300bs:hover{opacity:1}.addthis_20x20_style .at15t,.addthis_20x20_style .at300bs{overflow:hidden;display:block;height:20px!important;width:20px!important;line-height:20px!important}.addthis_32x32_style .at15t,.addthis_32x32_style .at300bs{overflow:hidden;display:block;height:2pc!important;width:2pc!important;line-height:2pc!important}.at300bs{overflow:hidden;display:block;background-position:0 0;height:1pc;width:1pc;line-height:1pc!important}.addthis_default_style .at15t_compact,.addthis_default_style .at15t_expanded{margin-right:4px}#at_share .at_item{width:123px!important;padding:4px;margin-right:2px;border:1px solid #fff}#at16p{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);z-index:10000001;position:absolute;top:50%;left:50%;width:300px;padding:10px;margin:0 auto;margin-top:-185px;margin-left:-155px;font-family:arial,helvetica,tahoma,verdana,sans-serif;font-size:9pt;color:#5e5e5e}#at_share{margin:0;padding:0}#at16pt{position:relative;background:#f2f2f2;height:13px;padding:5px 10px}#at16pt a,#at16pt h4{font-weight:700}#at16pt h4{display:inline;margin:0;padding:0;font-size:9pt;color:#4c4c4c;cursor:default}#at16pt a{position:absolute;top:5px;right:10px;color:#4c4c4c;text-decoration:none;padding:2px}#at15sptx:focus,#at16pt a:focus{outline:thin dotted}#at15s #at16pf a{top:1px}#_atssh{width:1px!important;height:1px!important;border:0!important}.atm{width:10pc!important;padding:0;margin:0;line-height:9pt;letter-spacing:normal;font-family:arial,helvetica,tahoma,verdana,sans-serif;font-size:9pt;color:#444;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);padding:4px}.atm-f{text-align:right;border-top:1px solid #ddd;padding:5px 8px}.atm-i{background:#fff;border:1px solid #d5d6d6;padding:0;margin:0;box-shadow:1px 1px 5px rgba(0,0,0,.15)}.atm-s{margin:0!important;padding:0!important}.atm-s a:focus{border:transparent;outline:0;transition:none}#at_hover.atm-s a,.atm-s a{display:block;text-decoration:none;padding:4px 10px;color:#235dab!important;font-weight:400;font-style:normal;transition:none}#at_hover.atm-s .at_bold{color:#235dab!important}#at_hover.atm-s a:hover,.atm-s a:hover{background:#2095f0;text-decoration:none;color:#fff!important}#at_hover.atm-s .at_bold{font-weight:700}#at_hover.atm-s a:hover .at_bold{color:#fff!important}.atm-s a .at-label{vertical-align:middle;margin-left:5px;direction:ltr}.at_PinItButton{display:block;width:40px;height:20px;padding:0;margin:0;background-image:url(//s7.addthis.com/static/t00/pinit00.png);background-repeat:no-repeat}.at_PinItButton:hover{background-position:0 -20px}.addthis_toolbox .addthis_button_pinterest_pinit{position:relative}.at-share-tbx-element .fb_iframe_widget span{vertical-align:baseline!important}#at16pf{height:auto;text-align:right;padding:4px 8px}.at-privacy-info{position:absolute;left:7px;bottom:7px;cursor:pointer;text-decoration:none;font-family:helvetica,arial,sans-serif;font-size:10px;line-height:9pt;letter-spacing:.2px;color:#666}.at-privacy-info:hover{color:#000}.body .wsb-social-share .wsb-social-share-button-vert{padding-top:0;padding-bottom:0}.body .wsb-social-share.addthis_counter_style .addthis_button_tweet.wsb-social-share-button{padding-top:40px}.body .wsb-social-share.addthis_counter_style .addthis_button_facebook_like.wsb-social-share-button{padding-top:21px}@media print{#at4-follow,#at4-share,#at4-thankyou,#at4-whatsnext,#at4m-mobile,#at15s,.at4,.at4-recommended{display:none!important}}@media screen and (max-width:400px){.at4win{width:100%}}@media screen and (max-height:700px) and (max-width:400px){.at4-thankyou-inner .at4-recommended-container{height:122px;overflow:hidden}.at4-thankyou-inner .at4-recommended .at4-recommended-item:first-child{border-bottom:1px solid #c5c5c5}}</style><style type="text/css">.at-branding-logo{font-family:helvetica,arial,sans-serif;text-decoration:none;font-size:10px;display:inline-block;margin:2px 0;letter-spacing:.2px}.at-branding-logo .at-branding-icon{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////+GlNUkcc1QAAAB1JREFUeNpiYIQDBjQmAwMmkwEM0JnY1WIxFyDAABGeAFEudiZsAAAAAElFTkSuQmCC")}.at-branding-logo .at-branding-icon,.at-branding-logo .at-privacy-icon{display:inline-block;height:10px;width:10px;margin-left:4px;margin-right:3px;margin-bottom:-1px;background-repeat:no-repeat}.at-branding-logo .at-privacy-icon{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAMAAABR24SMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhQTFRF8fr9ot/xXcfn2/P5AKva////////AKTWodjhjAAAAAd0Uk5T////////ABpLA0YAAAA6SURBVHjaJMzBDQAwCAJAQaj7b9xifV0kUKJ9ciWxlzWEWI5gMF65KUTv0VKkjVeTerqE/x7+9BVgAEXbAWI8QDcfAAAAAElFTkSuQmCC")}.at-branding-logo span{text-decoration:none}.at-branding-logo .at-branding-addthis,.at-branding-logo .at-branding-powered-by{color:#666}.at-branding-logo .at-branding-addthis:hover{color:#333}.at-cv-with-image .at-branding-addthis,.at-cv-with-image .at-branding-addthis:hover{color:#fff}a.at-branding-logo:visited{color:initial}.at-branding-info{display:inline-block;padding:0 5px;color:#666;border:1px solid #666;border-radius:50%;font-size:10px;line-height:9pt;opacity:.7;transition:all .3s ease;text-decoration:none}.at-branding-info span{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.at-branding-info:before{content:'i';font-family:Times New Roman}.at-branding-info:hover{color:#0780df;border-color:#0780df}</style><style id="service-icons-0"></style>
+		<script src="./blog/application-3f344f5c583bddeef7c9a888f9224ee41297c2ab35707fa2d019ca21149a8541.js.descarga" data-turbolinks-track="true"></script>
+
+	<style>
+		@import "bourbon";
+
+		/* Demo Styles */
+		
+		#content {
+		  margin: 0 auto;
+		  padding-bottom: 50px;
+		  width: 80%;
+		  max-width: 978px;
+		}
+		
+		h1 {
+		  font-size: 40px;
+		}
+		
+		/* The Loader */
+		
+		#loader-wrapper {
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  z-index: 10;
+		  overflow: hidden;
+		  
+		  // Modernizr no-js fallback
+		  .no-js & {
+			display: none;
+		  }
+		}
+		
+		
+		#loader {
+		  display: block;
+		  position: relative;
+		  left: 50%;
+		  top: 50%;
+		  width: 150px;
+		  height: 150px;
+		  margin: -75px 0 0 -75px;
+		  border-radius: 50%;
+		  border: 3px solid transparent;
+		  border-top-color: #16a085;
+		  animation: spin 1.7s linear infinite;
+		  z-index: 11;
+		  
+		  &:before {
+			content: "";
+			position: absolute;
+			top: 5px;
+			left: 5px;
+			right: 5px;
+			bottom: 5px;
+			border-radius: 50%;
+			border: 3px solid transparent;
+			border-top-color: #e74c3c;
+			animation: spin-reverse .6s linear infinite;
+		  }
+		  
+		  &:after {
+			content: "";
+			position: absolute;
+			top: 15px;
+			left: 15px;
+			right: 15px;
+			bottom: 15px;
+			border-radius: 50%;
+			border: 3px solid transparent;
+			border-top-color: #f9c922;
+			animation: spin 1s linear infinite;
+		  }
+		}
+		
+		// Bourbon mixins
+		@include keyframes(spin) {
+		  0% { 
+			@include transform(rotate(0deg));
+		  }
+		  100% {
+			@include transform(rotate(360deg));
+		  }
+		}
+		
+		@include keyframes(spin-reverse) {
+		  0% { 
+			@include transform(rotate(0deg));
+		  }
+		  100% {
+			@include transform(rotate(-360deg));
+		  }
+		}
+		
+		#loader-wrapper .loader-section {
+		  position: fixed;
+		  top: 0;
+		  width: 51%;
+		  height: 100%;
+		  background: #222;
+		  z-index: 10;
+		}
+		
+		#loader-wrapper .loader-section.section-left {
+		  left: 0;
+		}
+		
+		#loader-wrapper .loader-section.section-right {
+		  right: 0;
+		}
+		
+		/* Loaded styles */
+		
+		.loaded #loader-wrapper .loader-section.section-left {
+		  transform: translateX(-100%);
+		  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+		}
+		
+		.loaded #loader-wrapper .loader-section.section-right {
+		  transform: translateX(100%);
+		  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+		}
+		
+		.loaded #loader {
+		  opacity: 0;
+		  transition: all 0.3s ease-out;
+		}
+		
+		.loaded #loader-wrapper {
+		  visibility: hidden;
+		  transform: translateY(-100%);
+		  transition: all 0.3s 1s ease-out;
+		}
+		</style>		
+<!-- start section navbar -->
+<div id="loader-wrapper">
+	<div id="loader"></div>
+	
+	<div class="loader-section section-left"></div>
+	<div class="loader-section section-right"></div>
+	
+  </div>
+  <script>
+	$(document).ready(function() {
+
+		// Fakes the loading setting a timeout
+		  setTimeout(function() {
+			  $('body').addClass('loaded');
+		  }, 3500);
+	   
+	  });
+</script>
+<nav id="main-nav">
+		<div class="row">
+			<div class="container">
+				<div class="logo">
+					<a href="https://roqueleal.me" target="_blank"><img src="images/logo.png" alt="logo"></a>
+				</div>
+				<div class="responsive">
+					<i data-icon="m" class="ion-navicon-round"></i>
+				</div>
+				<ul class="nav-menu list-unstyled">
+					
+					<li><a href="#header" class="smoothScroll">Accueil</a></li>
+					<li><a href="#about" class="smoothScroll">Plus</a></li>
+					<li><a href="#journal" class="smoothScroll">Journal</a></li>
+					<li><a href="#contact" class="smoothScroll">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		</nav>
+		<!-- End section navbar -->
+		<!-- start section header -->
+		<div id="header" class="home">
+			<div class="container">
+				<div class="container">
+					<div class="header-content">
+						<p>
+							<br></br><h1 >Découvrez l'avantage de la localisation</h1>
+						</p>
+						<h2 style="font-size:3vw">Data Scientist Blog</h2><p><span class="typed"></span></p>
+					<ul class="list-unstyled list-social">
+						<li><a href="https://www.linkedin.com/in/lealrlx"><i class="ion-social-linkedin"></i></a></li>
+					</ul>
+					<ul class="list-unstyled list-social">
+							<li><a href="https://roqueleal.me/es.html">
+								<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+									width="48" height="40"
+									viewBox="0 0 48 48"
+									style=" fill:#000000;"><path fill="#d50000" d="M2,9h44v30H2V9z">
+									</path><path fill="#1a237e" d="M2,9h44v20H2V9z"></path><path fill="#ffd600" d="M2,9h44v10H2V9z"></path><path fill="#fff" d="M25.906 20.805L25.78 19.906 25.354 20.708 24.459 20.55 25.09 21.203 24.664 22.005 25.48 21.607 26.111 22.26 25.984 21.361 26.801 20.963zM28.819 22.561L29.723 22.466 28.936 22.012 29.125 21.123 28.45 21.731 27.664 21.277 28.033 22.107 27.358 22.714 28.261 22.619 28.631 23.449zM31.073 24.658L31.954 24.877 31.371 24.182 31.852 23.411 31.852 23.411 31.852 23.411 31.852 23.411 31.852 23.411 31.01 23.752 30.426 23.056 30.489 23.962 29.647 24.302 30.529 24.522 30.592 25.428zM32.916 27.053L33.632 26.494 32.724 26.526 32.414 25.673 32.163 26.546 31.256 26.577 32.009 27.085 31.758 27.958 32.474 27.399 33.227 27.907zM22.094 20.805L22.22 19.906 22.646 20.708 23.541 20.55 22.91 21.203 23.336 22.005 22.52 21.607 21.889 22.26 22.016 21.361 21.199 20.963zM19.181 22.561L18.277 22.466 19.064 22.012 18.875 21.123 19.55 21.731 20.336 21.277 19.967 22.107 20.642 22.714 19.739 22.619 19.369 23.449zM16.927 24.658L16.046 24.877 16.629 24.182 16.148 23.411 16.148 23.411 16.148 23.411 16.148 23.411 16.148 23.411 16.99 23.752 17.574 23.056 17.511 23.962 18.353 24.302 17.471 24.522 17.408 25.428zM15.084 27.053L14.368 26.494 15.276 26.526 15.586 25.673 15.837 26.546 16.744 26.577 15.991 27.085 16.242 27.958 15.526 27.399 14.773 27.907z"></path></svg></a>
+									
+								<li><a href="https://roqueleal.me/en.html">
+									<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+									width="48" height="40"
+									viewBox="0 0 48 48"
+									style=" fill:#000000;"><path fill="#ECEFF1" d="M1.998 10H45.998V37H1.998z"></path><path fill="#F44336" d="M2 10H46V13H2zM2 16H46V19H2zM2 22H46V25H2zM2 28H46V31H2zM2 34H46V37H2z">
+									</path><path fill="#3F51B5" d="M2 10H23V25H2z"></path><g><path fill="#FFF" d="M4.25 12L4.713 12.988 5.75 13.146 5 13.916 5.178 15 4.25 14.488 3.322 15 3.5 13.916 2.75 13.146 3.787 12.988zM8.25 12L8.713 12.988 9.75 13.146 9 13.916 9.178 15 8.25 14.488 7.322 15 7.5 13.916 6.75 13.146 7.787 12.988zM12.25 12L12.713 12.988 13.75 13.146 13 13.916 13.178 15 12.25 14.488 11.322 15 11.5 13.916 10.75 13.146 11.787 12.988zM16.25 12L16.713 12.988 17.75 13.146 17 13.916 17.178 15 16.25 14.488 15.322 15 15.5 13.916 14.75 13.146 15.787 12.988zM20 12L20.463 12.988 21.5 13.146 20.75 13.916 20.928 15 20 14.488 19.072 15 19.25 13.916 18.5 13.146 19.537 12.988zM4.25 20L4.713 20.988 5.75 21.146 5 21.916 5.178 23 4.25 22.488 3.322 23 3.5 21.916 2.75 21.146 3.787 20.988zM8.25 20L8.713 20.988 9.75 21.146 9 21.916 9.178 23 8.25 22.488 7.322 23 7.5 21.916 6.75 21.146 7.787 20.988zM12.25 20L12.713 20.988 13.75 21.146 13 21.916 13.178 23 12.25 22.488 11.322 23 11.5 21.916 10.75 21.146 11.787 20.988zM16.25 20L16.713 20.988 17.75 21.146 17 21.916 17.178 23 16.25 22.488 15.322 23 15.5 21.916 14.75 21.146 15.787 20.988zM20 20L20.463 20.988 21.5 21.146 20.75 21.916 20.928 23 20 22.488 19.072 23 19.25 21.916 18.5 21.146 19.537 20.988zM5.25 16L5.713 16.988 6.75 17.146 6 17.916 6.178 19 5.25 18.488 4.322 19 4.5 17.916 3.75 17.146 4.787 16.988zM9.25 16L9.713 16.988 10.75 17.146 10 17.916 10.178 19 9.25 18.488 8.322 19 8.5 17.916 7.75 17.146 8.787 16.988zM13.25 16L13.713 16.988 14.75 17.146 14 17.916 14.178 19 13.25 18.488 12.322 19 12.5 17.916 11.75 17.146 12.787 16.988zM17.25 16L17.713 16.988 18.75 17.146 18 17.916 18.178 19 17.25 18.488 16.322 19 16.5 17.916 15.75 17.146 16.787 16.988zM21 16L21.463 16.988 22.5 17.146 21.75 17.916 21.928 19 21 18.488 20.072 19 20.25 17.916 19.5 17.146 20.537 16.988z"></path></g></svg>
+								</li>
+							
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		</div>
+        <!-- End section header -->
+		<!-- start section about us -->
+		<div id="about" class="paddsection">
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-lg-4 ">
+					<div class="div-img-bg">
+						<div class="about-img">
+							<img src="images/roque-leal.jpg" loading="lazy"  style=max-width:100% class="img-responsive" alt="Roque Leal">
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-7">
+					<div class="about-descr">
+						<p class="p-heading">
+							 Je suis un Géographe intéressé par la modélisation spatio-temporelle et ses visualisations
+						</p>
+						<p class="separator">
+							 Pour ce faire, je combine un apprentissage approfondi des données, des systèmes d’information géographique et une programmation créative afin de générer des produits innovants et attrayants. Actuellement, mes projets se concentrent sur la business intelligence en utilisant des outils d'optimisation.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<!-- end section about us -->
+		<!-- start section services -->
+		<div id="services">
+		<div class="container">
+			<div class="services-carousel owl-theme">
+				<div class="services-block">
+					<i class="ion-ios-location-outline"></i>
+					<span>SIG</span>
+					<p class="separator">
+						 Expérience dans la conception et la mise en œuvre de systèmes d'information géographique pour le secteur du pétrole et du gaz dans la modélisation des sous-sols et des surfaces.
+					</p>
+				</div>
+				<div class="services-block">
+					<i class="ion-ios-lightbulb-outline"></i>
+					<span>Planification</span>
+					<p class="separator">
+						 Etudes régionales sur la localisation des projets et leur impact sur l'environnement, études de base et prévisions de scénarios.
+					</p>
+				</div>
+				<div class="services-block">
+					<i class="ion-ios-color-wand-outline"></i>
+					<span>Digital Marketing</span>
+					<p class="separator">
+						 Analyse des données de commerce électronique et des <u><a href="./reseaux-sociaux/world-meetup-map.html" target="_blank">réseaux sociaux</a></u> pour la segmentation, la <u><a href="./big-data/popular-times-paris.html" target="_blank">géolocalisation du comportement du public</a></u> en tant que stratégie inbound marketing et transmedia storytelling.
+					</p>
+				</div>
+				<div class="services-block">
+					<i class="ion-social-android-outline"></i>
+					<span>MOBILE APPS</span>
+					<p class="separator">
+						 Développement d'applications web pour la visualisation de cartes.
+					</p>
+				</div>
+				<div class="services-block">
+					<i class="ion-ios-analytics-outline"></i>
+					<span>Intelligence d'entreprise</span>
+					<p class="separator">
+						 Modélisation des outils ETL (Extraction, Transformation et Chargement) , connectivité en temps réel et tableaux de bord business intelligence pour le secteur du pétrole et du gaz et le commerce de détail.
+					</p>
+				</div>
+				<div class="services-block">
+					<i class="ion-ios-world-outline"></i>
+					<span>Data Scientist</span>
+					<p class="separator">
+						 Connaissance des éléments de programmation créatifs pour la visualisation dynamique de modèles spatiaux avec des variables économiques, les médias sociaux réels et l'environnement.
+					</p>
+				</div>
+			</div>
+		</div>
+		</div>
+		<!-- end section services -->
+		<div id="journal">
+				<div class="section-title text-center">
+						<h3>J'aime partager des idées et des techniques innovantes en Analyse de données avancées. Ou n'hésitez pas <a href="mailto:roqueleal@gmail.com">Contactez-moi, </a><h3>Je recherche de nouveaux défis professionnels avec une disponibilité immédiate pour faire décoller vos Projets 🚀</h3>
+				</div>
+			<!--[if lte IE 7]> <div class="outdated"> <p>You are using an outdated browser. Please <a href="http://outdatedbrowser.com/">upgrade your browser</a> to improve your experience.</p> </div> <![endif]-->
+		</div>
+		
+		<div class="block-grid-row">
+
+<div class="block-grid-container with-top-margin">
+	<ul class="block-grid" style="position: relative; height: 2053.59px;">
+		<li class="block medium" style="position: absolute; left: 0px; top: 0px;">
+			<div class="wrapper">
+
+				<div class="image">
+
+					<a href="./reseaux-sociaux/world-meetup-map.html" target="_blank">
+
+						<img src="images/meetup-world-map.jpg" loading="lazy" style=max-width:100% alt="Meetup+Map">
+
+</a>
+				</div>
+
+				<div class="equalized content">
+
+					<div class="date">
+
+						<a>Il y a un jour</a>
+
+					</div>
+
+					<div class="title">
+
+						<h2><a href="./reseaux-sociaux/world-meetup-map.html" target="_blank">The World Meetup Map 2020</a></h2>
+
+					</div>
+
+					<div class="text">
+						
+						150 millions de personnes dans 330.000 groupes; une carte qui utilise toutes les données Meetup pour découvrir la diversité sociale de l'humanité: groupes sociaux, principaux influenceurs, membres et leurs principaux organisateurs. <a class="read-more" href="./reseaux-sociaux/world-meetup-map.html" target="_blank"> →</a>
+					</div>
+
+				</div>
+
+			</div>
+
+		</li>	
+
+		<li class="block medium" style="position: absolute; left: 0px; top: 0px;">
+
+			<div class="wrapper">
+
+				<div class="image">
+
+					<a href="./big-data/popular-times-paris.html" target="_blank">
+
+						<img src="images/google-maps-popular-times.jpg" loading="lazy" style=max-width:100% alt="Google+Popular+Times"> 
+
+</a>
+				</div>
+
+				<div class="equalized content">
+
+					<div class="date">
+
+						<a>Il y a 3 jours</a>
+
+					</div>
+
+					<div class="title">
+
+						<h2><a href="./big-data/popular-times-paris.html" target="_blank">Google My Business: Paris</a></h2>
+
+					</div>
+
+					<div class="text">
+						Pour aider les clients à planifier les visites de leur entreprise, avec l'aide de Google Popular Times, il est possible de découvrir le comportement des Parisiens concernant les lieux et les temps populaires de la ville. <a class="read-more" href="./big-data/popular-times-paris.html" target="_blank"> →</a>
+					</div>
+
+				</div>
+
+			</div>
+
+		</li>
+		<li class="block medium" style="position: absolute; left: 0px; top: 0px;">
+
+			<div class="wrapper">
+
+				<div class="image">
+
+					<a href="./big-data/tripadvisor-insights-paris.html" target="_blank">
+
+						<img src="images/tripadvisor-insights-hotels-paris.jpg" loading="lazy" style=max-width:100% alt="Tripadvisor+GeoInsights">
+
+</a>
+				</div>
+
+				<div class="equalized content">
+
+					<div class="date">
+
+						<a>23 mai 2020</a>
+
+					</div>
+
+					<div class="title">
+
+						<h2><a href="./big-data/tripadvisor-insights-paris.html" target="_blank"> Tripadvisor GeoInsights</a></h2>
+
+					</div>
+
+					<div class="text">
+						Comment utiliser la science des données dans le secteur de <u><a href="./big-data/tripadvisor-analyser-service-hotelier-lyon.html" target="_blank">l'hôtellerie</a></u> et du <u><a href="./big-data/google-maps-smart-tourism-lyon.html" target="_blank">tourisme</a></u>: découvrez les statistiques et les données de TripAdvisor.<a class="read-more" href="./big-data/tripadvisor-insights-paris.html" target="_blank"> →</a>
+					</div>
+
+				</div>
+
+			</div>
+
+		</li>
+		<li class="block medium" style="position: absolute; left: 0px; top: 0px;">
+
+			<div class="wrapper">
+
+				<div class="image">
+
+					<a href="./big-data/limpact-du-covid-19-sur-la-reprise-economique-en-france-le-bigdata-20200520.html" target="_blank">
+
+						<img src="images/confinement-variation-deplacements-frequentation-lieux-publics-france.jpg" loading="lazy" style=max-width:100% alt="la reprise économique de la France">
+
+</a>
+				</div>
+
+				<div class="equalized content">
+
+					<div class="date">
+
+						<a>23 mai 2020</a>
+
+					</div>
+
+					<div class="title">
+
+						<h2><a href="./big-data/limpact-du-covid-19-sur-la-reprise-economique-en-france-le-bigdata-20200520.html" target="_blank">Google Mobility Report et la reprise économique de la France</a></h2>
+
+					</div>
+
+					<div class="text">
+						Les données mobiles des français sont analysées chaque semaine basée sur le concept créatif d’un <u><a href="https://www.floralrise.com/portfolio/tableau-de-bord-d%C3%A9confinement-covid-19" target="_blank">tableau de bord positif</a></u>.<a class="read-more" href="./big-data/limpact-du-covid-19-sur-la-reprise-economique-en-france-le-bigdata-20200520.html" target="_blank"> →</a>
+					</div>
+
+				</div>
+
+			</div>
+
+		</li>
+
+			<li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="./big-data/google-trends-coronavirus.html" target="_blank">
+
+							<img src="images/google-trends-france-covid19.jpg" loading="lazy" style=max-width:100% alt="Google Trends Coronavirus France">
+
+</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>23 mai 2020</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="./big-data/google-trends-coronavirus.html" target="_blank">Google Trends France</a></h2>
+
+						</div>
+
+						<div class="text">
+
+							Analyser les tendances de recherche Google Trends liées à COVI19 et les comparer avec le marché boursier du CAC40 pour découvrir les préoccupations et les requêtes les plus fréquentes sur cette nouvelle épidémie en France.<a class="read-more" href="./big-data/google-trends-coronavirus.html" target="_blank"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+			<li class="block medium" style="position: absolute; left: 0px; top: 0px;">
+
+				<div class="wrapper">
+	
+					<div class="image">
+	
+						<a href="./big-data/tripadvisor-restaurants-insights-suisse.html" target="_blank">
+	
+							<img src="images/tripadvisor-restaurants-location-intelligence.jpg" loading="lazy" style=max-width:100% alt="Tripadvisor+Suisse">
+	
+	</a>
+					</div>
+	
+					<div class="equalized content">
+	
+						<div class="date">
+	
+							<a>20 mai 2020</a>
+	
+						</div>
+	
+						<div class="title">
+	
+							<h2><a href="./big-data/tripadvisor-restaurants-insights-suisse.html" target="_blank"> Tripadvisor Restaurants</a></h2>
+	
+						</div>
+	
+						<div class="text">
+							"Les gens aiment manger dans les meilleurs endroits!" Cette carte explore les données TripAdvisor pour découvrir où se trouvent les meilleurs restaurants suisses.<a class="read-more" href="./big-data/tripadvisor-restaurants-insights-suisse.html" target="_blank"> →</a>
+						</div>
+	
+					</div>
+	
+				</div>
+	
+			</li>
+			<li class="block medium" style="position: absolute; left: 0px; top: 0px;">
+	
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="./modele-trafic/uber-movement-san-francisco.html" target="_blank">
+
+							<img src="images/uber-speeds-map.jpg" loading="lazy" style=max-width:100%  alt="Uber Movement">
+
+</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>20 mai 2020</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="./modele-trafic/uber-movement-san-francisco.html" target="_blank">San Francisco: Uber Movement street speeds</a></h2>
+
+						</div>
+
+						<div class="text">
+
+							Un coup d'œil rapide sur la carte des vitesses de déplacement Uber de San Francisco à partir de millions de voyages Uber en utilisant Kepler.gl.<a class="read-more" href="./modele-trafic/uber-movement-san-francisco.html" target="_blank"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+		</li>
+		<li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
+
+			<div class="wrapper">
+
+				<div class="image">
+
+					<a href="./big-data/covid19-google-community-mobility-reports-france.html" target="_blank">
+
+						<img src="images/covid19-google-community-mobility-reports-france.jpg" loading="lazy" style=max-width:100% alt="covid19 google community mobility reports France">
+
+</a>
+				</div>
+
+				<div class="equalized content">
+
+					<div class="date">
+
+						<a>20 mai 2020</a>
+
+					</div>
+
+					<div class="title">
+
+						<h2><a href="./big-data/covid19-google-community-mobility-reports-france.html" target="_blank">Quels impacts sur le comportement des Français face au Covid-19.</a></h2>
+
+					</div>
+
+					<div class="text">
+
+						L'évolution des tendances sur le commerce et le comportement des Français touchées par la pandémie et les mesures de confinement.<a class="read-more" href="./big-data/covid19-google-community-mobility-reports-france.html" target="_blank"> →</a>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</li>
+		<li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
+
+			<div class="wrapper">
+
+				<div class="image">
+
+					<a href="./big-data/covid19-apple-mobility-trends-reports-france.html" target="_blank">
+
+						<img src="images/apple-mobility-trends-reports-france.jpg" loading="lazy" style=max-width:100% alt="covid19+apple+mobility+trends+reports+france.jpg">
+
+</a>
+				</div>
+
+				<div class="equalized content">
+
+					<div class="date">
+
+						<a>20 mai 2020</a>
+
+					</div>
+
+					<div class="title">
+
+						<h2><a href="./big-data/covid19-apple-mobility-trends-reports-france.html" target="_blank">Confinement: Mobility Trends Reports France.</a></h2>
+
+					</div>
+
+					<div class="text">
+
+						Comment la mobilité des Français a-t-elle évolué avec les différentes mesures et degrés de confinement pour ralentir la propagation de l'épidémie de Covid-19.<a class="read-more" href="./big-data/covid19-apple-mobility-trends-reports-france.html" target="_blank"> →</a>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</li>
+
+			<li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="./modele-trafic/carte-velov-grandlyon.html" target="_blank">
+
+							<img src="images/velov-grandlyon-bike.jpg" loading="lazy" style=max-width:100% alt="Le flux de Système Velo'v">
+
+</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>20 mai 2020</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="./modele-trafic/carte-velov-grandlyon.html" target="_blank">Le flux de Système Vélo'v à Lyon</a></h2>
+
+						</div>
+
+						<div class="text">
+
+							🚲 Une carte animée permet de visualiser la variation de disponibilités au Système Vélo'v à Lyon présente ses périodes d'offre et de demande.<a class="read-more" href="./modele-trafic/carte-velov-grandlyon.html" target="_blank"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+			<li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="./big-data/le-guide-michelin-2020.html" target="_blank">
+
+							<img src="images/le-michellin-guide-map-2020.jpg" loading="lazy" style=max-width:100% alt="Michelin Guide Map">
+
+</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>20 mai 2020</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="./big-data/le-guide-michelin-2020.html" target="_blank">La Carte du Le Guide Michelin 2020: tous les restaurants étoilés</a></h2>
+
+						</div>
+
+						<div class="text">
+
+							Une, deux ou trois étoiles… Le Guide Michelin et ses distinctions attribuées à 2615 restaurants, retrouvez les meilleurs restaurants du monde.<a class="read-more" href="./big-data/le-guide-michelin-2020.html" target="_blank"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+			<li class="block medium" style="position: absolute; left: 0px; top: 0px;">
+
+						<div class="wrapper">
+		
+							<div class="image">
+		
+								<a href="https://www.informationisbeautifulawards.com/showcase/4397-desaparecidos" target="_blank">
+		
+									<img src="images/information-is-beautiful-awards.jpg" loading="lazy" style=max-width:100% alt="Prize Dataviz">
+		
+		</a>
+							</div>
+		
+							<div class="equalized content">
+		
+								<div class="date">
+		
+									<a>15 janvier 2020</a>
+		
+								</div>
+		
+								<div class="title">
+		
+									<h2><a href="https://www.informationisbeautifulawards.com/showcase/4398-world-oil-map" target="_blank"> Information is Beautiful Awards 2019</a></h2>
+		
+								</div>
+		
+								<div class="text">
+										
+									Cinq de mes projets en demi-finale! Je vous invite à découvrir les meilleures histoires racontées à travers des Data Science.<a class="read-more" href="https://www.informationisbeautifulawards.com/showcase/4526-one-week-on-waze-san-francisco" target="_blank"> →</a>
+								</div>
+		
+							</div>
+		
+						</div>
+		
+					</li>
+
+			<li class="block medium" style="position: absolute; left: 0px; top: 0px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="./reseaux-sociaux/carte-tour-de-france.html" target="_blank">
+
+							<img src="images/tour-de-france-location-map.jpg" loading="lazy" style=max-width:100% alt="Instagram #TourdeFrance2019">
+
+</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>12 janvier 2020</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="./reseaux-sociaux/carte-tour-de-france.html" target="_blank">La carte du Tour de France</a></h2>
+
+						</div>
+
+						<div class="text">
+
+							🚴 Comment géolocaliser les publications Instagram: les sports et ses nombreuses émotions peuvent être cartographiées à l'aide de la #TourdeFrance pour créer une visualisation dynamique et temporaire des interactions et des émotions sur la route.<a class="read-more" href="./reseaux-sociaux/carte-tour-de-france.html" target="_blank"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+			<li class="block medium" style="position: absolute; left: 0px; top: 0px;">
+
+				<div class="wrapper">
+	
+					<div class="image">
+	
+						<a href="./big-data/carte-biodiversite-gbif-france.html" target="_blank">
+	
+							<img src="images/carte-biodiversite-gbif-france.jpg" loading="lazy" style=max-width:100% alt="GBIF+France">
+	
+	</a>
+					</div>
+	
+					<div class="equalized content">
+	
+						<div class="date">
+	
+							<a>30 janvier 2020</a>
+	
+						</div>
+	
+						<div class="title">
+	
+							<h2><a href="./big-data/carte-biodiversite-gbif-france.html" target="_blank"> GBIF: Data Science et Environnement</a></h2>
+	
+						</div>
+	
+						<div class="text">
+							La carte de la biodiversité en France: présente 2,9 millions d'enregistrements de localisation d'espèces animales et végétales en France avec des données du GBIF.<a class="read-more" href="./big-data/carte-biodiversite-gbif-france.html" target="_blank"> →</a>
+						</div>
+	
+					</div>
+	
+				</div>
+	
+			</li>
+			<li class="block medium" style="position: absolute; left: 0px; top: 0px;">
+
+					<div class="wrapper">
+	
+						<div class="image">
+	
+							<a href="https://blog.mapbox.com/bringing-data-to-life-with-powerbi-ccaf214eaf16" target="_blank">
+	
+								<img src="images/mapbox-point-of-interest.jpg" loading="lazy" style=max-width:100% alt="bringing data to life with powerbi">
+	
+	</a>
+						</div>
+	
+						<div class="equalized content">
+	
+							<div class="date">
+	
+								<a>12 junin 2019</a>
+	
+							</div>
+	
+							<div class="title">
+	
+								<h2><a href="https://blog.mapbox.com/bringing-data-to-life-with-powerbi-ccaf214eaf16" target="_blank">Visualisation des données géographiques avec Mapbox</a></h2>
+	
+							</div>
+	
+							<div class="text">
+									Invité sur le blog de Mapbox, une série de mes DataViz préférées pour partager des idées et savoir comment utiliser Mapbox et PowerBi pour révéler d’impressionnants Geoinsights et communiquer des idées novatrices. <a class="read-more" href="https://blog.mapbox.com/bringing-data-to-life-with-powerbi-ccaf214eaf16" target="_blank"> →</a>
+							</div>
+	
+						</div>
+	
+					</div>
+	
+				</li>
+			<li class="block medium" style="position: absolute; left: 372.953px; top: 0px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="./modele-trafic/waze-data-paris.html" target="_blank">
+
+							<img src="images/waze-traffic-data-for-cities.jpg" loading="lazy" style=max-width:100% alt="Waze Data">
+
+</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>12 juin 2019</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="./modele-trafic/waze-data-paris.html" target="_blank">Données Waze #Paris</a></h2>
+
+						</div>
+
+						<div class="text">
+
+							🏙️ Pour mieux comprendre les villes intelligentes: les données Waze pour analyser l’évolution des embouteillages et des conditions de circulation à Paris.<a class="read-more" href="./modele-trafic/waze-data-paris.html" target="_blank"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+			<li class="block medium" style="position: absolute; left: 745.906px; top: 0px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="https://oilmap.xyz/">
+
+							<img src="images/world-oil-map.jpg" loading="lazy" style=max-width:100% alt="Oil Map">
+
+</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>12 mai 2019</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="https://oilmap.xyz/">Une visualisation globale du secteur du Pétrole et du Gaz</a></h2>
+
+						</div>
+
+						<div class="text">
+
+							🛢️ Où sont les principaux ressources en hydrocarbures de la France, au Moyen-Orient et dans le monde, quelles sont les infrastructures pétrolières existantes et le développement des activités Pétrole & Gaz.<a class="read-more" href="https://oilmap.xyz/"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+			<li class="block medium" style="position: absolute; left: 745.906px; top: 0px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="./big-data/airbnb-carte-france.html" target="_blank">
+
+							<img src="images/airbnb-data-insights-maps.jpg" loading="lazy" style=max-width:100% alt="airbnb data">
+
+</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>29 janvier 2020</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="./big-data/airbnb-carte-france.html" target="_blank">Airbnb une carte du premier hôtelier de France</a></h2>
+
+						</div>
+
+						<div class="text">
+
+							Une nouvelle vision qui permet de comprendre le marché immobilier et touristique, ses tendances et l'impact de la gentrification urbaine.<a class="read-more" href="./big-data/airbnb-carte-france.html" target="_blank"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+			<li class="block medium" style="position: absolute; left: 745.906px; top: 781.531px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="./modele-trafic/paris-transitland-flows.html" target="_blank">
+
+							<img src="images/transitland-feeds-metro.jpg" loading="lazy" style=max-width:100% alt="Paris Data">
+
+</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>12 mars 2020</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="./modele-trafic/paris-transitland-flows.html" target="_blank">Une carte animée montre les flux des transports à Paris pendant une journée</a></h2>
+
+						</div>
+
+						<div class="text">
+
+								Modèle du système en FER pour l’ Île-de-France développé en traitement à l'aide des bibliothèques TransitLand API 🚇. <a class="read-more" href="./modele-trafic/paris-transitland-flows.html" target="_blank"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+			<li class="block medium" style="position: absolute; left: 0px; top: 781.531px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="./modele-trafic/lyon-waze-data-keplergl.html" target="_blank" >
+
+							<img src="images/waze-data-carte-lyon.jpg" loading="lazy" style=max-width:100% alt="Kepler gl">
+
+</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>22 mars 2020</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="./modele-trafic/lyon-waze-data-keplergl.html" target="_blank">Les données de  Waze: Lyon</a></h2>
+
+						</div>
+
+						<div class="text">
+							Comment conduire dans la ville de Lyon en utilisant les données Waze et en les visualisant avec Kepler.gl pour améliorer l'expérience de conduite et créer un modèle de trafic efficace basé sur des concepts de ville intelligente<a class="read-more" href="./modele-trafic/lyon-waze-data-keplergl.html" target="_blank"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+			<li class="block medium" style="position: absolute; left: 0px; top: 781.531px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="./machine-learning/competitive-clusters-restaurants-lyon.html" target="_blank" >
+
+							<img src="images/machine-learning-restaurants-lyon.jpg" loading="lazy" style=max-width:100% alt="Machine Learning">
+
+</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>30 mars 2020</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="./machine-learning/competitive-clusters-restaurants-lyon.html" target="_blank">Machine Learning à Lyon</a></h2>
+
+						</div>
+
+						<div class="text">
+
+							🤖 Un cas pratique de Machine Learning  intégrant des données de l'application Foursquare pour l'emplacement d'un nouveau restaurant de cuisine française.<a class="read-more" href="./machine-learning/competitive-clusters-restaurants-lyon.html" target="_blank"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+			<li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="./reseaux-sociaux/carte-lyon-fete-lumiere.html" target="_blank">
+
+							<img src="images/instagram-lyon-fete-lumiere.jpg" loading="lazy" style=max-width:100% alt="Fête des Lumières">
+
+</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>12 décembre 2019</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="./reseaux-sociaux/carte-lyon-fete-lumiere.html" target="_blank"> Fête des Lumières</a></h2>
+
+						</div>
+
+						<div class="text">
+
+							🎉 La Fête des lumières de Lyon: utiliser le Big Data et un échantillon des 18.000 post Instagram's pour connaître les meilleures publications, le nombre de Like, les commentaires et le nombre de posts réalisés par des influenceurs. <a class="read-more" href="./reseaux-sociaux/carte-lyon-fete-lumiere.html" target="_blank"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+			<li class="block medium" style="position: absolute; left: 0px; top: 781.531px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="./big-data/analyse-donnees-foursquare-france.html" target="_blank" >
+
+							<img src="images/foursquare-locations-data.jpg" loading="lazy" style=max-width:100% alt="Machine Leaning Mapping">
+
+</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>05 décembre 2019</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="./big-data/analyse-donnees-foursquare-france.html" target="_blank">On va nous déménager</a></h2>
+
+						</div>
+
+						<div class="text">
+
+							Ce projet vise à comparer certains quartiers entre deux villes et à voir quelles zones sont similaires et lesquelles pourraient être complètement opposées.<a class="read-more" href="./big-data/analyse-donnees-foursquare-france.html" target="_blank"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+			<li class="block medium" style="position: absolute; left: 372.953px; top: 0px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="./reseaux-sociaux/geolocaliser-tweets-lyon-france.html" target="_blank">
+
+							<img src="images/geolocaliser-carte-tweets-lyon.jpg" loading="lazy" style=max-width:100% alt="Mapping Tweets">
+
+</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>20 décembre 2019</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="./reseaux-sociaux/geolocaliser-tweets-lyon-france.html" target="_blank">Géolocaliser 200 mille tweets à Lyon.</a></h2>
+
+						</div>
+
+						<div class="text">
+
+							En utilisant les données de géolocalisation qu’on trouve sur l’API de Twitter, on vous explique comment vous y prendre pour transformer vos alentours en carte à tweets.<a class="read-more" href="./reseaux-sociaux/geolocaliser-tweets-lyon-france.html" target="_blank"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+			<li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="https://oilmap.xyz/prices/oilprices.html" target="_blank">
+
+							<img src="images/oil-price-map.jpg" loading="lazy" style=max-width:100% alt="Oil Prices">
+
+</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>12 juin 2019</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="https://oilmap.xyz/prices/oilprices.html" target="_blank">Carte des prix du Pétrole en temps réel</a></h2>
+
+						</div>
+
+						<div class="text">
+
+								
+							Data Science pour la finance: prix du pétrole collectées en temps réel depuis leur origine jusqu'à cette carte avec Phyton et Leaflet.js, les données des prix dans le monde prennent vie et nous montrent leur comportement.<a class="read-more" href="https://oilmap.xyz/prices/oilprices.html" target="_blank"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+			<li class="block medium" style="position: absolute; left: 0px; top: 781.531px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="./big-data/google-maps-smart-tourism-lyon.html" target="_blank" >
+
+							<img src="images/lyon-france-google-maps.jpg" loading="lazy" style=max-width:100% alt="Grand Lyon: Tourisme intelligent">
+
+</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>12 mai 2019</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="./big-data/google-maps-smart-tourism-lyon.html" target="_blank">Tourisme intelligent à Lyon</a></h2>
+
+						</div>
+
+						<div class="text">
+
+							L'offre gastronomique et touristique de la ville de Lyon: un cas pratique de Data Intelligence et Machine Learning pour l'analyse des comportements sociaux avec Google Maps.<a class="read-more" href="./big-data/google-maps-smart-tourism-lyon.html" target="_blank"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+			<li class="block medium" style="position: absolute; left: 372.953px; top: 0px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="./reseaux-sociaux/flickr-location-map.html" target="_blank">
+
+							<img src="images/geotag-photo-map-flickr.jpg" loading="lazy" style=max-width:100% alt="Mapping Flickr">
+
+</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>12 décembre 2019</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="./reseaux-sociaux/flickr-location-map.html" target="_blank">Explorez les photos de tout le monde sur une carte</a></h2>
+
+						</div>
+
+						<div class="text">
+
+							📷 Affiche une grande quantité de photos sur une carte du monde hautement interactive. Explorez les photos des lieux de chacun avec Flickr.<a class="read-more" href="./reseaux-sociaux/flickr-location-map.html" target="_blank"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+			<li class="block medium" style="position: absolute; left: 0px; top: 781.531px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="./big-data/tripadvisor-analyser-service-hotelier-lyon.html" target="_blank" >
+
+							<img src="images/tripadvisor-hotels-reviews-lyon.jpg" loading="lazy" style=max-width:100% alt="hotels reviews lyon">
+
+</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>12 mai 2020</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="./big-data/tripadvisor-analyser-service-hotelier-lyon.html" target="_blank">DataScience: Gestion en Hôtellerie et Tourisme</a></h2>
+
+						</div>
+
+						<div class="text">
+
+							Comment mieux comprendre vos clients avec l'aide des données de Tripadvisor.com pour l'analyser le service hôtelier à Lyon.<a class="read-more" href="./big-data/tripadvisor-analyser-service-hotelier-lyon.html" target="_blank"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+
+			<li class="block medium" style="position: absolute; left: 0px; top: 781.531px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="./modele-trafic/mexico-uber-data.html" target="_blank" >
+
+							<img src="images/cdmx-uber-data-maps.jpg" loading="lazy" style=max-width:100% alt="Uber CDMX et Data Science">
+
+</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>23 décembre 2019</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="./modele-trafic/mexico-uber-data.html" target="_blank">Uber CDMX et Data Science</a></h2>
+
+						</div>
+
+						<div class="text">
+
+							🚕L'analyse des <u><a href="./modele-trafic/uber-movement-san-francisco.html" target="_blank">données Uber</a></u> pour Mexico permettent de connaître la dynamique des utilisateurs et des conducteurs.<a class="read-more" href="./modele-trafic/mexico-uber-data.html" target="_blank"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+			<li class="block medium" style="position: absolute; left: 372.953px; top: 781.531px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="./modele-trafic/marine-traffic-map-hormuz.html" target="_blank">
+
+							<img src="images/marine-traffic-oil-tanker-routes.jpg" loading="lazy" style=max-width:100% alt="Marine Traffic">
+
+</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>22 mai 2019</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="./modele-trafic/marine-traffic-map-hormuz.html" target="_blank">Géopolitique et marinetraffic.com</a></h2>
+
+						</div>
+
+						<div class="text">
+
+								Analysant la sécurité maritime dans le détroit d’Hormuz. Combinaison de Python avec les données marinetraffic.com pour représenter une petite partie du routage des pétroliers.<a class="read-more" href="./modele-trafic/marine-traffic-map-hormuz.html" target="_blank"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+			<li class="block medium" style="position: absolute; left: 0px; top: 781.531px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="./modele-trafic/osmnx-reseaux-urbains.html" target="_blank" >
+
+							<img src="images/modelisation-reseaux-urbains.jpg" loading="lazy" style=max-width:100% alt="osmnx reseaux urbains">
+
+</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>12 juillet 2019</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="./modele-trafic/osmnx-reseaux-urbains.html" target="_blank">Algorithmes OSMnx pour analyser le réseau routier</a></h2>
+
+						</div>
+
+						<div class="text">
+
+							Villes françaises: modélisant les réseaux de transport et leur orientation géographique  avec les données d'OpenStreetMap et GoogleMaps.<a class="read-more" href="./modele-trafic/osmnx-reseaux-urbains.html" target="_blank"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+
+			<li class="block medium" style="position: absolute; left: 0px; top: 0px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="./big-data/flowmap-world-migration-2019.html" target="_blank">
+
+							<img src="images/world-migrations-flows.jpg" loading="lazy" style=max-width:100% alt="Données des Nations Unies sur les migrations">
+
+					</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>22 juillet 2019</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="./big-data/flowmap-world-migration-2019.html" target="_blank">Migrations internationales 2019</a></h2>
+
+						</div>
+
+						<div class="text">
+							L'étude des migrations à travers les données des Nations Unies pour visualiser les flux origine-destination en utilisant flowmap.blue pour explorer les données de manière interactive.<a class="read-more" href="./big-data/flowmap-world-migration-2019.html" target="_blank"> →</a>
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+			<li class="block medium" style="position: absolute; left: 745.906px; top: 781.531px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="https://blog.mapbox.com/location-is-personal-issue-4-february-2019-6c207d54b765">
+
+							<img src="images/oil-map-mapbox.jpg" loading="lazy" style=max-width:100% alt="Mapbox Data">
+
+</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>08 août 2019</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="https://blog.mapbox.com/location-is-personal-issue-4-february-2019-6c207d54b765">Mapbox Developer Spotlight</a></h2>
+
+						</div>
+
+						<div class="text">
+
+							À cette occasion, je me permets de republier le premier compte rendu de OilMap. MapBox et son équipe partagent leurs premières impressions sur mon projet. Sans votre aide, il ne serait pas possible de créer des cartes et des visualisations étonnantes.<a class="read-more" href="https://blog.mapbox.com/location-is-personal-issue-4-february-2019-6c207d54b765"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+			<li class="block medium" style="position: absolute; left: 372.953px; top: 781.531px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="./reseaux-sociaux/carte-oenotourisme-tourisme-en-france.html">
+
+							<img src="images/carte-oenotourisme-tourisme-en-france.jpg" loading="lazy" style=max-width:100% alt="Œnotourisme et Le BigData France">
+
+						</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>28 avril 2020</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="./reseaux-sociaux/carte-oenotourisme-tourisme-en-france.html">Carte Œnotouristique France 2020</a></h2>
+
+						</div>
+
+						<div class="text">
+
+							Les meilleurs posts sur Instagram parfait pour engager votre communauté, découvrez les destinations œnotouristiques en France avec PowerBi et Mapbox customs visuals.<a class="read-more" href="./reseaux-sociaux/carte-oenotourisme-tourisme-en-france.html"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+			<li class="block medium" style="position: absolute; left: 745.906px; top: 781.531px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="./reseaux-sociaux/instagram-map-giro-italia.html" target="_blank">
+
+							<img src="images/instagram-trends-map-giro-de-italia.jpg" loading="lazy" style=max-width:100% alt="Instagram Machine Learning">
+
+</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>08 août 2019</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="./reseaux-sociaux/instagram-map-giro-italia.html" target="_blank">Données de localisation Instagram #Giro d' Italia</a></h2>
+
+						</div>
+
+						<div class="text">
+
+							Data Science et le marketing pour localiser une tendance dans #Instagram et visualiser les interactions sur une carte pour identifier les principaux tendances associés à #GiroDItalia. <a class="read-more" href="./reseaux-sociaux/instagram-map-giro-italia.html" target="_blank"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+			<li class="block medium" style="position: absolute; left: 0px; top: 1563.06px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="./machine-learning/data-science-retail-data.html" target="_blank">
+
+							<img src="images/machine-learning-retail.jpg" loading="lazy" style=max-width:100% alt="Retail Machine Learning">
+
+</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>08 mai 2019</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="./machine-learning/data-science-retail-data.html" target="_blank">Prévisions au détail</a></h2>
+
+						</div>
+
+						<div class="text">
+
+								Les données de 54 magasins appartenant à un important réseau de supermarchés en Équateur sont analysées afin de connaître le comportement de ses clients, de proposer un modèle de regroupement et de présenter un scénario de prévision des transactions.<a class="read-more" href="./machine-learning/data-science-retail-data.html" target="_blank"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+					</li>
+					<li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
+
+						<div class="wrapper">
+		
+							<div class="image">
+		
+                                <a href="./reseaux-sociaux/la-carte-de-solidarite-covid19-instagram.html">
+
+                                    <img src="https://roqueleal.me/migraciones/la-carte-de-solidaritecovid19-instagram.jpg" loading="lazy" style=max-width:100% alt="Solidarite covid19 - France">
+        
+                                </a>
+                            </div>
+        
+                            <div class="equalized content">
+        
+                                <div class="date">
+        
+                                    <a>08 mai 2020</a>
+        
+                                </div>
+        
+                                <div class="title">
+        
+                                    <h2><a href="./reseaux-sociaux/la-carte-de-solidarite-covid19-instagram.html">COVID19 France: solidarité en période de pandémie</a></h2>
+        
+                                </div>
+        
+                                <div class="text">
+        
+                                    Une carte des messages Instagram associés aux gestes de solidarité postés par les utilisateurs sur Instagram pendant la période de confinement en France.<a class="read-more" href="./reseaux-sociaux/la-carte-de-solidarite-covid19-instagram.html"> →</a>
+        
+                                </div>
+		
+							</div>
+		
+						</div>
+		
+					</li>
+            <li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
+
+                    <div class="wrapper">
+    
+                        <div class="image">
+    
+                            <a href="./machine-learning/pronostico-precios-crudo.html" target="_blank">
+    
+                                <img src="images/oil-pices-forescast-machine-learning.jpg" loading="lazy" style=max-width:100% alt="Oil Data">
+    
+    </a>
+                        </div>
+    
+                        <div class="equalized content">
+    
+							<div class="date">
+
+							<a>08 janvier 2019</a>
+    
+                            </div>
+    
+                            <div class="title">
+    
+                                <h2><a href="./machine-learning/pronostico-precios-crudo.html" target="_blank">Prix prévisionnels du pétrole</a></h2>
+    
+                            </div>
+    
+                            <div class="text">
+    
+                                    Un modèle de prévision à long terme du prix au comptant du pétrole brut West Texas Intermediate (WTI), basé sur le niveau des stocks de pétrole américain et sur les données hébergées sur le site web de l' US Energy Information Administration (EIA).<a class="read-more" href="./machine-learning/pronostico-precios-crudo.html" target="_blank"> →</a>
+    
+                            </div>
+    
+                        </div>
+    
+                    </div>
+    
+                </li>
+                <li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
+
+                        <div class="wrapper">
+        
+                            <div class="image">
+        
+								<a href="./reseaux-sociaux/cetetejevisitelafrance-hashtag-geocalisees-tourisme-instagram.html" target="_blank">
+	
+									<img src="images/cetetejevisitelafrance-hashtag-geocalisees-tourisme-instagram.jpg" loading="lazy" style=max-width:100% alt="cetetejevisitelafrance">
+		
+		</a>
+							</div>
+		
+							<div class="equalized content">
+		
+								<div class="date">
+		
+									<a>08 mai 2020</a>
+		
+								</div>
+		
+								<div class="title">
+		
+									<h2><a href="./reseaux-sociaux/cetetejevisitelafrance-hashtag-geocalisees-tourisme-instagram.html" target="_blank">Des cartes d'Instagram pour connaître le patrimoine en France</a></h2>
+		
+								</div>
+		
+								<div class="text">
+									#CetÉtéJeVisiteLaFrance : un hashtag pour sauver le patrimoine et préparer les visiteurs pour l’après-confinement. <a class="read-more" href="./reseaux-sociaux/cetetejevisitelafrance-hashtag-geocalisees-tourisme-instagram.html" target="_blank"> →</a>
+								</div>
+		
+							</div>
+			
+                        </div>
+        
+                    </li>
+                <li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
+
+                        <div class="wrapper">
+        
+                            <div class="image">
+        
+                                <a href="./argentina/desaparecidos.html" target="_blank">
+        
+                                    <img src="images/storymaps-desaparecidos-argentina-dictadura.jpg" loading="lazy" style=max-width:100% alt="Argentina disparus">
+        
+        </a>
+                            </div>
+        
+                            <div class="equalized content">
+        
+								<div class="date">
+
+								<a>08 décembre 2019</a>
+        
+                                </div>
+        
+                                <div class="title">
+        
+                                    <h2><a href="./argentina/desaparecidos.html" target="_blank">Cartes des Disparus</a></h2>
+        
+                                </div>
+        
+                                <div class="text">
+        
+                                        Raconter des histoires avec les données, dans Mémoire des disparus en Argentine, est une visualisation d'un processus que nous devons tous nous rappeler afin que cela ne se reproduise plus, sans doute dans de telles occasions, un fait est plus qu'une statistique.<a class="read-more" href="./argentina/desaparecidos.html" target="_blank"> →</a>
+        
+                                </div>
+        
+                            </div>
+        
+                        </div>
+                    </li>
+		    <li class="block medium" style="position: absolute; left: 372.953px; top: 1563.06px;">
+
+				<div class="wrapper">
+
+					<div class="image">
+
+						<a href="./reseaux-sociaux/python-twitter-carte-europe.html" target="_blank">
+
+							<img src="images/geolocated-tweets-map.jpg" loading="lazy" style=max-width:100% alt="Twitter Data">
+
+</a>
+					</div>
+
+					<div class="equalized content">
+
+						<div class="date">
+
+							<a>08 septembre 2019</a>
+
+						</div>
+
+						<div class="title">
+
+							<h2><a href="./reseaux-sociaux/python-twitter-carte-europe.html" target="_blank">Données de localisation Twitter</a></h2>
+
+						</div>
+
+						<div class="text">
+
+							Une carte thermique de tweets pour l'Union Européenne. En utilisant la bibliothèque tweepy pour interagir avec l'API de Twitter et les services #PowerBi.<a class="read-more" href="./reseaux-sociaux/python-twitter-carte-europe.html" target="_blank"> →</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</li>
+            <li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
+
+                    <div class="wrapper">
+    
+                        <div class="image">
+    
+                            <a href="./reseaux-sociaux/carte-des-vins-de-France-2020.html">
+
+                                <img src="images/carte-des-vins-de-France-2020.jpg" loading="lazy" style=max-width:100% alt="La carte des vins de France">
+    
+                            </a>
+                        </div>
+    
+                        <div class="equalized content">
+    
+                            <div class="date">
+    
+                                <a>18 mai 2020</a>
+    
+                            </div>
+    
+                            <div class="title">
+    
+                                <h2><a href="./reseaux-sociaux/carte-des-vins-de-France-2020.html">Carte des vins de France 2020</a></h2>
+    
+                            </div>
+    
+                            <div class="text">
+    
+                                Une carte des publications faisant référence aux vins français basée sur les publications des posts sur Instagram, connaissez les lieux les plus populaires de la communauté.<a class="read-more" href="./reseaux-sociaux/carte-des-vins-de-France-2020.html"> →</a>
+    
+                            </div>
+    
+                    </div>
+    
+                </li>
+                <li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
+
+                        <div class="wrapper">
+        
+                            <div class="image">
+        
+                                <a href="./reseaux-sociaux/carte-producteurs-locaux-en-france.html">
+
+                                    <img src="images/carte-producteurs-locaux-en-france.jpg" loading="lazy" style=max-width:100% alt="Les producteurs locaux et marketing digital">
+        
+                                </a>
+                            </div>
+        
+                            <div class="equalized content">
+        
+                                <div class="date">
+        
+                                    <a>20 avril 2020</a>
+        
+                                </div>
+        
+                                <div class="title">
+        
+                                    <h2><a href="./reseaux-sociaux/carte-producteurs-locaux-en-france.html">Retrouvez les producteurs locaux</a></h2>
+        
+                                </div>
+        
+                                <div class="text">
+        
+                                    Les producteurs locaux et leurs stratégies de marketing digital pendant le confinament.<a class="read-more" href="./reseaux-sociaux/carte-producteurs-locaux-en-france.html"> →</a>
+        
+                                </div>
+        
+                            </div>
+        
+                        </div>
+        
+                    </li>
+            <li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
+
+                    <div class="wrapper">
+    
+                        <div class="image">
+    
+                            <a href="./reseaux-sociaux/instagram-location-map-chile.html" target="_blank">
+    
+                                <img src="images/chile-la-marcha-mas-grande-instagram.jpg" loading="lazy" style=max-width:100% alt="Instagram Datamining">
+    
+    </a>
+                        </div>
+    
+                        <div class="equalized content">
+    
+							<div class="date">
+
+							<a>15 décembre 2019</a>
+    
+                            </div>
+    
+                            <div class="title">
+    
+                                <h2><a href="./reseaux-sociaux/instagram-location-map-chile.html" target="_blank">Données Instagram</a></h2>
+    
+                            </div>
+    
+                            <div class="text">
+    
+								Une analyse des interactions avec #lamarchamasgrande avec les données d'Instagram pour visualiser le comportement spatial de l'événement et découvrir ses répercussions à Santiago du Chili.<a class="read-more" href="./reseaux-sociaux/instagram-location-map-chile.html" target="_blank"> →</a>
+    
+                            </div>
+    
+                        </div>
+    
+                    </div>
+    
+                </li>
+
+                <li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
+
+                        <div class="wrapper">
+        
+                            <div class="image">
+        
+                                <a href="./reseaux-sociaux/pyspark-jupyter-notebook.html" target="_blank">
+        
+                                    <img src="images/jupyter-notebook-pyspark.jpg" loading="lazy" style=max-width:100% alt="PySpark">
+        
+					        </a>
+                            </div>
+        
+                            <div class="equalized content">
+        
+							<div class="date">
+
+							<a>06 mai 2019</a>
+        
+                                </div>
+        
+                                <div class="title">
+        
+                                    <h2><a href="./reseaux-sociaux/pyspark-jupyter-notebook.html" target="_blank">PySpark & Streaming Twitter</a></h2>
+        
+                                </div>
+        
+                                <div class="text">
+        
+					Data science avec PySpark: vous permettent d'obtenir les thèmes de tweet les plus populaires en fonction de l'emplacement et du volume de trafic en streaming Twitter, ce qui vous permet de représenter graphiquement les différentes variables de ces tendances.<a class="read-more" href="./reseaux-sociaux/pyspark-jupyter-notebook.html" target="_blank"> →</a>
+        
+                                </div>
+        
+                            </div>
+        
+                        </div>
+        
+					</li>
+		</ul>
+
+	</div>
+
+</div>
+
+<div class="fr-loading" style="display: none;"><div class="fr-loading-offset"><div class="fr-loading-background"></div><div class="fr-loading-icon"></div></div></div><script src="./blog/adsct" type="text/javascript"></script><script src="./blog/adsct" type="text/javascript"></script>
+
+</body>
+<!-- End section journal -->
+</head>
+<!-- start sectoion contact -->
+<div id="contact" class="paddsection">
+	<div class="container">
+		<!-- start sectoion contact -->
+		<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Roque Leal</title>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"/>
+		<link rel="stylesheet" href="css/contacto.css">
+		</head>
+		<body>
+			<div class="banner light"><h2 class="h3">Êtes-vous prêt à commencer?</h2></div>
+		<div class="container">
+			<div class="wrapper">
+				<div class="company-info">
+					<h3>Contactez moi</h3>
+					<ul>
+						<li><i class="fa fa-envelope"></i> roqueleal@gmail.com</li>
+					</ul>
+				</div>
+				<div class="contact">
+					<div class="alert">
+						 Votre message a été envoyé sous peu, je vous répondrai prochainement
+					</div>
+					<form id="contactForm">
+						<p>
+							<label>Votre nom</label>
+							<input type="text" name="name" id="name" required>
+						</p>
+						<p>
+							<label>Sujet</label>
+							<input type="text" name="company" id="company">
+						</p>
+						<p>
+							<label>Email</label>
+							<input type="email" name="email" id="email" required>
+						</p>
+						<p>
+							<label>Numéro de téléphone</label>
+							<input type="text" name="phone" id="phone">
+						</p>
+						<p class="full">
+							<label>Message</label>
+							<textarea name="message" rows="5" id="message"></textarea>
+						</p>
+						<p class="full">
+							<button type="submit">Envoyer</button>
+						</p>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+		<script src="main.js"></script>
+		</body>
+		<!-- start sectoion contact -->
+		<!-- start section footer -->
+		<div id="footer" class="text-center">
+			<div class="container">
+				<div class="socials-media text-center">
+					<ul class="list-unstyled">
+						<li><a href="https://www.linkedin.com/in/lealrlx"><i class="ion-social-linkedin"></i></a></li>
+					</ul>
+				</div>
+				<p>
+                    &copy; Droits d'auteur roqueleal. Tous droits réservés 2020.
+					Les photos sur cette page Web ont été fournies par <a href="https://pixabay.com/" target="_blank">pixabay.com</a> et <a href="https://unsplash.com/" target="_blank">unsplash.com</a> 					
+				</p>
+				<b>Tous les noms de produits et marques déposées sont la propriété de leurs propriétaires respectifs. Tous les noms de sociétés, de produits et de services utilisés sur ce site Web sont uniquement à des fins d'identification 
+					et éducatif. L'utilisation de ces noms, marques et marques n'implique pas l'approbation.</b>
+				<div class="credits">
+
+
+					<div class="credits">
+
+
+						<!-- start section cookies -->
+								</script><script src="./js/cookieconsent.min.js" data-cfasync="false"></script>
+								<script>
+								window.cookieconsent.initialise({
+								  "palette": {
+									"popup": {
+									  "background": "#007afc"
+									},
+									"button": {
+									  "background": "#fff",
+									  "text": "#007afc"
+									}
+								  },
+								  "theme": "edgeless",
+								  "position": "bottom-left",
+								  "content": {
+									  "message": "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation des cookies pour assurer le bon fonctionnement de notre site. Pour en savoir plus <a target='_blank' style='color:white;' href='https://www.roqueleal.me/legal/privacy-policy.html'>cliquez ici</a> et pour paramétrer les cookies <a target='_blank' style='color:white;' href='https://www.roqueleal.me/legal/privacy-cookies.html'>cliquez ici</a>.",
+												"link": ""
+								  }
+								});
+								
+								window.cookieconsent.hasTransition = false;
+								window.expiryDays =  365;
+								
+								</script>
+									<!--End Cookies-->
+
+				</div>
+			</div>
+		</div>
+		<!-- End section footer -->
+		<!-- JavaScript Libraries -->
+		<script src="lib/jquery/jquery-migrate.min.js"></script>
+		<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="lib/typed/typed.js"></script>
+		<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+		<script src="lib/magnific-popup/magnific-popup.min.js"></script>
+		<script src="lib/isotope/isotope.pkgd.min.js"></script>
+		<!-- Contact Form JavaScript File -->
+		<script src="contactform/contactform.js"></script>
+		<!-- Contact Firebase File -->
+		<script>
+var config = {
+apiKey: "AIzaSyAVvV21l_4tC2tefzBP417pb35GaV3c5aE",
+authDomain: "roqueleal-b7038.firebaseapp.com",
+databaseURL: "https://roqueleal-b7038.firebaseio.com",
+projectId: "roqueleal-b7038",
+storageBucket: "roqueleal-b7038.appspot.com",
+messagingSenderId: "396061988538"
+};
+firebase.initializeApp(config);
+</script>
+		<!-- Template Main Javascript File -->
+		<script src="js/main.js"></script>
+		</body>
+		</html>
