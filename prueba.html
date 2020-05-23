@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" prefix="og: http://ogp.me/ns#">
+<html amp lang="fr" prefix="og: http://ogp.me/ns#">
 <html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths gr__informationisbeautifulawards_com wf-ptserif-n4-active wf-ptserif-i4-active wf-ptserif-n7-active wf-ptserif-i7-active wf-proximanovasoft-n4-active wf-proximanovasoft-n6-active wf-active" style=""><!--<![endif]-->
 <head>
 		<meta charset="UTF-8">
@@ -178,57 +178,33 @@ content="text/html; charset=UTF-8">
 		  height: 150px;
 		  margin: -75px 0 0 -75px;
 		  border-radius: 50%;
-		  border: 3px solid transparent;
-		  border-top-color: #16a085;
+		  border: 18px solid;
 		  animation: spin 1.7s linear infinite;
 		  z-index: 11;
-		  
-		  &:before {
-			content: "";
-			position: absolute;
-			top: 5px;
-			left: 5px;
-			right: 5px;
-			bottom: 5px;
-			border-radius: 50%;
-			border: 3px solid transparent;
-			border-top-color: #e74c3c;
-			animation: spin-reverse .6s linear infinite;
-		  }
-		  
-		  &:after {
-			content: "";
-			position: absolute;
-			top: 15px;
-			left: 15px;
-			right: 15px;
-			bottom: 15px;
-			border-radius: 50%;
-			border: 3px solid transparent;
-			border-top-color: #f9c922;
-			animation: spin 1s linear infinite;
-		  }
-		}
-		
-		// Bourbon mixins
-		@include keyframes(spin) {
-		  0% { 
-			@include transform(rotate(0deg));
-		  }
-		  100% {
-			@include transform(rotate(360deg));
-		  }
-		}
-		
-		@include keyframes(spin-reverse) {
-		  0% { 
-			@include transform(rotate(0deg));
-		  }
-		  100% {
-			@include transform(rotate(-360deg));
-		  }
-		}
-		
+  		  display: inline-block;
+          width: 107px;
+          height: 107px;
+          /* The background is used to specify the border background */
+          background: linear-gradient(90deg, hsla(212,67%,36%,0) 0%,
+                                         hsla(207,69%,51%,0) 76%,
+                                         hsla(0,0%,100%,1) 85%,
+                                         hsla(0,0%,100%,1) 100%); /* W3C */
+         /* Background origin is the padding box by default.
+         Override to make the background cover the border as well. */
+         -moz-background-origin: border;
+         background-origin: border-box;
+         /* A transparent border determines the width */
+         border: 6px solid transparent;
+         border-radius: 50%;
+         box-shadow: inset -999px 0 0 #fff; /* The background color */
+         transform: translate(-8px, 55px);
+         animation: loading 1s linear infinite;
+          }
+
+@keyframes loading {
+    0% { transform: translate(-9px, -25px) rotate(0deg); }
+  100% { transform: translate(-9px, -25px) rotate(360deg); }
+}  	
 		#loader-wrapper .loader-section {
 		  position: fixed;
 		  top: 0;
@@ -272,7 +248,6 @@ content="text/html; charset=UTF-8">
 <!-- start section navbar -->
 <div id="loader-wrapper">
 	<div id="loader"></div>
-	
 	<div class="loader-section section-left"></div>
 	<div class="loader-section section-right"></div>
 	
