@@ -135,7 +135,7 @@ map.on("load", function() {
     // Get the unique values.
     var visUnique = visibility.filter(uniques);
     // Default to not visible.
-    var visCssClass = "";
+   // var visCssClass = "";
     // If all layers are visible, use the 'active' class so the toggle is "on".
     if (visUnique.length === 1 && visUnique[0] === "visible") {
       visCssClass = "active";
