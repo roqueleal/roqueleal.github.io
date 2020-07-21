@@ -108,10 +108,9 @@ tr:nth-child(even) {
   top: 40px;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  border-top: 8px solid white;
 }
 #menu {
-  visibility: hidden;
+  visibility: visible;
   position: absolute;
   width: 120px;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
