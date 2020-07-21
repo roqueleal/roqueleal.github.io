@@ -1,0 +1,213 @@
+body{
+  margin: 0;
+  padding: 0;
+  
+}
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+@font-face {
+  font-family: 'terminathin';
+  src: url('/css/termina_thin-webfont.eot') format('eot'),
+  url('/css/termina_thin-webfont.woff') format('woff'),
+  url('/css/termina_thin-webfont.woff2') format('woff2'),
+  url('/css/termina_thin-webfont.ttf') format('truetype'),
+  url('/css/termina_thin-webfont.svg') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+.map-overlay {
+  margin-right: 20px;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  border-radius: 3px;
+  text-align: end;
+}
+.mapboxgl-popup {
+  max-width: 150px;
+  font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+h3 {
+  margin: 5px;
+  font-size: 14px;
+  line-height: 100%;
+  text-align: center;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 200px;
+}
+.mapboxgl-popup {
+  max-width: 300px;
+  font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 3px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+#SUBS {
+  position: absolute;
+  background: rgb(255, 255, 255);
+  bottom: 28px;
+  left: 10px;
+  min-height: 0px;
+  width: 250px;
+  padding: 0;
+  z-index: 100000000;
+}
+#DTW {
+  position: absolute;
+  background: rgb(255, 255, 255);
+  bottom: 10px;
+  left: 10px;
+  margin-top: 20px;
+  width: 250px;
+  padding: 0;
+  z-index: 1000000000;
+  text-align: center;
+}
+
+#top {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 96px;
+  z-index: 100;
+  font-family: "Open Sans", sans-serif;
+  background: white;
+  font-size: 13px;
+  color: black;
+  margin: 0;
+  padding: 11px;
+  text-decoration: none;
+  border-radius: 3px;
+  border-color: black;
+  text-align: center;
+  cursor: pointer;
+}
+.triangle-down {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 48px;
+  top: 40px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+}
+#menu {
+  visibility: visible;
+  position: absolute;
+  width: 120px;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  left: 9px;
+  top: 52px;
+  z-index: 100000000000;
+  -webkit-transition: visibility 1s 1s;
+  -moz-transition: visibility 1s 1s;
+  transition: visibility 1s 1s;
+  -o-transition: visibility 1s 1s;
+}
+#menu:hover {
+  visibility: visible;
+  -webkit-transition: visibility 1s 0.2s;
+  -moz-transition: visibility 1s 0.2s;
+  transition: visibility 1s 0.2s;
+  -o-transition: visibility 1s 0.2s;
+}
+#menu a {
+  display: block;
+  z-index: 100000000000;
+  background: #fff;
+  font-size: 12px;
+  color: #404040;
+  margin: 0;
+  padding: 5px;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid rgb(0, 0, 0);
+}
+.mapboxgl-popup {
+  max-width: 200px;
+  max-height: 400px;
+  font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif ;
+  border-radius: 5px;
+  
+  }
+#menu a:hover {
+  background-color: #dfdfdf;
+  color: #404040;
+}
+#menu a.active {
+  background-color: #424242;
+  color: #ffffff;
+}
+#menu a.active:before {
+  content: "✔ ";
+}
+#menu a.active:hover {
+  background: #b5b5b5;
+}
+#top:hover + #menu {
+  visibility: visible;
+  -webkit-transition: visibility 1s 0.2s;
+  -moz-transition: visibility 1s 0.2s;
+  transition: visibility 1s 0.2s;
+  -o-transition: visibility 1s 0.2s;
+}
+
+@-webkit-keyframes bounce {
+  100%,
+  80%,
+  40%,
+  0% {
+    -webkit-transform: translateY(0) rotate(180deg);
+  }
+  20% {
+    -webkit-transform: translateY(-8px) rotate(180deg);
+  }
+  60% {
+    -webkit-transform: translateY(-15px) rotate(180deg);
+  }
+}
+
+click {
+  width: 24px;
+  height: 24px;
+
+}
+
+#pop {
+    position: absolute;
+    z-index: 2;
+top: 148px;
+  right: 8px;
+  border: none;
+  color: white;
+  display: inline-block;
+    background-color: #FFFFFF;
+  border-radius: 6px;
+ padding: 2px 2px 4px 4px;
+    border: 2px solid rgba(0,0,0,.1);
+  background-clip: padding-box;
+  cursor: pointer;
+}
+#pop:hover{
+      background-color: #f2f2f2;
+
+
+}
