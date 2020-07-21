@@ -10,9 +10,10 @@ var map = new mapboxgl.Map({
   // style: "mapbox://styles/vistcomunicacion/ckcrutwsb180d1hph62u7jvim",
   style: "mapbox://styles/vistcomunicacion/ckcsasa0t1no91imjuqkeetxr",
     //style: 'mapbox://styles/mapbox/satellite-v9',
-  zoom: 1,
+  zoom: 3,
   logoPosition: "bottom-right",
-  minZoom: 0,
+  minZoom: 3.5,
+  //maxZoom: 3.5,
   maxBounds: bounds // Sets bounds as max
 });
 
@@ -198,7 +199,7 @@ map.on("load", function() {
   });
 
 // interacion fin hover
-map.addControl(new mapboxgl.NavigationControl());
+//map.addControl(new mapboxgl.NavigationControl());
 //map.addControl(new mapboxgl.FullscreenControl());
 map.doubleClickZoom.disable();
 
