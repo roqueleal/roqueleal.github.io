@@ -202,7 +202,7 @@ map.on('load', function() {
 });
 
 map.on("load", function() {
-  toggleLayer(["AMAZ"], "Cuenca amazónica");
+  toggleLayer(["AMAZ"], "Bioma Amazónico");
   toggleLayer(["INDG"], "Territorios indígenas");
   toggleLayer(["AREA"], "Areas naturales protegidas");
   toggleLayer(["DEFO"], "Deforestación y degradación del bosque");
