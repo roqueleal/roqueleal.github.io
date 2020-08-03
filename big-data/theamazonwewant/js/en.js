@@ -202,7 +202,7 @@ map.on('load', function() {
 });
 
 map.on("load", function() {
-  toggleLayer(["AMAZ"], "Amazon Basin");
+  toggleLayer(["AMAZ"], "Amazon");
   toggleLayer(["INDG"], "Indigenous Territories");
   toggleLayer(["AREA"], "Protected Natural Areas");
   toggleLayer(["DEFO"], "Deforestation and Forest Degradation");
