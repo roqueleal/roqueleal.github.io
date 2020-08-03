@@ -202,7 +202,7 @@ map.on('load', function() {
 });
 
 map.on("load", function() {
-  toggleLayer(["AMAZ"], "Bioma Amazonia");
+  toggleLayer(["AMAZ"], "Biomas Amazonia");
   toggleLayer(["INDG"], "Terras Indígenas");
   toggleLayer(["AREA"], "Unidades de Conservação");
   toggleLayer(["DEFO"], "Desmatamento e Degradação Florestal");
