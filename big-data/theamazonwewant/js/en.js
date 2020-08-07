@@ -1,5 +1,9 @@
 mapboxgl.accessToken =
   "pk.eyJ1IjoidmlzdGNvbXVuaWNhY2lvbiIsImEiOiJja2Nyc3ZiYzQxaTJ4MnFzNXBpMG5iZno2In0.9bPy87fQMJpOmV2sJ_AYWQ";
+  var bounds = [
+    [-97.031250,-21.688053], // Southwest coordinates
+    [-22.851563,16.636192] // Northeast coordinates
+  ];
 var map = new mapboxgl.Map({
   container: "map",
   zoomControl:false, maxZoom:9, minZoom:3.7,
@@ -7,12 +11,75 @@ var map = new mapboxgl.Map({
   style: "mapbox://styles/vistcomunicacion/ckcsasa0t1no91imjuqkeetxr",
   zoom: 3.7,
   dragPan: false,
+  maxBounds: bounds // Sets bounds as max
+  
+});
+map.on('load', function() {
+  map.loadImage(
+      'https://roqueleal.me/big-data/theamazonwewant/image/legend-base.png',
+      function(error, image) {
+          if (error) throw error;
+          map.addImage('legend', image);
+          map.addSource('point', {
+              'type': 'geojson',
+              'data': {
+                  'type': 'FeatureCollection',
+                  'features': [
+                      {
+                          'type': 'Feature',
+                          'geometry': {
+                              'type': 'Point',
+                              'coordinates': [-35.068359,-4.477856]
+                          }
+                      }
+                  ]
+              }
+          });
+          map.addLayer({
+              'id': 'points',
+              'type': 'symbol',
+              'source': 'point',
+              'layout': {
+                  'icon-image': 'legend',
+                  'icon-size': 0.25
+              }
+          });
+      }
+  );
 });
 
+
 var nav = new mapboxgl.ScaleControl();
-map.addControl(nav, "bottom-right");
+map.addControl(nav, "top-right");
 // When a click event occurs on a feature in the states layer, open a popup at the
 // location of the click, with description HTML from its properties.
+//image
+map.on('load', function() {
+  var layers = map.getStyle().layers;
+  // Find the index of the first symbol layer in the map style
+  var firstSymbolId;
+  for (var i = 0; 0 < layers.length; i++) {
+  if (layers[i].type === 'symbol') {
+  firstSymbolId = layers[i++].id;
+  break;
+  }
+  }
+  map.addLayer({
+    id: "BIOMAS",
+    type: "raster",
+
+    source: {
+      type: "raster",
+      url: "mapbox://vistcomunicacion.7up3fsiv"
+    },
+    "source-layer": "mapbiomas-last-661jye",
+  },
+  firstSymbolId
+
+);
+});
+//image
+
 map.on("load", function() {
   var layers = map.getStyle().layers;
   // Find the index of the first symbol layer in the map style
@@ -74,6 +141,7 @@ map.on("load", function() {
 
   );
 });
+
 map.on("load", function() {
   var layers = map.getStyle().layers;
   // Find the index of the first symbol layer in the map style
@@ -104,6 +172,7 @@ map.on("load", function() {
 
   );
 });
+
 map.on("load", function() {
   var layers = map.getStyle().layers;
   // Find the index of the first symbol layer in the map style
@@ -165,6 +234,7 @@ map.on("load", function() {
 
   );
 });
+
 map.on('load', function() {
   var layers = map.getStyle().layers;
   // Find the index of the first symbol layer in the map style
@@ -200,9 +270,9 @@ map.on('load', function() {
 
   );
 });
-
 map.on("load", function() {
-  toggleLayer(["AMAZ"], "Amazon Biomes");
+  toggleLayer(["AMAZ"], "Amazon");
+  toggleLayer(["BIOMAS", "points"], "Amazon Biomes");
   toggleLayer(["INDG"], "Indigenous Territories");
   toggleLayer(["AREA"], "Protected Natural Areas");
   toggleLayer(["DEFO"], "Deforestation and Forest Degradation");
@@ -292,6 +362,7 @@ $(function () {
   $("#pop").click(function () {
     window.open(window.location.href)});
 });
+
 
 
 
