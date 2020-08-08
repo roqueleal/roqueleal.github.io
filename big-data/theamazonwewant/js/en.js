@@ -16,7 +16,7 @@ var map = new mapboxgl.Map({
 });
 map.on('load', function() {
   map.loadImage(
-      'https://roqueleal.me/big-data/theamazonwewant/image/legend-base.png',
+      'https://roqueleal.me/big-data/theamazonwewant/image/legend-en.png',
       function(error, image) {
           if (error) throw error;
           map.addImage('legend', image);
@@ -271,7 +271,7 @@ map.on('load', function() {
   );
 });
 map.on("load", function() {
-  toggleLayer(["AMAZ"], "Amazon");
+  toggleLayer(["AMAZ"], "Amazon Basin");
   toggleLayer(["BIOMAS", "points"], "Amazon Biomes");
   toggleLayer(["INDG"], "Indigenous Territories");
   toggleLayer(["AREA"], "Protected Natural Areas");
