@@ -235,43 +235,7 @@ map.on("load", function() {
   );
 });
 
-map.on('load', function() {
-  var layers = map.getStyle().layers;
-  // Find the index of the first symbol layer in the map style
-  var firstSymbolId;
-  for (var i = 0; i < layers.length; i++) {
-  if (layers[i].type === 'symbol') {
-  firstSymbolId = layers[i].id;
-  break;
-  }
-  }
-  map.addLayer({
-    id: "AMAZ",
-    type: "line",
-
-    source: {
-      type: "vector",
-      url: "mapbox://vistcomunicacion.6pjdhv9y"
-    },
-    "source-layer": "amazonas-limite-5i2crb",
-
-    'layout': {
-      // make layer visible by default
-      'visibility': 'visible',
-      'line-join': 'round',
-      'line-cap': 'round'
-      },
-      'paint': {
-      'line-color': '#FF9999',
-      'line-width': 3
-    }
-  }, 
-    firstSymbolId
-
-  );
-});
 map.on("load", function() {
-  toggleLayer(["AMAZ"], "Amazon Basin");
   toggleLayer(["BIOMAS", "points"], "Amazon Biomes");
   toggleLayer(["INDG"], "Indigenous Territories");
   toggleLayer(["AREA"], "Protected Natural Areas");
@@ -290,7 +254,7 @@ map.on("load", function() {
     // Get the unique values.
     var visUnique = visibility.filter(uniques);
     // Default to not visible.
-   // var visCssClass = "";
+   var visCssClass = "active";
     // If all layers are visible, use the 'active' class so the toggle is "on".
     if (visUnique.length === 1 && visUnique[0] === "visible") {
       visCssClass = "active";
