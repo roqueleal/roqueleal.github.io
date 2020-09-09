@@ -1,0 +1,30 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+.mdl-layout__content {
+    background: url('https://tricountyhealth.com/wp-content/uploads/2017/02/ThinkstockPhotos-512883102.jpg') center / cover;
+}
+.mdl-grid {
+    max-width: 800px;
+}
+.mdl-card__action {
+    display: flex;
+    box-sizing: border-box;
+    align-self: center;
+}
+.mdl-card__media {
+	margin: 0;
+}
+.mdl-card__media > img {
+    max-width: 100%;
+}
+#detail_link {
+    float: right;
+    margin: 10px;
+}
+#detail_link img {
+    width: 50px;
+}
+.mdl-grid.center-items {
+  justify-content: center;
+}
