@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.marker {
+  display: block;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  }
+
+
+  .mapboxgl-popup {
+    padding-bottom: 20px;
+  }
+  .mapboxgl-popup img {
+    width: 200px;
+    height: 200px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .mapboxgl-popup .mapboxgl-popup-close-button {
+    background-color: white;
+    color: grey;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+  }
+  .mapboxgl-popup .mapboxgl-popup-close-button:hover {
+    background-color: black;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  
+  .mapboxgl-popup-content {
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 400;
+    padding: 0;
+    overflow: hidden;
+    width: 530px;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.87);
+    border-radius: 2px;
+    min-width: 300px;
+    position: relative;
+    text-decoration: none;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-flex: 1;
+            flex: 1 1 auto;
+    flex-wrap: nowrap;
+    min-width: 0;
+  }
+  .mapboxgl-popup-content div {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-flex: 1;
+            flex: 1 1 auto;
+    flex-wrap: nowrap;
+    min-width: 0;
+    -webkit-box-pack: center;
+            justify-content: center;
+    align-self: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    padding: 2em 1.3em 1.3em 1.3em;
+    max-width: 390px;
+  }
+  .mapboxgl-popup-content div h3 {
+    margin-top: 5px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #0d0925;
+    margin-bottom: 20px;
+  }
+  .mapboxgl-popup-content div p {
+    padding: 0;
+    color: var(--text-color);
+    margin: 0 0 30px 0;
+    line-height: 1.5em;
+  }
+  
+  .mapboxgl-ctrl.mapboxgl-ctrl-attrib {
+    padding: 0 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    border-radius: 200px;
+    padding: 6px 12px;
+  }
+  
+  .mapboxgl-ctrl-attrib a {
+    color: #90a4ae;
+  }
+  
+  .mapboxgl-ctrl-attrib .mapbox-improve-map {
+    display: none;
+  }
+  
+  a.mapboxgl-ctrl-logo {
+    display: none;
+  }
+
+
+  
