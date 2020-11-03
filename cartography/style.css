@@ -247,7 +247,7 @@ h2 {
   font-size: 15px;
   color: #1d1a1a;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing:.1em;
   text-decoration: none;
   margin: 0 18px;
 }
@@ -314,7 +314,8 @@ main {
 .popup {
   position: fixed;
   padding: 10px;
-  max-width: 500px;
+  width: 50%;
+  max-width: 400px;
   border-radius: 10px;
   top: 50%;
   left: 50%;
@@ -379,4 +380,13 @@ main {
   /* cancel visibility transition delay */
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+}
+
+svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150%;
+  opacity: 10;
 }
