@@ -226,4 +226,6 @@ imagesLoaded(document.querySelectorAll('img'), () => {
 
 
 });
-
+TweenMax.from("#fernLeftBack, #fernTop", 4, {rotation:-3, repeat:-1, yoyo:true, transformOrigin:"50% 100%", ease: Sine.easeInOut});
+TweenMax.from('#tallFernFront, #leafRightBack, #fernRightBack', 4, {rotation:3, repeat:-1, yoyo:true, transformOrigin:"50% 100%", ease: Sine.easeInOut});
+TweenMax.from('#leafRightRightBack, #leafLeftBack', 3.5, {rotation:-3, repeat:-1, yoyo:true, transformOrigin:"50% 100%", ease: Sine.easeInOut});
