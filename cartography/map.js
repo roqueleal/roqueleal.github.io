@@ -65,7 +65,7 @@ map.on('load', function() {
     paint: {
       "line-color": "#FF007F",
       "line-opacity": 0.85,
-      "line-width": 4
+      "line-width": 2
     }
   },
   firstSymbolId
@@ -208,7 +208,7 @@ var geojson = {
   geojson.features.forEach(function (marker) {
   // create a DOM element for the marker
   var el = document.createElement('div');
-	zoom= map.getZoom()+ 2  +'px';
+  zoom= 2.5  +'px';
   el.className = 'marker';
   el.style.backgroundImage = marker.properties.url;
   el.style.width =  zoom   ;
