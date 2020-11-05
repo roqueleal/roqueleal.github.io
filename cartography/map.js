@@ -6,11 +6,11 @@ const options = {
   // style: 'mapbox://styles/mapbox/dark-v10',
   //style: 'mapbox://styles/mapbox/satellite-v9',
   style: "mapbox://styles/roqueleal/ckgwgfwit04fe19s6zr9kbqrk",
-  center: [-8.4,43.36], 
-  zoom: 3.2
+  center: [-8.45, 43.39], 
+  zoom: 5,
+  bearing: -350
 };
   
-
 const featureCollection = {
   type: "FeatureCollection",
   features: [
@@ -83,43 +83,31 @@ map.on('load', function() {
   }
 
 
-
-  // setup the viewport
-  map.jumpTo({ center: coordinates[0], zoom: 3.2, bearing: -350 });
-  map.setPitch(40);
+// setup the viewport
+map.jumpTo({ 'center': coordinates[i], 'zoom': 5, 'bearing': -350 });
+map.setPitch(40);
+ 
 
   // on a regular basis, add more coordinates from the saved list and update the map
   var i = 0;
   var k = 0;
   
-  
-  
-   function animateMarker(timestamp) {
-// Update the data to a new position based on the animation timestamp. The
-// divisor in the expression `timestamp / 1000` controls the animation speed.
- if (k < coordinates.length) {
-      map.getSource("trace").setData(data);
-
-      console.log(i)
-        map.panTo(coordinates[i], { duration: 700 });
-        data.features[0].geometry.coordinates.push(coordinates[i + 1]);
-
-
-      i++;
-
-    }
-// Request the next frame of the animation.
-requestAnimationFrame(animateMarker, 1200/60);
+var i = 0;
+var timer = window.setInterval(function () {
+if (i < coordinates.length) {
+data.features[0].geometry.coordinates.push(
+coordinates[i]
+);
+map.getSource('trace').setData(data);
+map.panTo(coordinates[i]);
+i++;
+} else {
+window.clearInterval(timer);
 }
- 
-// Start the animation.
-animateMarker(2);
-  
-  const fps = new mapboxgl.FrameRateControl({ /* optional options */ });
-map.addControl(fps);
-  
-
-});
+}, 70);
+}
+);
+///////////////////////////////
 
 var geojson = {
   'type': 'FeatureCollection',
@@ -143,7 +131,7 @@ var geojson = {
     { 'type': 'Feature', 'properties': { 'Name': 'Philadelphia, Pennsylvania' ,'text': 'In 1804, famed German naturalist Alexander von Humboldt arrived in the United States after a five-year exploration voyage through the Spanish colonies. During this time, diplomatic disputes between the United States and Spain led to increased interest from President Jefferson in acquiring Humboldt’s expertise.', 'Date': 'May-July 1804', 'url': 'url(https://upload.wikimedia.org/wikipedia/commons/d/d0/Color-yellow.JPG', 'img': './img/14-philadelphia.jpg'}, 'geometry': { 'type': 'Point', 'coordinates': [ -75.16, 39.95, 0.0 ] } },
     { 'type': 'Feature', 'properties': { 'Name': 'Washington, District of Columbia' ,'text': 'Hello World', 'Date': 'May-July 1804', 'url': 'url(https://upload.wikimedia.org/wikipedia/commons/d/d0/Color-yellow.JPG', 'img': './img/24-usa.jpg'}, 'geometry': { 'type': 'Point', 'coordinates': [ -77.03, 38.89, 0.0 ] } },
     { 'type': 'Feature', 'properties': { 'Name': 'Bordeaux, Gironde, Nouvelle-Aquitaine' ,'text': 'Alexander von Humboldt and Aime Bonpland arrived in Bordeaux. After five years in the Americas, the two had brought back a treasure trove of data and specimens which they would turn into some of the greatest scientific texts of the century.', 'Date': '1 Aug 1804', 'url': 'url(https://upload.wikimedia.org/wikipedia/commons/d/d0/Color-yellow.JPG', 'img': './img/8-bordeaux.jpg'}, 'geometry': { 'type': 'Point', 'coordinates': [ -0.58, 44.84, 0.0 ] } },
-    { 'type': 'Feature', 'properties': { 'Name': 'Calabozo' , 'text': 'Humboldt was fascinated by electric eels. To catch them, locals sent a herd of wild horses through to have the eels discharge. Once Humboldt caught one, he poked and prodded it with various materials (including himself!) to understand animal electricity.','Date': '1800','text': 'Hello World', 'Date': 'year', 'url': 'url(https://upload.wikimedia.org/wikipedia/commons/d/d0/Color-yellow.JPG', 'img': './img/36-vzla.jpg', 'img': './img/5-calabozo.jpg'}, 'geometry': { 'type': 'Point', 'coordinates': [ -67.43, 8.93, 0.0 ] } },
+    { 'type': 'Feature', 'properties': { 'Name': 'Calabozo' , 'text': 'Humboldt was fascinated by electric eels. To catch them, locals sent a herd of wild horses through to have the eels discharge. Once Humboldt caught one, he poked and prodded it with various materials (including himself!) to understand animal electricity.','Date': '1800', 'url': 'url(https://upload.wikimedia.org/wikipedia/commons/d/d0/Color-yellow.JPG', 'img': './img/36-vzla.jpg', 'img': './img/5-calabozo.jpg'}, 'geometry': { 'type': 'Point', 'coordinates': [ -67.43, 8.93, 0.0 ] } },
     { 'type': 'Feature', 'properties': { 'Name': 'San Fernando de Apure' ,'text': 'Hello World', 'Date': '1800', 'url': 'url(https://upload.wikimedia.org/wikipedia/commons/d/d0/Color-yellow.JPG', 'img': './img/36-vzla.jpg'}, 'geometry': { 'type': 'Point', 'coordinates': [ -67.47, 7.89, 0.0 ] } },
     { 'type': 'Feature', 'properties': { 'Name': 'San Fernando de Atabapo' ,'text': 'Hello World', 'Date': '1800', 'url': 'url(https://upload.wikimedia.org/wikipedia/commons/d/d0/Color-yellow.JPG', 'img': './img/9-casiquiare.jpg'}, 'geometry': { 'type': 'Point', 'coordinates': [ -67.7, 4.05, 0.0 ] } },
     { 'type': 'Feature', 'properties': { 'Name': 'La Esmeralda, Orinoco, Amazonas' ,'text': 'Hello World', 'Date': '1800', 'url': 'url(https://upload.wikimedia.org/wikipedia/commons/d/d0/Color-yellow.JPG', 'img': './img/10-amazonas.jpg'}, 'geometry': { 'type': 'Point', 'coordinates': [ -65.55, 3.17, 0.0 ] } },
@@ -205,35 +193,32 @@ var geojson = {
 
    // add markers to map
 
-  geojson.features.forEach(function (marker) {
-  // create a DOM element for the marker
-  var el = document.createElement('div');
-  zoom= 2.5  +'px';
-  el.className = 'marker';
-  el.style.backgroundImage = marker.properties.url;
-  el.style.width =  zoom   ;
-  el.style.height =  zoom  ;
 
-  // add marker to map
-  new mapboxgl.Marker(el)
-  .setLngLat(marker.geometry.coordinates)
-  .setPopup(
-    new mapboxgl.Popup() // add popups
-    .setHTML(
-      '<img src=' + marker.properties.img + '>' +
-      '<div class="event-card-layout-column justify-space-between">' +
-      '<h3><a>' + marker.properties.Name + ' </a>' + '<a>' + marker.properties.Date + '</a> </h3>' +
-      '<p>' + marker.properties.text + '</p>' 
-      )
-  )
-  .addTo(map);
+   geojson.features.forEach(function (marker) {
+    // create a DOM element for the marker
+    var el = document.createElement('div');
+    zoom= 10  +'px';
+    el.className = 'marker';
+    el.style.width =  zoom   ;
+    el.style.height =  zoom  ;
   
-});
-
+    // add marker to map
+    new mapboxgl.Marker(el)
+    .setLngLat(marker.geometry.coordinates)
+    .setPopup(
+      new mapboxgl.Popup() // add popups
+      .setHTML(
+        '<img src=' + marker.properties.img + '>' +
+        '<div class="event-card-layout-column justify-space-between">' +
+        '<h3><a>' + marker.properties.Name + ' </a>' + '<a>' + marker.properties.Date + '</a> </h3>' +
+        '<p>' + marker.properties.text + '</p>' 
+        )
+    )
+    .addTo(map);
+    
+  });
+  
+// Add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl({
-  showZoom: false
+  showZoom: true
 }), 'bottom-right');
-
-
-
-
