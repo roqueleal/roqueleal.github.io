@@ -1,2033 +1,691 @@
 <!DOCTYPE html>
 <html amp lang="es">
-<html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths gr__informationisbeautifulawards_com wf-ptserif-n4-active wf-ptserif-i4-active wf-ptserif-n7-active wf-ptserif-i7-active wf-proximanovasoft-n4-active wf-proximanovasoft-n6-active wf-active" style=""><!--<![endif]-->
 <head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, user-scalable=no">
-		<meta property="website:published_time" content="2020-05-10T00:10:00+00:00"/>
-		<meta name="copyright" content="https://roqueleal.me/es.html"/>
-		<meta name="description" content="76 Estudios prácticos de Big Data y Data Science con datos geolocalizados de Instagram, Google, Uber, Waze... ¡Entra y descubre este maravilloso mundo!✔️">
-		<meta property="fb:admins" content="1573187928"/>
-		<link rel="shortcut icon" href="./images/favicon.png">
-		<meta name="keywords" content="Data Science, Mapping, Intelligence Location, Python, Data, Machine Learning"/>
-		<meta property="og:type" content="website" />
-		<meta property="og:image" content="https://raw.githubusercontent.com/roqueleal/roqueleal.github.io/master/images/data-science-blog-roque.jpg" />
-		<meta property="og:image:width" content="530"/>
-		<meta property="og:image:height" content="398"/>
-		<meta property="og:title" content="Roque Leal"/>
-		<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-		<meta property="og:description" content="Blog de Data Science, Machine Learning y Location Intelligence. Continuar leyendo ..."/>
-		<meta property="og:url" content="https://roqueleal.me/es.html"/>
-		<meta name="keywords" content="Blog de Ciencia de Datos, Data Science, Inteligencia de Localización, Geografía, Social Mapping, Scraping, Mapping, Machine Learning, Python, Data Scientist, Visualizaciones, Modelos Espaciales"/>
-		<title>🥇 Data Science Blog: descubra el poder del Big Data</title>
-		<!-- Twitter -->
-		<meta property="twitter:card" content="summary_large_image"> 		 
-		<meta property="twitter:image:width" content="400"/>
-		<meta property="twitte:image:height" content="300"/>
-		<meta name="twitter:site" content="@roqueleal08" />
-		<meta name="twitter:creator" content="@roqueleal08" />
-		<meta property="twitter:url" content="https://roqueleal.me/es.html">
-		<meta property="twitter:title" content="🥇 Data Science Blog">
-		<meta property="twitter:description" content="Blog especializado en Ciencia de Datos y Big Data">
-		<meta property="twitter:image" content="https://raw.githubusercontent.com/roqueleal/roqueleal.github.io/master/images/data-science-blog-roque.jpg">
-		<!-- Twitter -->	
-		<link rel="canonical" href="https://roqueleal.me/es.html">
-		<link rel="alternate" href="https://roqueleal.me" hreflang="fr-fr" />
-		<link rel="alternate" href="https://roqueleal.me/en.html" hreflang="en-us" />
-		<link rel="alternate" href="https://roqueleal.me/es.html" hreflang="es-es" />
-	        <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "author": {
-        "@type": "Person",
-        "name": "Roque Leal",
-	"inLanguage" : "es-ES",
-        "image": {
-            "@type": "ImageObject",
-            "url": "https://roqueleal.me/images/data-science-blog-roque.webp"
-        }
-    },
-    "datePublished": "2020-05-11T11:14:14+09:00",
-    "dateModified": "2020-06-05T11:14:14+09:00",
-    "url": "https://roqueleal.me/es.html",
-    "image": {
-        "@type": "ImageObject",
-        "url": "https://roqueleal.me/images/data-science-blog-roque.webp"
-    },
-    "keywords": "Ciencia de Datos, Big Data, Científico de Datos Blog",
-    "description": "76 Estudios prácticos de Big Data y Data Science con datos geolocalizados de Instagram, Google, Uber, Waze... ¡Entra y descubre este maravilloso mundo!",
-    "sameAs": ["https://twitter.com/roqueleal08", "https://www.linkedin.com/in/lealrlx/"]
-    }
+<meta charset="utf-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136089997-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-136089997-1');
+</script>
+<!-- Note: plugin scripts must be included after the tracking snippet. -->
+<script src="https://ipmeta.io/plugin.js"></script>
+<script>
+	provideGtagPlugin({
+	apiKey: '18bf8f1d26cb517fdf42fd4d789a01445f8245eab896aa42997500bf9f5d5702',
+	serviceProvider: 'dimension1',
+	networkDomain: 'dimension2',
+	networkType: 'dimension3',
+	});
+</script>         
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="author" content="Roque Leal" />
+        <meta name="copyright" content="https://oilmap.xyz" />
+        <meta property="fb:admins" content="1573187928" />
+        <meta name="description" content="🥇 Descubra el Mapa de Petróleo y Gas 2021, con la información y el conocimiento del mundo petroenergético en hermosas visualizaciones de datos sobre las actividades Upstream y Downstream para Oil and Gas.✔️">
+        <meta name="keywords" content="Petróleo, Mapas, Geología, gas, Energía, Yacimientos, Cartografía, Mapbox" />
+        <meta property="og:type" content="website" />
+		<meta property="og:image" content="https://oilmap.xyz/img/preview.jpg"/>	
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:title" content="Mapa Mundial de Petróleo y Gas 2021" /> 
+        <meta property="og:description" content="🥇 Tenga éxito en cualquier entorno con datos mundiales de ubicación e inteligencia sobre las actividades Upstream y Downstream en Oil and Gas. 🗺️" />        
+        <meta property="og:url" content="https://oilmap.xyz/es.html" />     
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@roqueleal08">
+        <meta name="twitter:title" content="Oil Map">
+        <meta name="twitter:description" content="🥇 Tenga éxito en cualquier entorno con datos mundiales de ubicación e inteligencia sobre las actividades Upstream y Downstream en Oil and Gas. 🗺️">
+        <meta name="twitter:creator" content="@roqueleal08">
+        <meta name="twitter:image" content="https://oilmap.xyz/img/preview.jpg">
+        <title>🥇 Mapa Petrolero Mundial 2021</title>
+        <link rel="canonical" href="https://oilmap.xyz/es.html">
+		<link rel="alternate" href="https://oilmap.xyz" hreflang="en-us" />
+		<link rel="alternate" href="https://oilmap.xyz/fr.html" hreflang="fr-fr" />
+        <link rel="alternate" href="https://oilmap.xyz/es.html" hreflang="es-es" />
+        <link rel="alternate" href="https://oilmap.xyz/ar.html" hreflang="ar-sa" /> 
+	    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "inLanguage" : "es-ES",
+            "author": {
+                "@type": "Person",
+                "name": "Roque Leal",
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "https://roqueleal.me/images/us-data-scientist-blog.webp"
+                }
+            },
+            "datePublished": "2021-04-15T11:14:14+09:00",
+            "dateModified": "2021-04-15T11:14:14+09:00",
+                "url": "https://oilmap.xyz",
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "https://oilmap.xyz/img/preview.jpg"
+                },
+          "keywords":[
+             "World Oil Map 2021", 
+             "Oil Map",
+             "Petroleum",
+             "Oil & Gas"
+              ],
+            "description": "Tenga éxito en cualquier entorno con datos mundiales de ubicación e inteligencia sobre las actividades Upstream y Downstream en Oil and Gas",
+            "sameAs": ["https://twitter.com/roqueleal08", "https://www.linkedin.com/in/lealrlx"]
+            }
     </script>
-			<a href="https://api.whatsapp.com/send?phone=584123188208&text=Hola!%21%20me%20gustaría%20tener%20más%27información%20" class="float" target="_blank">
-				<i class="fa fa-whatsapp my-float"></i>
-			</a>
-				<!-- Global site tag (gtag.js) - Google Analytics -->
-				<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111035186-2"></script>
-				<script>
-					  window.dataLayer = window.dataLayer || [];
-					  function gtag(){dataLayer.push(arguments);}
-					  gtag('js', new Date()); 
-					  gtag('config', 'UA-111035186-2');
-				</script>
-				<!-- Note: plugin scripts must be included after the tracking snippet. -->
-				<script src="https://ipmeta.io/plugin.js"></script>
-				
-				<script>
-				   provideGtagPlugin({
-					  apiKey: '6df866a9b2e25439d18f05274c25dd522a40a12a182de5fbae8901c7deffab8f',
-					  serviceProvider: 'dimension1',
-					  networkDomain: 'dimension2',
-					  networkType: 'dimension3',
-				   });
-				</script>         
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<!-- BEGIN SHAREAHOLIC CODE -->
-<link rel='preload' href='//apps.shareaholic.com/assets/pub/shareaholic.js' as='script'/>
-<script data-cfasync="false" async src="//apps.shareaholic.com/assets/pub/shareaholic.js" data-shr-siteid="c808dbc8d6951e1d6bc8c470f396b47a"></script>
-<!-- END SHAREAHOLIC CODE -->
-<!-- meta -->
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
-<!-- Bootstrap CSS File -->
-<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<!-- Libraries CSS Files -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
-<link rel=preload href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-<link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-<link href="lib/hover/hover.min.css" rel="stylesheet">
-<!-- Main Stylesheet File -->
-<link href="css/style.css" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-<!-- Responsive css -->
-<link href="css/responsive.css" rel="stylesheet">
-<!-- Favicon -->
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="./js/cookieconsent.min.css">
+    <link rel="icon" type="image/png" href="./img/oilmap.png" sizes="16x16">
+    <link href="./js/assembly.min.css" rel="stylesheet">
+    <script async="" defer="" src="./js/assembly.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <body class="prose">
+    <header class="bg-darken75 color-black h-auto-mm h6 ">
+    <div class="flex-parent flex-parent--space-between-main w-full">
+    <div class="flex-child ml240 mt24 mb12 color-yellow"><h2>Mapa Mundial de Petróleo y Gas 2021</h2></div>
+    <div class="about-header flex-child mr24 mt30 mb50 txt-bold" style="color: #F0B823; text-shadow: 1px 1px 2px rgb(8, 8, 8), 0 0 1em rgb(253, 253, 255);">
+    <svg class="icon inline mr6"><use xlink:href="#icon-question"></use></svg>Info</div>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v0.10.1/mapbox-gl-language.js'></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script><link
+    rel="stylesheet"
+    href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"
+    type="text/css"/>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+ </header>
+ <link rel="stylesheet" href="./css/style.css">  
+ <link rel="stylesheet" type="text/css" href="./js/cookieconsent.min.css">
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript>
-<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKJHJPN"  style="display:none;visibility:hidden">
-</iframe>
-</noscript>
-<!-- End Google Tag Manager (noscript) -->
-<meta http-equiv="Content-Type" 
-content="text/html; charset=UTF-8">
-<style type="text/css">.turbolinks-progress-bar {
-  position: fixed;
-  display: block;
-  top: 0;
-  left: 0;
-  height: 3px;
-  z-index: 9999;
-  transition: width 300ms ease-out, opacity 150ms 150ms ease-in;
-  transform: translate3d(0, 0, 0);
-}</style><script type="text/javascript" src="./blog/1.txt"></script><script type="text/javascript" src="./blog/1(1).txt"></script>
-	
-		<link rel="stylesheet" media="all" href="./blog/application-2b2d4dfb848677f3f5b083a6f98c7301011de0185ab9577ea8cdc59870de38f7.css" data-turbolinks-track="true">
-<style type="text/css">.at-icon{fill:#fff;border:0}.at-icon-wrapper{display:inline-block;overflow:hidden}a .at-icon-wrapper{cursor:pointer}.at-rounded,.at-rounded-element .at-icon-wrapper{border-radius:12%}.at-circular,.at-circular-element .at-icon-wrapper{border-radius:50%}.addthis_32x32_style .at-icon{width:2pc;height:2pc}.addthis_24x24_style .at-icon{width:24px;height:24px}.addthis_20x20_style .at-icon{width:20px;height:20px}.addthis_16x16_style .at-icon{width:1pc;height:1pc}#at16lb{display:none;position:absolute;top:0;left:0;width:100%;height:100%;z-index:1001;background-color:#000;opacity:.001}#at_complete,#at_error,#at_share,#at_success{position:static!important}.at15dn{display:none}#at15s,#at16p,#at16p form input,#at16p label,#at16p textarea,#at_share .at_item{font-family:arial,helvetica,tahoma,verdana,sans-serif!important;font-size:9pt!important;outline-style:none;outline-width:0;line-height:1em}* html #at15s.mmborder{position:absolute!important}#at15s.mmborder{position:fixed!important;width:250px!important}#at15s{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);float:none;line-height:1em;margin:0;overflow:visible;padding:5px;text-align:left;position:absolute}#at15s a,#at15s span{outline:0;direction:ltr;text-transform:none}#at15s .at-label{margin-left:5px}#at15s .at-icon-wrapper{width:1pc;height:1pc;vertical-align:middle}#at15s .at-icon{width:1pc;height:1pc}.at4-icon{display:inline-block;background-repeat:no-repeat;background-position:top left;margin:0;overflow:hidden;cursor:pointer}.addthis_16x16_style .at4-icon,.addthis_default_style .at4-icon,.at4-icon,.at-16x16{width:1pc;height:1pc;line-height:1pc;background-size:1pc!important}.addthis_32x32_style .at4-icon,.at-32x32{width:2pc;height:2pc;line-height:2pc;background-size:2pc!important}.addthis_24x24_style .at4-icon,.at-24x24{width:24px;height:24px;line-height:24px;background-size:24px!important}.addthis_20x20_style .at4-icon,.at-20x20{width:20px;height:20px;line-height:20px;background-size:20px!important}.at4-icon.circular,.circular .at4-icon,.circular.aticon{border-radius:50%}.at4-icon.rounded,.rounded .at4-icon{border-radius:4px}.at4-icon-left{float:left}#at15s .at4-icon{text-indent:20px;padding:0;overflow:visible;white-space:nowrap;background-size:1pc;width:1pc;height:1pc;background-position:top left;display:inline-block;line-height:1pc}.addthis_vertical_style .at4-icon,.at4-follow-container .at4-icon{margin-right:5px}html>body #at15s{width:250px!important}#at15s.atm{background:none!important;padding:0!important;width:10pc!important}#at15s_inner{background:#fff;border:1px solid #fff;margin:0}#at15s_head{position:relative;background:#f2f2f2;padding:4px;cursor:default;border-bottom:1px solid #e5e5e5}.at15s_head_success{background:#cafd99!important;border-bottom:1px solid #a9d582!important}.at15s_head_success a,.at15s_head_success span{color:#000!important;text-decoration:none}#at15s_brand,#at15sptx,#at16_brand{position:absolute}#at15s_brand{top:4px;right:4px}.at15s_brandx{right:20px!important}a#at15sptx{top:4px;right:4px;text-decoration:none;color:#4c4c4c;font-weight:700}#at15sptx:hover{text-decoration:underline}#at16_brand{top:5px;right:30px;cursor:default}#at_hover{padding:4px}#at_hover .at_item,#at_share .at_item{background:#fff!important;float:left!important;color:#4c4c4c!important}#at_share .at_item .at-icon-wrapper{margin-right:5px}#at_hover .at_bold{font-weight:700;color:#000!important}#at_hover .at_item{width:7pc!important;padding:2px 3px!important;margin:1px;text-decoration:none!important}#at_hover .at_item.athov,#at_hover .at_item:focus,#at_hover .at_item:hover{margin:0!important}#at_hover .at_item.athov,#at_hover .at_item:focus,#at_hover .at_item:hover,#at_share .at_item.athov,#at_share .at_item:hover{background:#f2f2f2!important;border:1px solid #e5e5e5;color:#000!important;text-decoration:none}.ipad #at_hover .at_item:focus{background:#fff!important;border:1px solid #fff}.at15t{display:block!important;height:1pc!important;line-height:1pc!important;padding-left:20px!important;background-position:0 0;text-align:left}.addthis_button,.at15t{cursor:pointer}.addthis_toolbox a.at300b,.addthis_toolbox a.at300m{width:auto}.addthis_toolbox a{margin-bottom:5px;line-height:initial}.addthis_toolbox.addthis_vertical_style{width:200px}.addthis_button_facebook_like .fb_iframe_widget{line-height:100%}.addthis_button_facebook_like iframe.fb_iframe_widget_lift{max-width:none}.addthis_toolbox a.addthis_button_counter,.addthis_toolbox a.addthis_button_facebook_like,.addthis_toolbox a.addthis_button_facebook_send,.addthis_toolbox a.addthis_button_facebook_share,.addthis_toolbox a.addthis_button_foursquare,.addthis_toolbox a.addthis_button_linkedin_counter,.addthis_toolbox a.addthis_button_pinterest_pinit,.addthis_toolbox a.addthis_button_tweet{display:inline-block}.addthis_toolbox span.addthis_follow_label{display:none}.addthis_toolbox.addthis_vertical_style span.addthis_follow_label{display:block;white-space:nowrap}.addthis_toolbox.addthis_vertical_style a{display:block}.addthis_toolbox.addthis_vertical_style.addthis_32x32_style a{line-height:2pc;height:2pc}.addthis_toolbox.addthis_vertical_style .at300bs{margin-right:4px;float:left}.addthis_toolbox.addthis_20x20_style span{line-height:20px}.addthis_toolbox.addthis_32x32_style span{line-height:2pc}.addthis_toolbox.addthis_pill_combo_style .addthis_button_compact .at15t_compact,.addthis_toolbox.addthis_pill_combo_style a{float:left}.addthis_toolbox.addthis_pill_combo_style a.addthis_button_tweet{margin-top:-2px}.addthis_toolbox.addthis_pill_combo_style .addthis_button_compact .at15t_compact{margin-right:4px}.addthis_default_style .addthis_separator{margin:0 5px;display:inline}div.atclear{clear:both}.addthis_default_style .addthis_separator,.addthis_default_style .at4-icon,.addthis_default_style .at300b,.addthis_default_style .at300bo,.addthis_default_style .at300bs,.addthis_default_style .at300m{float:left}.at300b img,.at300bo img{border:0}a.at300b .at4-icon,a.at300m .at4-icon{display:block}.addthis_default_style .at300b,.addthis_default_style .at300bo,.addthis_default_style .at300m{padding:0 2px}.at300b,.at300bo,.at300bs,.at300m{cursor:pointer}.addthis_button_facebook_like.at300b:hover,.addthis_button_facebook_like.at300bs:hover,.addthis_button_facebook_send.at300b:hover,.addthis_button_facebook_send.at300bs:hover{opacity:1}.addthis_20x20_style .at15t,.addthis_20x20_style .at300bs{overflow:hidden;display:block;height:20px!important;width:20px!important;line-height:20px!important}.addthis_32x32_style .at15t,.addthis_32x32_style .at300bs{overflow:hidden;display:block;height:2pc!important;width:2pc!important;line-height:2pc!important}.at300bs{overflow:hidden;display:block;background-position:0 0;height:1pc;width:1pc;line-height:1pc!important}.addthis_default_style .at15t_compact,.addthis_default_style .at15t_expanded{margin-right:4px}#at_share .at_item{width:123px!important;padding:4px;margin-right:2px;border:1px solid #fff}#at16p{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);z-index:10000001;position:absolute;top:50%;left:50%;width:300px;padding:10px;margin:0 auto;margin-top:-185px;margin-left:-155px;font-family:arial,helvetica,tahoma,verdana,sans-serif;font-size:9pt;color:#5e5e5e}#at_share{margin:0;padding:0}#at16pt{position:relative;background:#f2f2f2;height:13px;padding:5px 10px}#at16pt a,#at16pt h4{font-weight:700}#at16pt h4{display:inline;margin:0;padding:0;font-size:9pt;color:#4c4c4c;cursor:default}#at16pt a{position:absolute;top:5px;right:10px;color:#4c4c4c;text-decoration:none;padding:2px}#at15sptx:focus,#at16pt a:focus{outline:thin dotted}#at15s #at16pf a{top:1px}#_atssh{width:1px!important;height:1px!important;border:0!important}.atm{width:10pc!important;padding:0;margin:0;line-height:9pt;letter-spacing:normal;font-family:arial,helvetica,tahoma,verdana,sans-serif;font-size:9pt;color:#444;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);padding:4px}.atm-f{text-align:right;border-top:1px solid #ddd;padding:5px 8px}.atm-i{background:#fff;border:1px solid #d5d6d6;padding:0;margin:0;box-shadow:1px 1px 5px rgba(0,0,0,.15)}.atm-s{margin:0!important;padding:0!important}.atm-s a:focus{border:transparent;outline:0;transition:none}#at_hover.atm-s a,.atm-s a{display:block;text-decoration:none;padding:4px 10px;color:#235dab!important;font-weight:400;font-style:normal;transition:none}#at_hover.atm-s .at_bold{color:#235dab!important}#at_hover.atm-s a:hover,.atm-s a:hover{background:#2095f0;text-decoration:none;color:#fff!important}#at_hover.atm-s .at_bold{font-weight:700}#at_hover.atm-s a:hover .at_bold{color:#fff!important}.atm-s a .at-label{vertical-align:middle;margin-left:5px;direction:ltr}.at_PinItButton{display:block;width:40px;height:20px;padding:0;margin:0;background-image:url(//s7.addthis.com/static/t00/pinit00.png);background-repeat:no-repeat}.at_PinItButton:hover{background-position:0 -20px}.addthis_toolbox .addthis_button_pinterest_pinit{position:relative}.at-share-tbx-element .fb_iframe_widget span{vertical-align:baseline!important}#at16pf{height:auto;text-align:right;padding:4px 8px}.at-privacy-info{position:absolute;left:7px;bottom:7px;cursor:pointer;text-decoration:none;font-family:helvetica,arial,sans-serif;font-size:10px;line-height:9pt;letter-spacing:.2px;color:#666}.at-privacy-info:hover{color:#000}.body .wsb-social-share .wsb-social-share-button-vert{padding-top:0;padding-bottom:0}.body .wsb-social-share.addthis_counter_style .addthis_button_tweet.wsb-social-share-button{padding-top:40px}.body .wsb-social-share.addthis_counter_style .addthis_button_facebook_like.wsb-social-share-button{padding-top:21px}@media print{#at4-follow,#at4-share,#at4-thankyou,#at4-whatsnext,#at4m-mobile,#at15s,.at4,.at4-recommended{display:none!important}}@media screen and (max-width:400px){.at4win{width:100%}}@media screen and (max-height:700px) and (max-width:400px){.at4-thankyou-inner .at4-recommended-container{height:122px;overflow:hidden}.at4-thankyou-inner .at4-recommended .at4-recommended-item:first-child{border-bottom:1px solid #c5c5c5}}</style><style type="text/css">.at-branding-logo{font-family:helvetica,arial,sans-serif;text-decoration:none;font-size:10px;display:inline-block;margin:2px 0;letter-spacing:.2px}.at-branding-logo .at-branding-icon{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////+GlNUkcc1QAAAB1JREFUeNpiYIQDBjQmAwMmkwEM0JnY1WIxFyDAABGeAFEudiZsAAAAAElFTkSuQmCC")}.at-branding-logo .at-branding-icon,.at-branding-logo .at-privacy-icon{display:inline-block;height:10px;width:10px;margin-left:4px;margin-right:3px;margin-bottom:-1px;background-repeat:no-repeat}.at-branding-logo .at-privacy-icon{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAMAAABR24SMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhQTFRF8fr9ot/xXcfn2/P5AKva////////AKTWodjhjAAAAAd0Uk5T////////ABpLA0YAAAA6SURBVHjaJMzBDQAwCAJAQaj7b9xifV0kUKJ9ciWxlzWEWI5gMF65KUTv0VKkjVeTerqE/x7+9BVgAEXbAWI8QDcfAAAAAElFTkSuQmCC")}.at-branding-logo span{text-decoration:none}.at-branding-logo .at-branding-addthis,.at-branding-logo .at-branding-powered-by{color:#666}.at-branding-logo .at-branding-addthis:hover{color:#333}.at-cv-with-image .at-branding-addthis,.at-cv-with-image .at-branding-addthis:hover{color:#fff}a.at-branding-logo:visited{color:initial}.at-branding-info{display:inline-block;padding:0 5px;color:#666;border:1px solid #666;border-radius:50%;font-size:10px;line-height:9pt;opacity:.7;transition:all .3s ease;text-decoration:none}.at-branding-info span{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.at-branding-info:before{content:'i';font-family:Times New Roman}.at-branding-info:hover{color:#0780df;border-color:#0780df}</style><style id="service-icons-0"></style>
-		<script src="./blog/application-3f344f5c583bddeef7c9a888f9224ee41297c2ab35707fa2d019ca21149a8541.js.descarga" data-turbolinks-track="true"></script>
-		<script src="blog/d885f73163.js"></script>
-<!-- start section navbar -->
-<nav id="main-nav">
-		<div class="row">
-			<div class="container">
-				<div class="logo">
-					<a href="https://roqueleal.me" target="_blank"><img src="images/logo.png" alt="logo"></a>
-				</div>
-				<div class="responsive">
-					<i data-icon="m" class="ion-navicon-round"></i>
-				</div>
-				<ul class="nav-menu list-unstyled">
-					<li><a href="#header" class="smoothScroll">Home</a></li>
-					<li><a href="#about" class="smoothScroll">Más</a></li>
-					<li><a href="#journal" class="smoothScroll">Journal</a></li>
-					<li><a href="#contact" class="smoothScroll">Contacto</a></li>
-				</ul>
-			</div>
-		</div>
-		</nav>
-		<!-- End section navbar -->
-		<!-- start section header -->
-		<div id="header" class="home">
-			<div class="container">
-				<div class="header-content">
-					<p>
-						<br></br><h1 >Ciencia de los Datos, BigData y Localización</h1>
-					</p>
-					<h2 style="font-size:3vw">Data Scientist Blog</h2><p><span class="typed"></span></p>
-						<ul class="list-unstyled list-social">
-						<li><a href="https://www.linkedin.com/in/lealrlx"><i class="ion-social-linkedin"></i></a></li>
-					</ul>
-					<ul class="list-unstyled list-social">
-							<li><a href="https://roqueleal.me">
-								<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-								width="48" height="40"
-								viewBox="0 0 48 48"
-								style=" fill:#000000;"><path fill="#ECEFF1" d="M16 9H32V39H16z"></path><path fill="#FF3D00" d="M32 9H46V39H32z">
-								</path><path fill="#3F51B5" d="M2 9H16V39H2z"></path></svg>
-							
-								<li><a href="https://roqueleal.me/en.html">
-									<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-									width="48" height="40"
-									viewBox="0 0 48 48"
-									style=" fill:#000000;"><path fill="#ECEFF1" d="M1.998 10H45.998V37H1.998z"></path><path fill="#F44336" d="M2 10H46V13H2zM2 16H46V19H2zM2 22H46V25H2zM2 28H46V31H2zM2 34H46V37H2z">
-									</path><path fill="#3F51B5" d="M2 10H23V25H2z"></path><g><path fill="#FFF" d="M4.25 12L4.713 12.988 5.75 13.146 5 13.916 5.178 15 4.25 14.488 3.322 15 3.5 13.916 2.75 13.146 3.787 12.988zM8.25 12L8.713 12.988 9.75 13.146 9 13.916 9.178 15 8.25 14.488 7.322 15 7.5 13.916 6.75 13.146 7.787 12.988zM12.25 12L12.713 12.988 13.75 13.146 13 13.916 13.178 15 12.25 14.488 11.322 15 11.5 13.916 10.75 13.146 11.787 12.988zM16.25 12L16.713 12.988 17.75 13.146 17 13.916 17.178 15 16.25 14.488 15.322 15 15.5 13.916 14.75 13.146 15.787 12.988zM20 12L20.463 12.988 21.5 13.146 20.75 13.916 20.928 15 20 14.488 19.072 15 19.25 13.916 18.5 13.146 19.537 12.988zM4.25 20L4.713 20.988 5.75 21.146 5 21.916 5.178 23 4.25 22.488 3.322 23 3.5 21.916 2.75 21.146 3.787 20.988zM8.25 20L8.713 20.988 9.75 21.146 9 21.916 9.178 23 8.25 22.488 7.322 23 7.5 21.916 6.75 21.146 7.787 20.988zM12.25 20L12.713 20.988 13.75 21.146 13 21.916 13.178 23 12.25 22.488 11.322 23 11.5 21.916 10.75 21.146 11.787 20.988zM16.25 20L16.713 20.988 17.75 21.146 17 21.916 17.178 23 16.25 22.488 15.322 23 15.5 21.916 14.75 21.146 15.787 20.988zM20 20L20.463 20.988 21.5 21.146 20.75 21.916 20.928 23 20 22.488 19.072 23 19.25 21.916 18.5 21.146 19.537 20.988zM5.25 16L5.713 16.988 6.75 17.146 6 17.916 6.178 19 5.25 18.488 4.322 19 4.5 17.916 3.75 17.146 4.787 16.988zM9.25 16L9.713 16.988 10.75 17.146 10 17.916 10.178 19 9.25 18.488 8.322 19 8.5 17.916 7.75 17.146 8.787 16.988zM13.25 16L13.713 16.988 14.75 17.146 14 17.916 14.178 19 13.25 18.488 12.322 19 12.5 17.916 11.75 17.146 12.787 16.988zM17.25 16L17.713 16.988 18.75 17.146 18 17.916 18.178 19 17.25 18.488 16.322 19 16.5 17.916 15.75 17.146 16.787 16.988zM21 16L21.463 16.988 22.5 17.146 21.75 17.916 21.928 19 21 18.488 20.072 19 20.25 17.916 19.5 17.146 20.537 16.988z"></path></g></svg>
-								</li>
-							
-							</a>
-						</li>
-					</ul>
-				</ul>
-			</div>
-		</div>
-	</div>
-</div>
-		<!-- End section header -->
-		<!-- start section about us -->
-		<div id="about" class="paddsection">
-		<div class="container">
-			<div class="row justify-content-between">
-				<div class="col-lg-4 ">
-					<div class="div-img-bg">
-						<div class="about-img">
-							<img src="images/roque-leal.jpg" loading="lazy" class="img-responsive" alt="Roque Leal">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-7">
-					<div class="about-descr">
-						<p class="p-heading">
-								Soy un Geógrafo interesado en el modelado del espacio-tiempo y sus visualizaciones
-							</p>
-						<p class="separator">
-								Para ello combino el aprendizaje profundo de los datos, sistemas de información geográfica junto a programación creativa para generar productos novedosos y convincentes. Actualmente mis proyectos se enfocan en inteligencia de negocios utilizando herramientas de optimización.
-							</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		</div>
-		<!-- end section about us -->
-		<!-- start section services -->
-		<div id="services">
-		<div class="container">
-			<div class="services-carousel owl-theme">
-				<div class="services-block">
-					<i class="ion-ios-location-outline"></i>
-					<span>SIG</span>
-					<p class="separator">
-							Experiencia en el diseño e implementación de Sistemas de Información Geográfica para el sector Oil & Gas en modelamiento de subsuelo y superficie
-						</p>
-				</div>
-				<div class="services-block">
-					<i class="ion-ios-lightbulb-outline"></i>
-					<span>Planificación</span>
-					<p class="separator">
-							Estudios Regionales para el emplazamiento de proyectos y su impacto ambiental, estudios de linea base y predicción de escenarios
-						</p>
-				</div>
-				<div class="services-block">
-					<i class="ion-ios-color-wand-outline"></i>
-					<span>Marketing Digital</span>
-					<p class="separator">
-							Análisis de datos de eCommerce y APIs de Social Media para la segmentación, geolocalización y predicción del comportamiento de audiencia como estrategía de inbound marketing
-						</p>
-				</div>
-				<div class="services-block">
-					<i class="ion-social-android-outline"></i>
-					<span>MOBILE APPS</span>
-					<p class="separator">
-							Desarrollo de aplicaciones web para la visualización de mapas y monitores de inteligencia de negocios
-						</p>
-				</div>
-				<div class="services-block">
-					<i class="ion-ios-analytics-outline"></i>
-					<span>Inteligencia de Negocios</span>
-					<p class="separator">
-							Modelamiento de herramientas de ELT, conectividad en tiempo real y Business Intelligence Dashboards para el sector de Oil & Gas y Retail
-						</p>
-				</div>
-				<div class="services-block">
-					<i class="ion-ios-world-outline"></i>
-					<span>Data Scientist</span>
-					<p class="separator">
-							Conocimientos de elementos de programación creativa para la visualización dinámica de modelos espaciales con variables económicas, real social media y ambiente
-						</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end section services -->
-	<div id="journal">
-		<div class="section-title text-center">
-				<h3>Disfruto compartir ideas y técnicas innovadoras en el análisis avanzado de los datos. Te invito a <a href="mailto:roqueleal@gmail.com">contactarme,</a><h3> actualmente me encuentro en la búsqueda de nuevos retos profesionales con disponibilidad inmediata para hacer despegar sus Proyectos 🚀</h3>
-		</div>
-
-	<div class="block-grid-row">
-
-<div class="block-grid-container with-top-margin">
-
-<ul class="block-grid" style="position: relative; height: 2053.59px;">
-	<li class="block medium" style="position: absolute; left: 0px; top: 0px;">
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="./reseaux-sociaux/world-meetup-map.html" target="_blank">
-
-					<img src="images/meetup-world-map.jpg" loading="lazy" style=max-width:100%  alt="Meetup Map">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>Hace 1 día</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="./reseaux-sociaux/world-meetup-map.html" target="_blank">World Meetup Map</a></h2>
-
-				</div>
-
-				<div class="text">
-					
-					150 Millones de personas en 330 Mil Grupos un increíble mapa que analiza Meetup para descubrir cuales son los entornos sociales, gustos, intereses y las dimensiones de la diversidad social mundial.<a class="read-more" href="./reseaux-sociaux/world-meetup-map.html" target="_blank"> →</a>
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-	<li class="block medium" style="position: absolute; left: 0px; top: 0px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="./big-data/popular-times-stgo.html" target="_blank">
-
-					<img src="images/google-maps-popular-times.jpg" loading="lazy" style=max-width:100%  alt="Google Popular Times">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>Hace 3 días</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="./big-data/popular-times-stgo.html" target="_blank">Popular Times: Santiago de Chile</a></h2>
-
-				</div>
-
-				<div class="text">			
-				Conocer el comportamiento social con BigData analizando espacialmente Popular Times de Google Maps para localizar las horas populares, visitas y la duración habitual de los clientes.<a class="read-more" href="./big-data/popular-times-stgo.html" target="_blank"> →</a>
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-	<li class="block medium" style="position: absolute; left: 0px; top: 0px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="./big-data/mapa-especies-vulnerables-venezuela.html" target="_blank">
-
-					<img src="images/mapa-especies-vulnerables-venezuela.jpg" loading="lazy" style=max-width:100%  alt="Mapa CITES Venezuela">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>Hace 4 días</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="./big-data/mapa-especies-vulnerables-venezuela.html" target="_blank"> GBIF: Biodivesidad de Venezuela</a></h2>
-
-				</div>
-
-				<div class="text">
-					La Biogeografía Venezolana con datos del GBIF localizando las observaciones de las especies vulnerables en Venezuela que se encuentran protegidas por el convenio de Protección de especies CITES.<a class="read-more" href="./big-data/mapa-especies-vulnerables-venezuela.html" target="_blank"> →</a>
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-	<li class="block medium" style="position: absolute; left: 0px; top: 0px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="./big-data/data-science-tripadvisor-hotels-chile.html" target="_blank">
-
-					<img src="images/tripadvisor-data-hotels-chile.jpg" loading="lazy" style=max-width:100%  alt="Tripadvisor Mexico GeoInsights">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>23/05/2020</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="./big-data/data-science-tripadvisor-hotels-chile.html" target="_blank"> Tripadvisor GeoInsights</a></h2>
-
-				</div>
-
-				<div class="text">
-					Donde se encuentran los principales hoteles de Santiago de Chile utilizando datos de TripAdvisor y Location Intelligence para visualizar las oferta de los servicios hoteleros.<a class="read-more" href="./big-data/data-science-tripadvisor-hotels-chile.html" target="_blank"> →</a>
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-	<li class="block medium" style="position: absolute; left: 0px; top: 0px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="./marketing-powerbi-reports/powerbi-marketing-ecommerce-reports.html" target="_blank">
-
-					<img src="images/powerbi-advertising-marketing-reporting.jpg" loading="lazy" style=max-width:100%  alt="PowerBi Advertising and Marketing Reporting">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>05/06/2020</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="./marketing-powerbi-reports/powerbi-marketing-coronavirus-atl-media-trends-reports-ecuador.html" target="_blank"> Marketing Insights con PowerBI</a></h2>
-
-				</div>
-
-				<div class="text">
-					Reportes para: <u><a href="./marketing-powerbi-reports/powerbi-marketing-ecommerce-reports.html" target="_blank">E-commerce</a></u> 
-					<u><a href="./marketing-powerbi-reports/powerbi-marketing-tv-insights-reports.html" target="_blank">, Medios ATL</a></u>
-					<u><a href="./marketing-powerbi-reports/powerbi-marketing-media-insights-competitive-analysis.html" target="_blank">, Análisis de Competencia</a></u>
-					<u><a href="./marketing-powerbi-reports/powerbi-marketing-coronavirus-atl-media-trends-reports-ecuador.html" target="_blank">, Tendencias de Publicidad ATL ante el Coronavirus</a></u>
-					<u><a href="./marketing-powerbi-reports/powerbi-marketing-facebook-insights-reports.html" target="_blank">, Redes Sociales</a></u>
-					<u><a href="./marketing-powerbi-reports/powerbi-marketing-geomarketing-reports.html" target="_blank">, Geomarketing</a></u>
-					<u><a href="./marketing-powerbi-reports/ecuador-insights-economic-map-reports.html" target="_blank">, Location Intelligence</a></u>
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-
-	<li class="block medium" style="position: absolute; left: 0px; top: 0px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="./modele-trafic/uber-data-cluster-bogota.html" target="_blank">
-
-					<img src="images/uber-machine-learning-bogota.jpg" loading="lazy" style=max-width:100%  alt="Uber Bogotá">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>23/05/2020</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="./modele-trafic/uber-data-cluster-bogota.html" target="_blank"> Uber Machine Learning</a></h2>
-
-				</div>
-
-				<div class="text">
-					Como trasladarse en la ciudad de Bogotá con Uber y machine learning segmentando espacialmente las zonas recogida y llegada de los clientes.<a class="read-more" href="./modele-trafic/uber-data-cluster-bogota.html" target="_blank"> →</a>
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-	<li class="block medium" style="position: absolute; left: 0px; top: 0px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="./modele-trafic/ecobici-argentina.html" target="_blank">
-
-					<img src="images/ecobici-argentina.jpg" loading="lazy" style=max-width:100%  alt="ecobici-argentina Buenos Aires">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>23/02/2020</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="./modele-trafic/ecobici-argentina.html" target="_blank"> Ecobici Buenos Aires</a></h2>
-
-				</div>
-
-				<div class="text">
-					2 Millones de registros nos permiten conocer cuál es la disponibilidad del Sistema Ecobici de la Ciudad de Buenos Aires durante una semana.<a class="read-more" href="./modele-trafic/ecobici-argentina.html" target="_blank"> →</a>
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-	<li class="block medium" style="position: absolute; left: 0px; top: 0px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="https://www.informationisbeautifulawards.com/showcase/4397-desaparecidos" target="_blank">
-
-					<img src="images/information-is-beautiful-awards.jpg" loading="lazy" style=max-width:100%  alt="Prize Data">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>23/10/2019</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="https://www.informationisbeautifulawards.com/showcase/4398-world-oil-map" target="_blank"> Information is Beautiful Awards 2019</a></h2>
-
-				</div>
-
-				<div class="text">
-					¡Cinco de mis proyectos en la ronda Semifinal! Te invito a descubrir las mejores historias contadas a través de los Datos.<a class="read-more" href="https://www.informationisbeautifulawards.com/showcase/4526-one-week-on-waze-san-francisco" target="_blank"> →</a>
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-	<li class="block medium" style="position: absolute; left: 0px; top: 0px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="./reseaux-sociaux/carte-tour-de-france.html" target="_blank">
-
-					<img src="images/tour-de-france-location-map.jpg" loading="lazy" style=max-width:100%  alt="Tour de France">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>23/08/2019</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="./reseaux-sociaux/carte-tour-de-france.html" target="_blank">#TourdeFrance2019</a></h2>
-
-				</div>
-
-				<div class="text">
-
-						Como Geolocalizar los post de Instagram: los deportes son espacios donde convergen muchas emociones, por ello utilizando el #TourdeFrance desarrollamos una visualización dinámica y temporal de las interacciones.<a class="read-more" href="./reseaux-sociaux/carte-tour-de-france.html" target="_blank"> →</a>
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-	<li class="block medium" style="position: absolute; left: 0px; top: 0px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="https://blog.mapbox.com/bringing-data-to-life-with-powerbi-ccaf214eaf16" target="_blank">
-
-					<img src="images/mapbox-point-of-interest.jpg" loading="lazy" style=max-width:100%  alt="bringing data to life with powerbi">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>03/12/2019</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="https://blog.mapbox.com/bringing-data-to-life-with-powerbi-ccaf214eaf16" target="_blank">Dando vida a los datos</a></h2>
-
-				</div>
-
-				<div class="text">
-					Invitado al Blog de Mapbox, una serie de mis DataViz favoritos para compartir ideas y la forma de usar los datos para revelar increíbles Geoinsights  y comunicar innovadoras ideas. <a class="read-more" href="https://blog.mapbox.com/bringing-data-to-life-with-powerbi-ccaf214eaf16" target="_blank"> →</a>
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-	<li class="block medium" style="position: absolute; left: 372.953px; top: 0px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="./modele-trafic/waze-data-san-francisco.html" target="_blank">
-
-					<img src="images/waze-traffic-data-for-cities.jpg" loading="lazy" style=max-width:100%  alt="Waze Data">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>23/10/2019</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="./modele-trafic/waze-data-san-francisco.html" target="_blank">San Francisco Waze Data</a></h2>
-
-				</div>
-
-				<div class="text">
-
-						Utilizando Waze y BigData con Mapbox para PowerBi es posible comprender mejor las ciudades inteligentes, analizando los cambios en el tráfico y la congestión del tráfico en San Francisco durante una semana.<a class="read-more" href="./modele-trafic/waze-data-san-francisco.html" target="_blank"> →</a>
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-	<li class="block medium" style="position: absolute; left: 745.906px; top: 0px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="https://oilmap.xyz/">
-
-					<img src="images/world-oil-map.jpg" loading="lazy" style=max-width:100%  alt="Oil Map">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>04/01/2020</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="https://oilmap.xyz/">Una visualización global del sector Oil & Gas</a></h2>
-
-				</div>
-
-				<div class="text">
-
-						Donde se encuentran los principales yacimientos petrolíferos, cuál es la infraestructura petrolera existente y el desarrollo de las actividades de Oil & Gas en el mundo.<a class="read-more" href="https://oilmap.xyz/" target="_blank"> →</a>
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-	<li class="block medium" style="position: absolute; left: 0px; top: 781.531px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="./machine-learning/machine-learning-location-buenos-aires.html" target="_blank" >
-
-					<img src="images/machine-learning-buenos-aires.jpg" loading="lazy" style=max-width:100%  alt="Machine Learning">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>15/04/2020</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="./machine-learning/machine-learning-location-buenos-aires.html" target="_blank">Machine Learning Buenos Aires</a></h2>
-
-				</div>
-
-				<div class="text">
-
-					Aplicación de algoritmos de Machine Learning para la toma de decisiones basadas en datos del API de Foursquare en la ciudad de Buenos Aires, utilizando herramientas de visualización geniales en nuestros jupyter notebook. <a class="read-more" href="./machine-learning/machine-learning-location-buenos-aires.html" target="_blank"> →</a>
-
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-	<li class="block medium" style="position: absolute; left: 745.906px; top: 0px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="./big-data/airbnb-intelligence-location-peru.html" target="_blank">
-
-					<img src="images/airbnb-data-insights-maps.jpg" loading="lazy" style=max-width:100%  alt="AIRBNB Data">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>23/10/2019</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="./big-data/airbnb-intelligence-location-peru.html" target="_blank">Peru Airbnb’s Data</a></h2>
-
-				</div>
-
-				<div class="text">
-
-					Perú una exploración de los usuarios de Airbnb, es posible usar los datos de esta red social para descubrir interesantes insights en Lima, Cusco, Trujillo y todo el territorio peruano desde una nueva visión para entender el mercado inmobiliario y el sector turístico.<a class="read-more" href="./big-data/airbnb-intelligence-location-peru.html" target="_blank"> →</a>
-
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-	<li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="./big-data/le-guide-michelin-2020.html" target="_blank">
-
-					<img src="images/le-michellin-guide-map-2020.jpg" loading="lazy" style=max-width:100%  alt="Michelin Guide Map">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>10/01/2020</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="./big-data/le-guide-michelin-2020.html" target="_blank">Descubre la Guia Michelin 2020 en un Mapa</a></h2>
-
-				</div>
-
-				<div class="text">
-
-					Una, dos o tres estrellas... La guía Michelin dio a conocer las distinciones otorgadas a 2.615 Restaurantes, encuentre todos los establecimientos premiados en este mapa interactivo.<a class="read-more" href="./big-data/le-guide-michelin-2020.html" target="_blank"> →</a>
-
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-	<li class="block medium" style="position: absolute; left: 745.906px; top: 781.531px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="./modele-trafic/santiago-chile-transitland-flows.html" target="_blank">
-
-					<img src="images/transitland-feeds-metro.jpg" loading="lazy" style=max-width:100%  alt="Chile Metro">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>30/05/2019</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="./modele-trafic/santiago-chile-transitland-flows.html" target="_blank">Traffic Map Metro Santiago</a></h2>
-
-				</div>
-
-				<div class="text">
-
-						Modelo del sistema Metro de Santiago de Chile 🇨🇱 desarrollado en Processing gracias al API de TransitLand y las librerías Pandas de Python 🚇. <a class="read-more" href="./modele-trafic/santiago-chile-transitland-flows.html" target="_blank"> →</a>
-
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-	<li class="block medium" style="position: absolute; left: 0px; top: 781.531px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="./big-data/smat-city-guadalajara-google-maps.html" target="_blank" >
-
-					<img src="images/guadalajara-mexico-google-maps.jpg" loading="lazy" style=max-width:100% alt="Gudalajara: Turismo Inteligente">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>23/05/2020</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="./big-data/smat-city-guadalajara-google-maps.html" target="_blank">Turismo Inteligente con Data Science: Guadalajara</a></h2>
-
-				</div>
-
-				<div class="text">
-
-					Conociendo la oferta gastronómica y turística de la ciudad de Guadalajara: un práctico caso de Data Intelligence y Machine Learning para el análisis del comportamiento social con Google Maps.<a class="read-more" href="./big-data/smat-city-guadalajara-google-maps.html" target="_blank"> →</a>
-
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-	<li class="block medium" style="position: absolute; left: 0px; top: 0px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="./big-data/flowmap-world-migration-2019.html" target="_blank">
-
-					<img src="images/world-migrations-flows.jpg" loading="lazy" style=max-width:100%  alt="Migration Data">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>10/12/2019</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="./big-data/flowmap-world-migration-2019.html" target="_blank"> Migraciones 2019</a></h2>
-
-				</div>
-
-				<div class="text">
-					El fenómeno de las migraciones a través de los datos de Naciones Unidas para visualizar los flujos Origen-Destino utilizando las librerías del equipo de flowmap.blue para explorar los datos interactivamente.<a class="read-more" href="./big-data/flowmap-world-migration-2019.html" target="_blank"> →</a>
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-	<li class="block medium" style="position: absolute; left: 0px; top: 781.531px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="./modele-trafic/mexico-uber-data.html" target="_blank" >
-
-					<img src="images/cdmx-uber-data-maps.jpg" loading="lazy" style=max-width:100%  alt="Uber Data Mexico">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-	 			<div class="date">
-
-						<a>08/08/2019</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="./modele-trafic/mexico-uber-data.html" target="_blank">Uber Data Analysis CDMX</a></h2>
-
-				</div>
-
-				<div class="text">
-
-						Utilizaremos datos de Uber para Ciudad de México a manera de conocer la dinámica de usuarios y conductores.<a class="read-more" href="./modele-trafic/mexico-uber-data.html" target="_blank"> →</a>
-
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-	<li class="block medium" style="position: absolute; left: 372.953px; top: 781.531px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="./modele-trafic/oil-tankers-routes-pdvsa.html" target="_blank">
-
-					<img src="images/marine-traffic-oil-tanker-routes.jpg" loading="lazy" style=max-width:100%  alt="Marine Traffic Data">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>08/10/2019</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="./modele-trafic/oil-tankers-routes-pdvsa.html" target="_blank">Geopolítica con marinetraffic.com</a></h2>
-
-				</div>
-
-				<div class="text">
-
-						En esta oportunidad mi curiosidad se enfoca en un contexto global, analizar los temores de seguridad marítima en el Estrecho de Ormuz, una ruta vital para el envío de petróleo. Utilizar Python y los datos de Marine Traffic son la combinación perfecta para representar una pequeña parte del enrutamiento de los tanqueros petroleros, identificando las áreas sensibles del transporte de petróleo, actores y la línea de tiempo de las recientes tensiones en el Golfo.<a class="read-more" href="./modele-trafic/oil-tankers-routes-pdvsa.html" target="_blank"> →</a>
-
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-	<li class="block medium" style="position: absolute; left: 372.953px; top: 0px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="./reseaux-sociaux/flickr-location-map.html" target="_blank">
-
-					<img src="images/geotag-photo-map-flickr.jpg" loading="lazy" style=max-width:100%  alt="Mapping Flickr">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>23/12/2019</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="./reseaux-sociaux/flickr-location-map.html" target="_blank">Explorar las fotos del mundo con Flickr</a></h2>
-
-				</div>
-
-				<div class="text">
-
-					Muestra una gran cantidad de fotos en un mapa altamente interactivo. Explora fotos de todos los lugares con Flickr.<a class="read-more" href="./reseaux-sociaux/flickr-location-map.html" target="_blank"> →</a>
-
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-				<li class="block medium" style="position: absolute; left: 372.953px; top: 781.531px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="./big-data/mapa-sector-inmobiliario-ecuador.html" target="_blank">
-
-					<img src="images/properati-data-ecuador.jpg" loading="lazy" style=max-width:100%  alt="Ecuador Property">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>23/04/2020</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="./big-data/mapa-sector-inmobiliario-ecuador.html" target="_blank">Mercado Inmobiliario en Ecuador</a></h2>
-
-				</div>
-
-				<div class="text">
-
-						Una mirada contemporánea al mercado inmobiliario para Latam, analizando la web de Properati es posible conocer la dinámica espacial de los 54 mil inmuebles disponibles para Ecuador. <a class="read-more" href="./big-data/mapa-sector-inmobiliario-ecuador.html" target="_blank"> →</a>
-
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-	<li class="block medium" style="position: absolute; left: 745.906px; top: 781.531px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="https://blog.mapbox.com/location-is-personal-issue-4-february-2019-6c207d54b765">
-
-					<img src="images/oil-map-mapbox.jpg" loading="lazy" style=max-width:100%  alt="Oil Map">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>15/03/2019</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="https://blog.mapbox.com/location-is-personal-issue-4-february-2019-6c207d54b765">Mapbox Developer Spotlight</a></h2>
-
-				</div>
-
-				<div class="text">
-
-						En esta ocasión me permito republicar la primera reseña de OilMap en esta oportunidad MapBox y su equipo comparten sus primeras impresiones de mi proyecto; sin su ayuda no seria posible crear mapas y visualizaciones sorprendentes.<a class="read-more" href="https://blog.mapbox.com/location-is-personal-issue-4-february-2019-6c207d54b765"> →</a>
-
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-	<li class="block medium" style="position: absolute; left: 745.906px; top: 781.531px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="./modele-trafic/red-vial-caracas.html">
-
-					<img src="images/red-vial-caracas.jpg" loading="lazy" style=max-width:100%  alt="OSMnx">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>23/05/2020</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="./modele-trafic/red-vial-caracas.html">Entendiendo la red vial de Caracas</a></h2>
-
-				</div>
-
-				<div class="text">
-
-					Algoritmos de OSMnx para construir, proyectar, visualizar y analizar la red vial del Municipio Libertador - Caracas.<a class="read-more" href="./modele-trafic/red-vial-caracas.html"> →</a>
-
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-
-	<li class="block medium" style="position: absolute; left: 745.906px; top: 781.531px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="./reseaux-sociaux/instagram-map-giro-italia.html" target="_blank">
-
-					<img src="images/instagram-trends-map-giro-de-italia.jpg" loading="lazy" style=max-width:100%  alt="Giro d'Italia Data">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>30/12/2019</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="./reseaux-sociaux/instagram-map-giro-italia.html" target="_blank">Instagram Location Data #Girod'Italia</a></h2>
-
-				</div>
-
-				<div class="text">
-
-						Localizar una tendencia en #Instagram y visualizar las relaciones en un mapa, es posible programar un algoritmo y entrenarlo con Machine Learning para identificar los principales post asociados al #GiroDItalia ubicando los usuarios desde el mismo lugar donde sucede el evento y descubriendo una nueva forma de ver este evento.<a class="read-more" href="./reseaux-sociaux/instagram-map-giro-italia.html" target="_blank"> →</a>
-
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-	<li class="block medium" style="position: absolute; left: 745.906px; top: 781.531px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="./big-data/tripadvisor-data-turismo-gastronomia-mexico.html" target="_blank">
-
-					<img src="images/tripadvisor-restaurants-location-intelligence.jpg" loading="lazy" style=max-width:100%  alt="Tripadvisor Data">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>12/03/2019</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="./big-data/tripadvisor-data-turismo-gastronomia-mexico.html" target="_blank">Tripadvisor Intelligence Location</a></h2>
-
-				</div>
-
-				<div class="text">
-
-						“¡Las personas que aman comer siempre son las mejores personas!” Por el amor a la comida, decidí explorar TripAdvisor. Esta visualización incluye información sobre los restaurantes en México utilizando Python y el poder de MapBox y PowerBi.<a class="read-more" href="./big-data/tripadvisor-data-turismo-gastronomia-mexico.html" target="_blank"> →</a>
-
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-	<li class="block medium" style="position: absolute; left: 0px; top: 1563.06px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="./machine-learning/data-science-retail-data.html" target="_blank">
-
-					<img src="images/machine-learning-retail.jpg" loading="lazy" style=max-width:100%  alt="Machine Learning Retail">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>24/03/2019</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="./machine-learning/data-science-retail-data.html" target="_blank">Retail Forecast</a></h2>
-
-				</div>
-
-				<div class="text">
-
-						Se analizan los datos de 54 tiendas pertenecientes a una importante red de supermercados del Ecuador, a manera de conocer el comportamiento de sus clientes, proponer un modelo de agrupamiento y presentar un escenario de pronóstico de transacciones.<a class="read-more" href="./machine-learning/data-science-retail-data.html" target="_blank"> →</a>
-
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
- <li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
-
-			<div class="wrapper">
-
-				<div class="image">
-
-					<a href="./big-data/big-data-pymes-latam.html" target="_blank">
-
-						<img src="images/big-data-pymes-guayaquil.jpg" loading="lazy" style=max-width:100%  alt="Pymes Guayaquil">
-
-</a>
-				</div>
-
-				<div class="equalized content">
-
-					<div class="date">
-
-						<a>13/03/2019</a>
-
-					</div>
-
-					<div class="title">
-
-						<h2><a href="./big-data/big-data-pymes-latam.html" target="_blank">Granular Data Guayaquil</a></h2>
-
-					</div>
-
-					<div class="text">
-
-							Abstracción de una agrupación granular de datos para alcanzar un nuevo significado del espacio-tiempo.<a class="read-more" href="./big-data/big-data-pymes-latam.html" target="_blank"> →</a>
-
-					</div>
-
-				</div>
-
-			</div>
-
-		</li>
-	<li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
-
-			<div class="wrapper">
-
-				<div class="image">
-
-					<a href="/big-data/uber-keplergl-dataviz-chile.html" target="_blank">
-
-						<img src="images/uber-keplergl-chile-dataviz.jpg" loading="lazy" style=max-width:100%  alt="Machine Learning Chile">
-
-</a>
-				</div>
-
-				<div class="equalized content">
-
-					<div class="date">
-
-						<a>13/10/2019</a>
-
-					</div>
-
-					<div class="title">
-
-						<h2><a href="/big-data/uber-keplergl-dataviz-chile.html" target="_blank">Geoespatial Data Viz</a></h2>
-
-					</div>
-
-					<div class="text">
-
-							A propósito de Uber y sus herramientas OpenSource de visualización de datos, comparto una visualización de la Población Empleada en Chile, teniendo por fuente un ejercicio de Geodatamining y la exploración del Here API´s de geocodificación masiva.<a class="read-more" href="/big-data/uber-keplergl-dataviz-chile.html" target="_blank"> →</a>
-
-					</div>
-
-				</div>
-
-			</div>
-
-		</li>
-	<li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
-
-			<div class="wrapper">
-
-				<div class="image">
-
-					<a href="./machine-learning/pronostico-precios-crudo.html" target="_blank">
-
-						<img src="images/oil-pices-forescast-machine-learning.jpg" loading="lazy" style=max-width:100%  alt="Oil machine Learning">
-
-</a>
-				</div>
-
-				<div class="equalized content">
-
-					<div class="date">
-
-						<a>13/11/2019</a>
-
-					</div>
-
-					<div class="title">
-
-						<h2><a href="./machine-learning/pronostico-precios-crudo.html" target="_blank">Oil Forecast Prices</a></h2>
-
-					</div>
-
-					<div class="text">
-
-							En este Jupyter Notebook me permito proponer un modelo de pronóstico a largo plazo del precio spot del petróleo crudo West Texas Intermediate (WTI) utilizando el nivel de inventario de petróleo de Estados Unidos y basado en los datos alojados en la web del Energy Information Administration (EIA).<a class="read-more" href="./machine-learning/pronostico-precios-crudo.html" target="_blank"> →</a>
-
-					</div>
-
-				</div>
-
-			</div>
-
-		</li>
-		<li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
-
-				<div class="wrapper">
-
-					<div class="image">
-
-						<a href="./big-data/big-data-keplergl-chile.html" target="_blank">
-
-							<img src="images/big-data-chile-here-api.jpg" loading="lazy" style=max-width:100%  alt="Big Data">
-
-</a>
-					</div>
-
-					<div class="equalized content">
-
-						<div class="date">
-
-						<a>19/04/2019</a>
-
-						</div>
-
-						<div class="title">
-
-							<h2><a href="./big-data/big-data-keplergl-chile.html" target="_blank">Geodatamining y Here APIs</a></h2>
-
-						</div>
-
-						<div class="text">
-
-								Los datos disponibles y de uso público en la web son asombrosos, en este caso para representar un 20% de las empresas registradas en el Servicio de Impuestos Internos de Chile, utilizando técnicas de Web scraping con Python y usar el API de Here para una geocodificación masiva y avanzada de los resultados, un total de 120.000 ubicaciones.<a class="read-more" href="./big-data/big-data-keplergl-chile.html" target="_blank"> →</a>
-
-						</div>
-
-					</div>
-
-				</div>
-
-			</li>
-		<li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
-
-				<div class="wrapper">
-
-					<div class="image">
-
-						<a href="./argentina/desaparecidos.html" target="_blank">
-
-							<img src="images/storymaps-desaparecidos-argentina-dictadura.jpg" loading="lazy" style=max-width:100%  alt="Pyhton Dataviz">
-
-</a>
-					</div>
-
-					<div class="equalized content">
-
-						<div class="date">
-
-						<a>15/12/2019</a>
-
-						</div>
-
-						<div class="title">
-
-							<h2><a href="./argentina/desaparecidos.html" target="_blank">Storytelling Maps</a></h2>
-
-						</div>
-
-						<div class="text">
-
-								En Memoria a los Desaparecidos en la Argentina, una visualización de un proceso que todos debemos recordar para que no vuelva a pasar, sin duda en ocasiones como esta, un dato es más que una estadística.<a class="read-more" href="./argentina/desaparecidos.html" target="_blank"> →</a>
-
-						</div>
-
-					</div>
-
-				</div>
-			</li>
-			<li class="block medium" style="position: absolute; left: 0px; top: 781.531px;">
-
-				<div class="wrapper">
-
-					<div class="image">
-
-						<a href="./reseaux-sociaux/mapa-instagram-la-vuelta-espana.html" target="_blank" >
-
-							<img src="images/la-vuelta-espana-ciclismo-instagram.jpg" loading="lazy" style=max-width:100%  alt="Instagram Machine Learning">
-
-</a>
-					</div>
-
-					<div class="equalized content">
-
-						<div class="date">
-
-						<a>13/05/2019</a>
-
-						</div>
-
-						<div class="title">
-
-							<h2><a href="./reseaux-sociaux/mapa-instagram-la-vuelta-espana.html" target="_blank">La Vuelta 2019</a></h2>
-
-						</div>
-
-						<div class="text">
-
-							Continuamos explorando los eventos deportivos, en esta oportunidad La Vuelta España 2019, analizando las etiquetas asociadas es posible contar con valiosas observaciones de las interacciones de los usuarios en Instagram representados en el espacio geográfico.<a class="read-more" href="./reseaux-sociaux/mapa-instagram-la-vuelta-espana.html" target="_blank"> →</a>
-
-						</div>
-
-					</div>
-
-				</div>
-
-			</li>
-			<li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
-
-					<div class="wrapper">
-	
-						<div class="image">
-	
-							<a href="./big-data/mapa-sector-inmobiliario-panama.html" target="_blank">
-	
-								<img src="images/real-estate-panama-data-insights.jpg" loading="lazy" style=max-width:100%  alt="Panama Real Estate">
-	
-	</a>
-						</div>
-	
-						<div class="equalized content">
-	
-						<div class="date">
-
-						<a>22/01/2020</a>
-	
-							</div>
-	
-							<div class="title">
-	
-								<h2><a href="./big-data/mapa-sector-inmobiliario-panama.html" target="_blank">Panamá </a></h2>
-	
-							</div>
-	
-							<div class="text">
-	
-									Visualizar el paisaje inmobiliario de Panamá utilizando datos de compraovende.com una forma única de ver nuestras ciudades.<a class="read-more" href="./big-data/mapa-sector-inmobiliario-panama.html" target="_blank"> →</a>
-	
-							</div>
-	
-						</div>
-	
-					</div>
-	
-				</li>
-	<li class="block medium" style="position: absolute; left: 372.953px; top: 1563.06px;">
-
-		<div class="wrapper">
-
-			<div class="image">
-
-				<a href="./reseaux-sociaux/mapa-tweets-venezuela.html" target="_blank">
-
-					<img src="images/geolocated-tweets-map.jpg" loading="lazy" style=max-width:100%  alt="Python Twitter Data">
-
-</a>
-			</div>
-
-			<div class="equalized content">
-
-				<div class="date">
-
-						<a>23/11/2019</a>
-
-				</div>
-
-				<div class="title">
-
-					<h2><a href="./reseaux-sociaux/mapa-tweets-venezuela.html" target="_blank">Twitter Analysis</a></h2>
-
-				</div>
-
-				<div class="text">
-
-						Geolocalizar tweets para Venezuela, un mosaico de interacciones, idiomas, usuarios y comentarios en constante cambio, revelando los ocultos patrones geográficos de la comunicación y el comportamiento social de los venezolanos.<a class="read-more" href="./reseaux-sociaux/mapa-tweets-venezuela.html" target="_blank"> →</a>
-
-				</div>
-
-			</div>
-
-		</div>
-
-	</li>
-	<li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
-
-			<div class="wrapper">
-
-				<div class="image">
-
-					<a href="https://roqueleal.me/uber/bog.html" target="_blank">
-
-						<img src="images/mapa-uber-data-bogota.jpg" loading="lazy" style=max-width:100%  alt="Uber Data Bogotá">
-
-</a>
-				</div>
-
-				<div class="equalized content">
-
-					<div class="date">
-
-						<a>23/11/2019</a>
-
-					</div>
-
-					<div class="title">
-
-						<h2><a href="https://roqueleal.me/uber/bog.html" target="_blank">Bogotá Uber Data</a></h2>
-
-					</div>
-
-					<div class="text">
-
-							Un colega me invito a seguir aplicando modelos con datos de Uber de manera que ahora te invito a explorar la ciudad de Bogotá para descubrir su dinámica de tráfico.<a class="read-more" href="https://roqueleal.me/uber/bog.html" target="_blank"> →</a>
-
-					</div>
-
-				</div>
-
-			</div>
-
-		</li>
-		<li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
-
-				<div class="wrapper">
-
-					<div class="image">
-
-						<a href="./machine-learning/machine-learning-datos-migraciones-america.html" target="_blank">
-
-							<img src="images/migrant-stock-2019-united-nations-population.jpg" loading="lazy" style=max-width:100%  alt="Migraciones Data">
-
-</a>
-					</div>
-
-					<div class="equalized content">
-
-						<div class="date">
-
-						<a>23/08/2019</a>
-
-						</div>
-
-						<div class="title">
-
-							<h2><a href="./machine-learning/machine-learning-datos-migraciones-america.html" target="_blank">Migration Data</a></h2>
-
-						</div>
-
-						<div class="text">
-
-								El fenómeno de las migraciones en Sur América, causas y proyecciones de este fenómeno es posible visualizar diferentes escenarios utilizando los datos de la ONU, el Banco Mundial y la Fundación para la Paz. En esta oportunidad utilizando Python y las librerías de Pandas, Numpy, GeoPandas y Seaborn basados en el modelo de System Dynamics para el estudio de la dinámica de las poblaciones.<a class="read-more" href="./machine-learning/machine-learning-datos-migraciones-america.html" target="_blank"> →</a>
-
-						</div>
-
-					</div>
-
-				</div>
-
-			</li>
-	<li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
-
-			<div class="wrapper">
-
-				<div class="image">
-
-					<a href="./reseaux-sociaux/mapa-instagram-protestas-venezuela" target="_blank">
-
-						<img src="images/venezuela-protestas-instagram-data.jpg" loading="lazy" style=max-width:100%  alt="Instagram Location Intelligence">
-
-</a>
-				</div>
-
-				<div class="equalized content">
-
-					<div class="date">
-
-						<a>23/06/2019</a>
-
-					</div>
-
-					<div class="title">
-
-						<h2><a href="./reseaux-sociaux/mapa-instagram-protestas-venezuela" target="_blank">Instagram Data</a></h2>
-
-					</div>
-
-					<div class="text">
-
-							El primero de mayo del 2019, fue una fecha muy agitada en Venezuela por ello en esta primera entrega me he permitido extraer y presentar el potencial que tienen los datos de Instagram para visualizar un acontecimiento y conocer las repercusiones.<a class="read-more" href="./reseaux-sociaux/mapa-instagram-protestas-venezuela" target="_blank"> →</a>
-
-					</div>
-
-				</div>
-
-			</div>
-
-		</li>	
-		<li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
-
-				<div class="wrapper">
-
-					<div class="image">
-
-						<a href="./reseaux-sociaux/pyspark-jupyter-notebook.html" target="_blank">
-
-							<img src="images/jupyter-notebook-pyspark.jpg" loading="lazy" style=max-width:100%  alt="Pyhton pySpark">
-
-</a>
-					</div>
-
-					<div class="equalized content">
-
-						<div class="date">
-
-						<a>18/07/2019</a>
-
-						</div>
-
-						<div class="title">
-
-							<h2><a href="./reseaux-sociaux/pyspark-jupyter-notebook.html" target="_blank">PySpark & Streaming Twitter</a></h2>
-
-						</div>
-
-						<div class="text">
-
-								Twitter y Spark Juntos, obtiene los temas más populares según una ubicación y según el volumen de tráfico en streaming de Twitter, permitiendo graficar diferentes variables de estas tendencias.<a class="read-more" href="./reseaux-sociaux/pyspark-jupyter-notebook.html" target="_blank"> →</a>
-
-						</div>
-
-					</div>
-
-				</div>
-
-			</li>
-			<li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
-
-					<div class="wrapper">
-	
-						<div class="image">
-	
-							<a href="./reseaux-sociaux/instagram-location-map-chile.html" target="_blank">
-	
-								<img src="images/chile-la-marcha-mas-grande-instagram.jpg" loading="lazy" style=max-width:100%  alt="#lamarchamasgrande">
-	
-	</a>
-						</div>
-	
-						<div class="equalized content">
-	
-						<div class="date">
-
-						<a>11/12/2019</a>
-	
-							</div>
-	
-							<div class="title">
-	
-								<h2><a href="./reseaux-sociaux/instagram-location-map-chile.html" target="_blank">#lamarchamasgrande</a></h2>
-	
-							</div>
-	
-							<div class="text">
-	
-									Una colección de Geoinsights de instagram asociados al #lamarchamasgrande ocurrida en Santiago de Chile.<a class="read-more" href="./reseaux-sociaux/instagram-location-map-chile.html" target="_blank"> →</a>
-	
-							</div>
-	
-						</div>
-	
-					</div>
-	
-				</li>
-				<li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
-
-						<div class="wrapper">
-		
-							<div class="image">
-		
-								<a href="https://oilmap.xyz/prices/oilprices.html" target="_blank">
-		
-									<img src="images/oil-price-map.jpg" loading="lazy" style=max-width:100%  alt="Oil Prices">
-		
-		</a>
-							</div>
-		
-							<div class="equalized content">
-		
-						<div class="date">
-
-						<a>23/02/2019</a>
-		
-								</div>
-		
-								<div class="title">
-		
-									<h2><a href="https://oilmap.xyz/prices/oilprices.html" target="_blank">Mapa de Precios del Petróleo en tiempo real</a></h2>
-		
-								</div>
-		
-								<div class="text">
-		
-										Datos colectados en tiempo real desde su origen hasta nuestro mapa, gracias a librerías de Phyton y Leaflet.js los datos de los diferentes precios del petróleo a nivel mundial cobran vida y nos muestran su comportamiento en tiempo real.<a class="read-more" href="https://oilmap.xyz/prices/oilprices.html" target="_blank"> →</a>
-		
-								</div>
-		
-							</div>
-		
-						</div>
-		
-					</li>
-					<li class="block medium" style="position: absolute; left: 745.906px; top: 1563.06px;">
-
-							<div class="wrapper">
-			
-								<div class="image">
-			
-									<a href="./reseaux-sociaux/python-sentiment-analysis-bank.html" target="_blank">
-			
-										<img src="images/sentiment-analysis-twitter.jpg" loading="lazy" style=max-width:100%  alt="Python Twitter">
-			
-			</a>
-								</div>
-			
-								<div class="equalized content">
-			
-						<div class="date">
-
-						<a>23/01/2020</a>
-			
-									</div>
-			
-									<div class="title">
-			
-										<h2><a href="./reseaux-sociaux/python-sentiment-analysis-bank.html" target="_blank">Tiwtter Analysis</a></h2>
-			
-									</div>
-			
-									<div class="text">
-			
-											Una aproximación científica de diferentes métodos para colectar y analizar Twitter con herramientas de Python y de análisis de sentimientos para el sector bancario del Ecuador.<a class="read-more" href="./reseaux-sociaux/python-sentiment-analysis-bank.html" target="_blank"> →</a>
-			
-									</div>
-			
-								</div>
-			
-							</div>
-			
-						</li>
-						<li class="block medium" style="position: absolute; left: 745.906px; top: 781.531px;">
-
-							<div class="wrapper">
-			
-								<div class="image">
-			
-									<a href="./big-data/inec-mapa-censo-gye.html">
-			
-										<img src="images/inec-datos-censales-ecuador.jpg" loading="lazy" style=max-width:100%  alt="INEC GYE Map">
-			
-			</a>
-								</div>
-			
-								<div class="equalized content">
-			
-						<div class="date">
-
-						<a>02/01/2019</a>
-			
-									</div>
-			
-									<div class="title">
-			
-										<h2><a href="./big-data/inec-mapa-censo-gye.html">Censo INEC 2010 Guayaquil-Ecuador</a></h2>
-			
-									</div>
-			
-									<div class="text">
-			
-										Una visualización interactiva de los datos del INE 2010 para la ciudad de Guayaquil, espacializando todos los registros censales.<a class="read-more" href="./big-data/inec-mapa-censo-gye.html"> →</a>
-			
-									</div>
-			
-								</div>
-			
-							</div>
-			
-						</li>
-		</ul>
-
-	</div>
-</div>
-
-<div class="fr-loading" style="display: none;"><div class="fr-loading-offset"><div class="fr-loading-background"></div><div class="fr-loading-icon"></div></div></div><script src="./blog/adsct" type="text/javascript"></script><script src="./blog/adsct" type="text/javascript"></script>
-
-</body>
-<!-- End section journal -->
-</head>
-<!-- start sectoion contact -->
-<div id="contact" class="paddsection">
-	<div class="container">
-		<!-- start sectoion contact -->
-		<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>Roque Leal</title>
-		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"/>
-		<link rel="stylesheet" href="css/contacto.css">
-		</head>
-		<body>
-			<div class="banner light"><h2 class="h3">¿Estás preparado para dar vida a los datos?</h2></div>
-		<div class="container">
-			<div class="wrapper">
-				<div class="company-info">
-					<h3>Te invito a compartir tus ideas</h3>
-					<ul>
-						<li><i class="fa fa-envelope"></i> roqueleal@gmail.com</li>
-					</ul>
-				</div>
-				<div class="contact">
-					<div class="alert">
-							Su mensaje fue enviado en breve te respondere
-					</div>
-					<form id="contactForm">
-						<p>
-							<label>Su Nombre</label>
-							<input type="text" name="name" id="name" required>
-						</p>
-						<p>
-							<label>Asunto</label>
-							<input type="text" name="company" id="company">
-						</p>
-						<p>
-							<label>Email</label>
-							<input type="email" name="email" id="email" required>
-						</p>
-						<p>
-							<label>Número teléfonico</label>
-							<input type="text" name="phone" id="phone">
-						</p>
-						<p class="full">
-							<label>Mensaje</label>
-							<textarea name="message" rows="5" id="message"></textarea>
-						</p>
-						<p class="full">
-							<button type="submit">Enviar</button>
-						</p>
-					</form>
-				</div>
-			</div>
-		</div>
-		<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
-		<script src="main.js"></script>
-		</body>
-		<!-- start sectoion contact -->
-		<!-- start section footer -->
-		<div id="footer" class="text-center">
-			<div class="container">
-				<div class="socials-media text-center">
-					<ul class="list-unstyled">
-						<li><a href="https://www.linkedin.com/in/lealrlx"><i class="ion-social-linkedin"></i></a></li>
-					</ul>
-				</div>
-				<p>
-					&copy; Roqueleal Copyright. Todos los Derechos Reservados 2020.
-					Las fotos de este Website son provistas por <a href="https://pixabay.com/" target="_blank">pixabay.com</a> y <a href="https://unsplash.com/" target="_blank">unsplash.com</a> 
-			</p>
-			<b>Todos los nombres de productos y marcas comerciales registradas son propiedad de sus respectivos dueños. Todos los nombres de empresas, productos y servicios utilizados en este sitio web son solo para fines de identificación y educativos. El uso de estos nombres, marcas registradas y marcas no implica aprobación.</b>
-			<div class="credits">
-				</div>
-			</div>
-									<!-- start section cookies -->
-								</script><script src="./js/cookieconsent.min.js" data-cfasync="false"></script>
-								<script>
-								window.cookieconsent.initialise({
-								  "palette": {
-									"popup": {
-									  "background": "#007afc"
-									},
-									"button": {
-									  "background": "#fff",
-									  "text": "#007afc"
-									}
-								  },
-								  "theme": "edgeless",
-								  "position": "bottom-left",
-								  "content": {
-									  "message": "Al continuar navegando por este sitio, acepta el uso de cookies para garantizar el correcto funcionamiento de nuestro sitio. Para saber más <a target='_blank' style='color:white;' href='https://www.roqueleal.me/legal/privacy-policy.html'>haga clic aquí</a> y por la configuración de las cookies <a target='_blank' style='color:white;' href='https://www.roqueleal.me/legal/privacy-cookies.html'>haga clic aquí</a>.",
-												"link": ""
-								  }
-								});
-								
-								window.cookieconsent.hasTransition = false;
-								window.expiryDays =  365;
-								
-								</script>
-									<!--End Cookies-->
-
-		</div>
-		<!-- End section footer -->
-		<!-- JavaScript Libraries -->
-		<script src="lib/jquery/jquery-migrate.min.js"></script>
-		<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<script src="lib/typed/typed.js"></script>
-		<script src="lib/owlcarousel/owl.carousel.min.js"></script>
-		<script src="lib/magnific-popup/magnific-popup.min.js"></script>
-		<script src="lib/isotope/isotope.pkgd.min.js"></script>
-		<!-- Contact Form JavaScript File -->
-		<script src="contactform/contactform.js"></script>
-		<!-- Contact Firebase File -->
-		<script>
-var config = {
-apiKey: "AIzaSyAVvV21l_4tC2tefzBP417pb35GaV3c5aE",
-authDomain: "roqueleal-b7038.firebaseapp.com",
-databaseURL: "https://roqueleal-b7038.firebaseio.com",
-projectId: "roqueleal-b7038",
-storageBucket: "roqueleal-b7038.appspot.com",
-messagingSenderId: "396061988538"
-};
-firebase.initializeApp(config);
+  
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXJ6F8F"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+<nav id="menu"></nav>
+<div id='map'></div>
+<div id='distance' class='distance-container'></div>
+<div id="distanceGuide" class="distance-container">
+<button onclick="measureDistance()">Measuring tool</button></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoicm9xdWVsZWFsIiwiYSI6ImNqaHVzZTA4ODBkZjczdmt0cTNrbGo1ZWEifQ.m7xOPPWAFsY-A4cAr5nDAw';
+var map = new mapboxgl.Map({
+    container: 'map',
+        style: 'mapbox://styles/roqueleal/ckg8c3kqf3udn19p3zhhhia61',
+        center: [-65.830078,7.449624],
+        zoom: 4
+    });
+mapboxgl.setRTLTextPlugin('https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.1.0/mapbox-gl-rtl-text.js');
+map.addControl(new MapboxLanguage());
 </script>
-		<!-- Template Main Javascript File -->
-		<script src="js/main.js"></script>
-		</body>
-		</html>
+</script>
+ 
+<!-- modal-->
+<div id="aboutModal" class="modal" style="display: none;">
+
+    <!-- modal content -->
+    <div class="modal-content">
+        <span class="close">×</span>
+        <img class="logo" src="./img/oilmap.png" style="width:50%;max-width:70px"><p></p>
+        <h1><a href="https://www.roqueleal.me" target="_blank">Mapa Mundial de Petróleo y Gas 2021</a></h1>
+        🌎🛢️ World Oil Map una nueva plataforma abierta para el fácil seguimiento de las actividades de petróleo y gas en el mundo y el seguimiento de noticias y precios del cruso geoetiquetadas. Le brinda acceso de búsqueda a rondas de licencias de petróleo y gas, compañías, campos y pozos petroleros y noticias de la industria en vivo. </a><br>
+        <h2><a href="https://oilmap.xyz/prices/oilprices.html" target="_blank">Mapa de Precios del Crudo Petróleo 2021</a></h2>
+        Usted tambien puede visualizar los precios de la mayoria de las segregaciones de crudo que se comercializan a nivel mundial en tiempo real disponible en <a href="https://oilmap.xyz/prices/oilprices.html" target="_blank">Oil Prices Map 2021</a>.<p></p>
+        Soy <a href="https://www.roqueleal.me" target="_blank" >Roque Leal,
+        </a> te invito a colaborar y compartir tus ideas, para mayor información puedes escribirme en<a href="mailto:roqueleal@gmail.com"> roqueleal@gmail.com
+        </a>.
+        Especial agradecimiento a <a href="https://blog.mapbox.com/bringing-data-to-life-with-powerbi-ccaf214eaf16" target="_blank">Mapbox</a> por compartir su inspiración y pasión por los mapas.<p>
+        </p>Este proyecto esta distribuido bajo la Licencia GPL Open Source License. Puedes visitar el repositorio de este proyecto, disponible en <a href="https://github.com/roqueleal/oilmap" target="_blank">Github</a>.<p></p>
+        <a href="https://github.com/roqueleal/oilmap" target="_blank"><img src="./img/git.png" style="width:300%;max-width:200px" alt="Link to this page" ></a>
+        <p>Certificado de datos Abiertos Open Data Certificate™ disponible en <a href="https://certificates.theodi.org/en/datasets/220195/certificate" target="_blank">ODI</a>.<p></p>
+        <a href="https://certificates.theodi.org/en/datasets/220195/certificate" target="_blank"><img src="./img/odi.png" style="width:150%;max-width:150px" alt="Link to this page"></a> 
+    </div>
+</div>
+<!-- menu -->
+
+<script>
+    // inicio NEWS
+    var url = 'https://api.gdeltproject.org/api/v2/geo/geo?zoomwheel=0&query=petroleum%20(sourcelang:zho%20OR%20sourcelang:eng%20OR%20sourcelang:rus%20OR%20sourcelang:spa)%20&mode=pointdata&format=geojson';
+    map.on('load', function () {
+    window.setInterval(function() {
+    map.getSource('NEWS').setData(url);
+    }, 2000);
+
+    map.addSource('NEWS', { type: 'geojson', data: url });
+    map.addLayer({
+        "id": "NEWS",
+        "type": "symbol",
+        "source": "NEWS",
+            "layout": {
+            "icon-image": "oil",
+            "icon-size":[
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            0,
+            0,
+            9.256,
+            0.1
+                ]
+                }
+                });
+                });
+    // FIN NEWS
+    // inicio CLUSTERNEWS
+    
+    map.on('load', function() {
+// Add a new source from our GeoJSON data and set the
+// 'cluster' option to true. GL-JS will add the point_count property to your source data.
+    map.addSource("CLUSTER-NEWS", {
+    type: "geojson",
+// Point to GeoJSON data. This example visualizes all M1.0+ NEWS
+// from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
+    data: "https://api.gdeltproject.org/api/v2/geo/geo?zoomwheel=0&query=petroleum%20(sourcelang:zho%20OR%20sourcelang:eng%20OR%20sourcelang:rus%20OR%20sourcelang:spa)%20&mode=pointdata&format=geojson",
+    cluster: true,
+    clusterMaxZoom: 14, // Max zoom to cluster points on
+    clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
+    });
+
+    map.addLayer({
+    id: "CLUSTER-NEWS",
+    type: "circle",
+    source: "CLUSTER-NEWS",
+    filter: ["has", "point_count"],
+paint: {
+
+"circle-color": [
+"step",
+["get", "point_count"],
+"#1dcaff",
+5,
+"#fff000",
+10,
+"#ff521d"
+],
+"circle-radius": [
+"step",
+["get", "point_count"],
+20,
+10,
+30,
+750,
+40
+]
+}
+});
+
+map.addLayer({
+id: "cluster-count",
+type: "symbol",
+source: "CLUSTER-NEWS",
+filter: ["has", "point_count"],
+layout: {
+"text-field": "{point_count_abbreviated}",
+"text-font": ["DIN Offc Pro Medium", "Arial Unicode MS Bold"],
+"text-size": 12
+}
+});
+
+map.addLayer({
+id: "unclustered-point",
+type: "circle",
+source: "CLUSTER-NEWS",
+filter: ["!", ["has", "point_count"]],
+paint: {
+"circle-color": "#11b4da",
+"circle-radius": 0.1,
+"circle-stroke-width": 1,
+"circle-stroke-color": "#fff"
+}
+});
+
+// inspect a cluster on click
+map.on('click', 'clusters', function (e) {
+var features = map.queryRenderedFeatures(e.point, { layers: ['clusters'] });
+var clusterId = features[0].properties.cluster_id;
+map.getSource('CLUSTER-NEWS').getClusterExpansionZoom(clusterId, function (err, zoom) {
+if (err)
+return;
+
+map.easeTo({
+center: features[0].geometry.coordinates,
+zoom: zoom
+});
+});
+});
+
+map.on('mouseenter', 'clusters', function () {
+map.getCanvas().style.cursor = 'pointer';
+});
+map.on('mouseleave', 'clusters', function () {
+map.getCanvas().style.cursor = '';
+});
+});
+    // fin CLUSTERNEWS
+    // INICIO MENU
+             
+    var toggleableLayerIds = ['PRODUCTION', 'BID-ROUNDS','EXPLORATION','REFINERIES','OIL-PIPELINE','GAS-PIPELINE', 'NEWS', 'CLUSTER-NEWS'];
+    for (var i = 0; i < toggleableLayerIds.length; i++) {
+        var id = toggleableLayerIds[i];
+        var link = document.createElement('a');
+        link.href = '#';
+        link.className = 'active';
+        link.textContent = id;
+        link.onclick = function (e) {
+            var clickedLayer = this.textContent;
+            e.preventDefault();
+            e.stopPropagation();
+            var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
+            if (visibility === 'visible') {
+                map.setLayoutProperty(clickedLayer, 'visibility', 'none');
+                this.className = '';
+            } else {
+                this.className = 'active';
+                map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+            }
+        };
+        var layers = document.getElementById('menu');
+        layers.appendChild(link);
+    }
+// fin MENU
+    // INICIO MENU
+             
+    var toggleableLayerIds = ['DEPOSITS'];
+    for (var i = 0; i < toggleableLayerIds.length; i++) {
+        var id = toggleableLayerIds[i];
+       
+        var link = document.createElement('a');
+        link.href = '#';
+        link.className = 'focus';
+        link.textContent = id;
+       
+        link.onclick = function (e) {
+            var clickedLayer = this.textContent;
+            e.preventDefault();
+            e.stopPropagation();
+          
+            var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
+           
+            if (visibility === 'visible') {
+                map.setLayoutProperty(clickedLayer, 'visibility', 'none');
+                this.className = '';
+            } else {
+                this.className = 'active';
+                map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+            }
+        };
+        var layers = document.getElementById('menu');
+        layers.appendChild(link);
+    }
+// fin MENU
+
+// interacion inicio hover
+var popup = new mapboxgl.Popup({
+closeButton: false,
+closeOnClick: false
+});
+map.on('mouseenter', 'DEPOSITS', function(e) {
+// Change the cursor style as a UI indicator.
+map.getCanvas().style.cursor = 'pointer';
+
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+
+// Populate the popup and set its coordinates
+// based on the feature found.
+popup.setLngLat(e.lngLat)
+            .setHTML('<dt>' + e.features[0].properties.NAME + '</dt>'+'<dt>'+ e.features[0].properties.OTHERINFO + '</dt>' + e.features[0].properties.RESINFO + '</dt>' )
+            .addTo(map);
+
+map.on('mouseleave', 'DEPOSITS', function() {
+map.getCanvas().style.cursor = '';
+popup.remove();
+});
+});
+
+// interacion fin hover
+// interacion inicio popup
+map.on('mousemove', function(event) {
+    if (map.loaded()) {
+        var features = map.queryRenderedFeatures(event.point, {
+            layers: ['REFINERIES', 'EXPLORATION', 'BID-ROUNDS','PRODUCTION', 'NEWS']
+        });
+        map.getCanvas().style.cursor = features.length ? 'pointer' : '';
+    }
+});
+window.addEventListener('resize', () => {
+    mapReset();
+})
+ // interacion  refinerias
+map.on('click', function(e) {
+    var features = map.queryRenderedFeatures(e.point, {
+        layers: ['REFINERIES'] // replace this with the name of the layer
+    });
+    if (!features.length) {
+        return;
+    }
+    var feature = features[0];
+    var popup = new mapboxgl.Popup ()
+        .setLngLat(feature.geometry.coordinates)
+        .setHTML('<dd>' + feature.properties.Name + feature.properties.Descriptio + '</dd>')
+        .setLngLat(feature.geometry.coordinates)
+        .addTo(map);
+});
+window.addEventListener('resize', () => {
+    mapReset();
+})
+// interacion fin refinerias
+
+// interacion inicio bloquesar
+map.on('click', 'EXPLORATION-AREAS', function (e) {
+    new mapboxgl.Popup()
+        .setLngLat(e.lngLat)
+        .setHTML('<dt>' + e.features[0].properties.Name + '</dt>'+'<dt>'+ e.features[0].properties.Company + '</dt>' +'<dt>'+ e.features[0].properties.Type + '</dt>'+'<dt>')
+        .addTo(map);
+});
+// interacion fin bloquesar
+  // interacion inicio bloquesar
+  map.on('click', 'PRODUCTION', function (e) {
+    new mapboxgl.Popup()
+        .setLngLat(e.lngLat)
+        .setHTML('<dt>' + e.features[0].properties.Name + '</dt>'+'<dt>'+ e.features[0].properties.Company + '</dt>' +'<dt>'+ e.features[0].properties.Type + '</dt>'+'<dt>')
+        .addTo(map);
+});
+// interacion fin bloquesar
+ // interacion inicio NEWS2
+ map.on('click', 'NEWS', function (e) {
+    new mapboxgl.Popup()
+        .setLngLat(e.lngLat)
+        .setHTML('<dd>' + e.features[0].properties.name + 
+         '<img src=" '+ e.features[0].properties.shareimage + '" />' 
+        + e.features[0].properties.html + '</dd>')
+        .addTo(map);
+});
+// interacion fin NEWS
+// interacion inicio BID-ROUNDS
+  map.on('click', 'BID-ROUNDS', function (e) {
+    new mapboxgl.Popup()
+        .setLngLat(e.lngLat)
+        .setHTML('<dt>' + e.features[0].properties.title + '</dt>'+'<dt>'+ e.features[0].properties.description + '</dt>' )
+        .addTo(map);
+});
+// interacion fin bloquesar
+// modal interaction
+var modal = document.getElementById('aboutModal');
+modal.style.display = "block";
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+    modal.style.display = "none";
+}
+var aboutHeader = document.getElementsByClassName("about-header")[0];
+aboutHeader.onclick = function() {
+    document.body.style.cursor = "pointer";
+    modal.style.display = "block";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";      }
+}
+
+
+//geocder
+var customData
+function forwardGeocoder(query) {
+var matchingFeatures = [];
+for (var i = 0; i < customData.features.length; i++) {
+var feature = customData.features[i];
+// handle queries with different capitalization than the source data by calling toLowerCase()
+if (
+feature.properties.title
+.toLowerCase()
+.search(query.toLowerCase()) !== -1
+) {
+// add a tree emoji as a prefix for custom data results
+// using carmen geojson format: https://github.com/mapbox/carmen/blob/master/carmen-geojson.md
+feature['place_name'] = '🛢️ ' + feature.properties.title;
+feature['center'] = feature.geometry.coordinates;
+feature['place_type'] = ['park'];
+matchingFeatures.push(feature);
+}
+}
+return matchingFeatures;
+}
+
+map.addControl(
+new MapboxGeocoder({
+accessToken: mapboxgl.accessToken,
+localGeocoder: forwardGeocoder,
+zoom: 9,
+placeholder: '🛢️ Bloque Petrolero',
+mapboxgl: mapboxgl
+}) ,'bottom-right'
+);
+
+// to grab checkbox value
+$('input.js-checkboxes').prop('checked', true);
+var nav = new mapboxgl.NavigationControl();
+var nav2 = new mapboxgl.FullscreenControl();
+var nav3 = new mapboxgl.GeolocateControl({ positionOptions: { enableHighAccuracy: true }, trackUserLocation: true });
+map.addControl(nav, 'bottom-right');
+map.addControl(nav2, 'bottom-right');
+map.addControl(nav3, 'bottom-right');
+function mapReset() {
+    if (window.innerWidth < 800) {
+        map.setZoom(4.17);
+    } else {
+        map.setZoom(4.17);
+    }
+}   
+
+var distanceContainer = document.getElementById("distance");
+var distanceGuide = document.getElementById("distanceGuide");
+//ruler
+// Array to store id's of measured lines  -- kinda irrelevant as we have a counter
+var measureLayers = [];
+var counter = 0;
+var enabled = false;
+
+// GeoJSON object to hold our measurement features
+var geojson = {
+type: "FeatureCollection",
+features: []
+};
+
+// Used to draw a line between points
+var linestring = {
+type: "Feature",
+geometry: {
+    type: "LineString",
+    coordinates: []
+}
+};
+
+function measureDistance() {
+// Step 1, Toggle
+enabled = !enabled
+
+// If disabled and source exists, remove it
+if (enabled === false) {
+
+    // Check for map source
+    if (typeof map.getSource("geojson") === "object") {
+        // Delete map layers from geojson
+        map.removeLayer("measure-points");
+        map.removeLayer("measure-lines");
+        // Remove map source
+        map.removeSource("geojson");
+        // Remove the distance calculator
+        distanceContainer.innerHTML = "";
+        // Reset geojson
+        geojson = {
+            type: "FeatureCollection",
+            features: []
+        };
+        // Remove mouse handler
+        map.off("mousemove", measureMouseHandler);
+        // Remove onclick handler
+        map.off("click", measureDistanceHandler);
+        // Reset mouse cursor
+        map.getCanvas().style.cursor = "";
+    }
+} else if (enabled === true) {
+    // Add data source
+    map.addSource("geojson", {
+        type: "geojson",
+        data: geojson
+    });
+
+    // Add styles to the map
+    map.addLayer({
+        id: "measure-points",
+        type: "circle",
+        source: "geojson",
+        paint: {
+            "circle-radius": 5,
+            "circle-color": "#ef5350"
+        },
+        filter: ["in", "$type", "Point"]
+    });
+
+    map.addLayer({
+            id: "measure-lines",
+            type: "line",
+            source: "geojson",
+            layout: {
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            paint: {
+                "line-color": "#546e7a",
+                "line-width": 2.5
+            },
+            filter: ["in", "$type", "LineString"]
+        },
+        "measure-points"
+    );
+
+    // Add on click handler
+    map.on('click', measureDistanceHandler)
+
+    // UI indicator for clicking/hovering a point on the map
+    map.on("mousemove", measureMouseHandler)
+}
+};
+
+function measureDistanceHandler(e) {
+var features = map.queryRenderedFeatures(e.point, {
+    layers: ['measure-points']
+});
+
+// Remove the linestring from the group
+// So we can redraw it based on the points collection
+if (geojson.features.length > 1) geojson.features.pop();
+
+// Clear the Distance container to populate it with a new value
+distanceContainer.innerHTML = '';
+
+// If a feature was clicked, remove it from the map
+if (features.length) {
+    var id = features[0].properties.id;
+    geojson.features = geojson.features.filter(function (point) {
+        return point.properties.id !== id;
+    });
+} else {
+    var point = {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                e.lngLat.lng,
+                e.lngLat.lat
+            ]
+        },
+        "properties": {
+            "id": `measure-${counter}`
+        }
+    };
+
+    geojson.features.push(point);
+    counter++;
+    measureLayers.push(point.properties.id);
+}
+
+// If there's a line, calculate the distance
+if (geojson.features.length > 1) {
+    linestring.geometry.coordinates = geojson.features.map(function (point) {
+        return point.geometry.coordinates;
+    });
+
+    geojson.features.push(linestring);
+
+    // Populate the distanceContainer with total distance
+    var value = document.createElement("pre");
+    // If total distance less than 1km display in metres
+    if (turf.lineDistance(linestring) < 1) {
+        let tDist = turf.lineDistance(linestring) * 1000;
+        value.textContent = "Total distance: " + tDist.toLocaleString() + "m";
+        distanceContainer.appendChild(value);
+        map.getSource("geojson").setData(geojson);
+    } else {
+        value.textContent =
+            "Total distance: " +
+            turf.lineDistance(linestring).toLocaleString() +
+            "km";
+        distanceContainer.appendChild(value);
+        map.getSource("geojson").setData(geojson);
+    }
+}
+
+// Sets new data, updates layers/source
+map.getSource('geojson').setData(geojson);
+};
+
+function measureMouseHandler(e) {
+    var features = map.queryRenderedFeatures(e.point, {
+        layers: ["measure-points"]
+    });
+    map.getCanvas().style.cursor = features.length ? "pointer" : "crosshair";
+
+};    
+</script>
+						<!-- start section cookies -->
+                    </script><script src="./js/cookieconsent.min.js" data-cfasync="false"></script>
+                    <script>
+                    window.cookieconsent.initialise({
+                      "palette": {
+                        "popup": {
+                          "background": "#007afc"
+                        },
+                        "button": {
+                          "background": "#fff",
+                          "text": "#007afc"
+                        }
+                      },
+                      "theme": "edgeless",
+                      "position": "bottom-left",
+                      "content": {
+                          "message": "Al continuar navegando por este sitio, acepta el uso de cookies para garantizar el correcto funcionamiento de nuestro sitio. Para saber más <a target='_blank' style='color:white;' href='https://www.oilmap.xyz/legal/privacy-policy.html'>haga clic aquí</a> y por la configuración de las cookies <a target='_blank' style='color:white;' href='https://www.oilmap.xyz/legal/privacy-cookies.html'>haga clic aquí</a>.",
+												"link": ""
+                      }
+                    });
+                    
+                    window.cookieconsent.hasTransition = false;
+                    window.expiryDays =  365;
+                    
+                    </script>
+                        <!--End Cookies-->
+
+<!--Geocoder  -->
+<script src='https://api.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js'></script>
+<script src="data/geocoder.js"></script>
+</body></html>
+<!--Licensing information: https://roqueleal.me Purchase the pro version  -->
