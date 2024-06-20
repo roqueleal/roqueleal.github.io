@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Casa de Papel - Code Secret</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #b71c1c 30%, #000 100%);
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 2;
+            position: relative;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 1em;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #b71c1c;
+        }
+        .matrix {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .matrix span {
+            position: absolute;
+            top: 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.8);
+            animation: fall linear infinite, changeText linear infinite;
+            white-space: nowrap;
+            opacity: 1;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(-100%);
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+        }
+        @keyframes changeText {
+            0%, 100% {
+                content: attr(data-text);
+            }
+            10% {
+                content: attr(data-change);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="max-width: 450px;">
+        <img src="https://storage.googleapis.com/endurance-apps-liip/media/cache/vinci_social_card_panoramic_grid_fs/6310afe404f46e23d208a94a" alt="Banner" class="banner" style="width: 20%; display: block; margin-top: -20px;"> <!-- Ajuste de tamaño y alineación -->
+        <h1>La Casa de Papel</h1>
+        <p>Entrez le code secret pour continuer</p>
+        <input type="text" id="code" placeholder="Code secret">
+        <br>
+        <button onclick="verifierCode()">Envoyer</button>
+    </div>
+
+    <div class="matrix" id="matrix">
+        <!-- Efecto de Matrix se generará dinámicamente -->
+    </div>
+
+    <script>
+        function verifierCode() {
+            const code = document.getElementById('code').value;
+            if (code === '28501') {
+                window.location.href = 'https://app.powerbi.com/groups/me/apps/c0ee0348-78d9-4327-9833-cd53718f79f7/reports/986a3673-cfa0-40a2-81e8-b8b46a0ac47e/ReportSection?ctid=bc3d2e14-1c33-46cf-a507-345a7a9dd45a&experience=power-bi';
+            } else {
+                alert('Code incorrect. Essayez de nouveau.');
+            }
+        }
+
+        // Generar números de vuelo según código IATA
+        const iataCodes = ['AA', 'DL', 'UA', 'LH', 'BA', 'AF', 'KL', 'QF', 'EK', 'CX', 'SQ', 'NH', 'JL', 'AC', 'AZ'];
+
+        // Generar los símbolos descendentes
+        const matrix = document.getElementById('matrix');
+        const columns = Math.floor(window.innerWidth / 20);
+        for (let i = 0; i < columns; i++) {
+            const stream = document.createElement('span');
+            stream.style.left = `${i * 20}px`;
+            stream.style.animationDuration = `${Math.random() * 10 + 5}s`;
+            updateMatrixText(stream);
+            matrix.appendChild(stream);
+        }
+
+// Modificar la función updateMatrixText para actualizar dinámicamente los códigos IATA
+function updateMatrixText(stream) {
+    const columnHeight = Math.floor(Math.random() * 30) + 10; // Altura de la columna
+    let text = '';
+    for (let i = 0; i < columnHeight; i++) {
+        const randomIndex = Math.floor(Math.random() * iataCodes.length);
+        const randomIata = iataCodes[randomIndex];
+        const flightNumber = randomIata + Math.floor(Math.random() * 900 + 100); // Ejemplo: AA123
+        text += flightNumber;
+        text += '<br>';
+    }
+    const changeText = text.replace(/\d{3}/g, () => Math.floor(Math.random() * 900 + 100));
+    stream.setAttribute('data-text', text);
+    stream.setAttribute('data-change', changeText);
+    stream.innerHTML = text;
+
+        }
+    </script>
+</body>
+</html>
